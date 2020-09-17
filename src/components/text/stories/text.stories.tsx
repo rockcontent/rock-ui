@@ -37,47 +37,22 @@ export const truncated = () => (
 
 export const styled = () => (
   <Stack spacing={2}>
-    <Text color="blue.500" as="i">
-      Italic
+    <Text color="blue.500" fontSize="30px">
+      Custom font-size and color
     </Text>
-    <Text color="blue.500" as="u">
-      Underline
-    </Text>
-    <Text color="blue.500" as="b">
-      Bold
-    </Text>
-    <Text color="blue.500" as="abbr">
-      I18N
-    </Text>
-    <Text color="blue.500" as="cite">
-      Citation
-    </Text>
-    <Text color="blue.500" as="del">
-      Deleted
-    </Text>
-    <Text color="blue.500" as="em">
-      Emphasis
-    </Text>
-    <Text color="blue.500" as="ins">
-      Inserted
-    </Text>
-    <Text color="blue.500" as="kbd">
-      Ctrl + C
-    </Text>
-    <Text color="blue.500" as="mark">
-      Highlighted
-    </Text>
-    <Text color="blue.500" as="s">
-      Strikethrough
-    </Text>
-    <Text color="blue.500" as="samp">
-      Sample
-    </Text>
-    <Text color="blue.500" as="sub">
-      sub
-    </Text>
-    <Text color="blue.500" as="sup">
-      sup
-    </Text>
+    <Text as="i">Italic</Text>
+    <Text as="u">Underline</Text>
+    <Text as="b">Bold</Text>
+    <Text as="abbr">I18N</Text>
+    <Text as="cite">Citation</Text>
+    <Text as="del">Deleted</Text>
+    <Text as="em">Emphasis</Text>
+    <Text as="ins">Inserted</Text>
+    <Text as="kbd">Ctrl + C</Text>
+    <Text as="mark">Highlighted</Text>
+    <Text as="s">Strikethrough</Text>
+    <Text as="samp">Sample</Text>
+    <Text as="sub">sub</Text>
+    <Text as="sup">sup</Text>
   </Stack>
 );
