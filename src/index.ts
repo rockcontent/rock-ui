@@ -81,3 +81,4 @@ export {
   RockUITheme,
 } from './system/theme';
 export { COLORS } from './constants/colors/colors';
+export { Text } from './components/text';
