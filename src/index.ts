@@ -33,6 +33,8 @@ export {
   ModalBody,
   ModalCloseButton,
 } from './components/modal';
+export { Checkbox, CheckboxGroup } from './components/checkbox';
+export { Radio, RadioGroup, useRadio, useRadioGroup } from './components/radio';
 export { useDisclosure } from '@chakra-ui/core';
 export { Tooltip } from './components/tooltip';
 export {

@@ -91,3 +91,7 @@ We use https://github.com/sindresorhus/np to publish to NPM
 
 1. The progress component preview doesn't seem to work in the official docs examples
 https://next.chakra-ui.com/docs/components/progress however, it works fine for us.
+
+2. The checkbox and radio border color is inherited. So if it is not set on a parent, it will
+be white. And chances are high for the background to be white as well, so it will
+seem that the property is not set.
