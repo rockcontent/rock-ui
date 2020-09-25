@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Container } from '@chakra-ui/layout';
 import { Link } from '../';
-import { Icon } from '../../icon';
 import { Text } from '../../text';
 
 export default {
@@ -25,7 +24,7 @@ export const externalLink = () => (
 
 export const inlineWithText = () => (
   <Text>
-    Did you know that{" "}
+    Did you know that{' '}
     <Link color="teal.500" href="#">
       links can live inline with text
     </Link>
