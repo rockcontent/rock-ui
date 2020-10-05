@@ -65,11 +65,11 @@
   },
   "description": "Rock Content Design System component kit in React",
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-rc.3",
-    "@chakra-ui/icons": "^1.0.0-rc.3",
-    "@chakra-ui/system": "^1.0.0-rc.3",
-    "@chakra-ui/theme": "^1.0.0-rc.3",
-    "@chakra-ui/theme-tools": "^1.0.0-rc.3"
+    "@chakra-ui/core": "1.0.0-rc.5",
+    "@chakra-ui/icons": "1.0.0-rc.5",
+    "@chakra-ui/system": "1.0.0-rc.5",
+    "@chakra-ui/theme": "1.0.0-rc.5",
+    "@chakra-ui/theme-tools": "1.0.0-rc.5"
   },
   "repository": {
     "type": "git",
