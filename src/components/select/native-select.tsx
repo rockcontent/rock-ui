@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/core';
 
 interface NativeSelectProps extends BaseSelectProps {
-  iconSize?: number | string;
+  iconSize?: string;
 }
 
 export { NativeSelectProps };
