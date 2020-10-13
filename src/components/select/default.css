@@ -1,14 +1,22 @@
 .rock-overwrite-defaults .rock__control,
 .rock-overwrite-defaults .select__control {
-    border-color: rgb(226, 232, 240);
+    border-color: inherit;
 }
-.rock-overwrite-defaults .rock__single-value,
-.rock-overwrite-defaults .select__single-value,
+
+.rock-overwrite-defaults .rock__control:hover,
+.rock-overwrite-defaults .select__control:hover {
+    border-color: #CBD2E0;
+}
+
+.rock-overwrite-defaults .rock__control.rock__control--is-focused,
+.rock-overwrite-defaults .select__control.select__control--is-focused {
+    border-color: #225ED8;
+    box-shadow: 0 0 0 1px #225ED8;
+}
+
 .rock-overwrite-defaults .rock__placeholder,
-.rock-overwrite-defaults .select__placeholder,
-.rock-overwrite-defaults .rock__multi-value__label,
-.rock-overwrite-defaults .select__multi-value__label {
-    color: rgb(26, 32, 44);
+.rock-overwrite-defaults .select__placeholder {
+    color: #777;
 }
 
 .rock-overwrite-defaults .rock__value-container,
