@@ -6,3 +6,4 @@ dist
 .vscode
 storybook-static/
 package-lock.json
+.idea

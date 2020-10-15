@@ -71,6 +71,14 @@ export {
   NumberIncrementStepper,
 } from './components/number-input';
 export {
+  NativeSelect,
+  Select,
+  AsyncSelect,
+  AsyncCreatableSelect,
+  CreatableSelect,
+  defaultSelectComponents,
+} from './components/select';
+export {
   FormControl,
   FormErrorMessage,
   FormHelperText,
