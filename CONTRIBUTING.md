@@ -6,6 +6,8 @@ The following is a set of guidelines for contributing to the Rock UI project. We
 
 [Ask a Question](#ask-a-question)
 
+[Requesting a new component](#requesting-a-new-component)
+
 [Getting Started](#getting-started)
 
 [Contributing](#contributing)
@@ -19,6 +21,19 @@ _@TODO:_[Code of Conduct](https://github.com/rockcontent/rock-ui/blob/master/COD
 
 We will have a public forum soon where you can come and ask questions and have a discussion. For now please open an Issue on GitHub with the label `question`.
 
+
+## Requesting a new component
+
+If your team requires a new component that is not listed on the [Design System Documentation](https://design.rockcontent.com/docs/getting-started/), please follow the necessary steps in order to request a new component:
+
+1. [Create a new issue](https://github.com/rockcontent/rock-ui/issues/new/choose) by selecting the `Component Request` type.
+1. Add the tag `component request` on the issue;
+1. Add a description explaining why this component is necessary and the name of the product that need it;
+1. Add a Figma link, screenshot or an example of an existing component;
+1. Add spacing, colors, how it should work and any other important description that we need to know to create this component;
+1. Once you created the issue, send a message on **#team-design-system-community** Slack Channel with the link to the issue.
+
+*Note*: Issues that do not have all the requirements won't be accepted.
 
 ## Getting Started
 
