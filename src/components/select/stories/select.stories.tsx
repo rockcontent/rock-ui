@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Container } from '@chakra-ui/layout';
-import { Checkbox } from '@chakra-ui/core';
+import { Container } from '../../layout';
+import { Checkbox } from '../../checkbox';
 import { Select, makeAnimated } from '../';
 import { colourOptions } from '../constants';
 
@@ -40,7 +40,6 @@ export const Basic = () => {
   return (
     <React.Fragment>
       <Select
-        classNamePrefix="select"
         defaultValue={colourOptions[0]}
         isDisabled={state.isDisabled}
         isLoading={state.isLoading}
@@ -101,7 +100,6 @@ export const multi = () => (
     name="colors"
     options={colourOptions}
     className="basic-multi-select"
-    classNamePrefix="select"
   />
 );
 

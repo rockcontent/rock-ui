@@ -4,9 +4,11 @@ import {
   SelectProps as BaseSelectProps,
 } from '@chakra-ui/core';
 
-interface NativeSelectProps extends BaseSelectProps {
+type RockUINativeSelectProps = {
   iconSize?: string;
-}
+};
+
+type NativeSelectProps = RockUINativeSelectProps & BaseSelectProps;
 
 export { NativeSelectProps };
 
