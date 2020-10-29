@@ -1,6 +1,6 @@
 import BaseSelect from 'react-select';
 import styled from 'styled-components';
-import { COLORS } from 'constants/colors/colors';
+import { COLORS } from '../../constants/colors/colors';
 
 export const StyledBaseSelect = styled(BaseSelect)`
   border-color: inherit;
