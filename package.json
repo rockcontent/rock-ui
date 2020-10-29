@@ -1,7 +1,7 @@
 {
   "name": "@rockr/rock-ui",
   "author": "Rock Content",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -50,6 +50,7 @@
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@types/react-select": "^3.0.22",
+    "@types/styled-components": "^5.1.4",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.1.0",
@@ -62,7 +63,7 @@
     "rollup-plugin-postcss": "^3.1.8",
     "ts-loader": "^8.0.2",
     "tsdx": "^0.13.2",
-    "tslib": "^2.0.1",
+    "tslib": "^2.0.3",
     "typescript": "^3.9.7"
   },
   "description": "Rock Content Design System component kit in React",
@@ -72,7 +73,8 @@
     "@chakra-ui/system": "1.0.0-rc.5",
     "@chakra-ui/theme": "1.0.0-rc.5",
     "@chakra-ui/theme-tools": "1.0.0-rc.5",
-    "react-select": "^3.1.0"
+    "react-select": "^3.1.0",
+    "styled-components": "^5.2.0"
   },
   "repository": {
     "type": "git",

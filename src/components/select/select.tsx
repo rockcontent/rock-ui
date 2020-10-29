@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
-import BaseSelect, { Props } from 'react-select';
+import { Props as BaseSelectProps } from 'react-select';
 import makeAnimated from 'react-select/animated';
 import { components as defaultComponents } from './components';
 import { overwriteClassName, overwriteClassPrefix } from './constants';
 // overwriting the react-select default styling to match the rock-ui styling
-import './default.css';
+import { StyledBaseSelect } from './styled';
 
-interface SelectProps extends Props {
+type RockUISelectProps = {
   components?: any;
-}
+};
+
+type SelectProps = RockUISelectProps & BaseSelectProps;
 
 export const Select: FC<SelectProps> = props => {
   const { components, className, classNamePrefix, ...restProps } = props;
@@ -22,7 +24,7 @@ export const Select: FC<SelectProps> = props => {
     : { ...defaultComponents };
 
   return (
-    <BaseSelect
+    <StyledBaseSelect
       components={customComponents}
       className={customClassNames}
       classNamePrefix={classNamePrefix || overwriteClassPrefix}

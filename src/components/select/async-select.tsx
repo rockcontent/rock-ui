@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
-import BaseAsyncSelect, { AsyncProps } from 'react-select/async';
+import BaseAsyncSelect, {
+  AsyncProps as BaseAsyncProps,
+} from 'react-select/async';
 import { Props } from 'react-select';
 import { components as defaultComponents } from './components';
 import { overwriteClassPrefix, overwriteClassName } from './constants';
 // overwriting the react-select default styling to match the rock-ui styling
 import './default.css';
 
-export { AsyncProps };
+export type AsyncProps = BaseAsyncProps<any> & Props;
 
-export const AsyncSelect: FC<AsyncProps<any> & Props> = props => {
+export const AsyncSelect: FC<AsyncProps> = props => {
   const { components, className, classNamePrefix, ...restProps } = props;
 
   const customClassNames = className
