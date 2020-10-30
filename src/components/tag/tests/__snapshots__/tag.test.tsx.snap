@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tag component tests Tag (only) renders correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="css-1qm7lvz"
+  >
+    A
+  </span>
+</DocumentFragment>
+`;
+
+exports[`tag component tests Tag with close button renders correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="css-1qm7lvz"
+  >
+    <span
+      class="css-8uhtka"
+    >
+      B
+    </span>
+    <button
+      class="css-c7ab4t"
+      type="button"
+    >
+      <svg
+        class="chakra-icon css-1md6f3y"
+        focusable="false"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`tag component tests Tag with left icon renders correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="css-1qm7lvz"
+  >
+    <svg
+      class="chakra-icon css-15zxx5m"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <g
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path
+          d="M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+          fill="none"
+          stroke-linecap="round"
+        />
+        <path
+          d="M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+          fill="currentColor"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="none"
+          r="11.25"
+          stroke-miterlimit="10"
+        />
+      </g>
+    </svg>
+    <span
+      class="css-8uhtka"
+    >
+      C
+    </span>
+    <button
+      class="css-c7ab4t"
+      type="button"
+    >
+      <svg
+        class="chakra-icon css-1md6f3y"
+        focusable="false"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </span>
+</DocumentFragment>
+`;
