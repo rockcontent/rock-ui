@@ -94,3 +94,13 @@ export { COLORS } from './constants/colors/colors';
 export { Text } from './components/text';
 export { Link } from './components/link';
 export { useToast } from './components/toast';
+export {
+  Tag,
+  TagProps,
+  TagCloseButton,
+  TagCloseButtonProps,
+  TagLabel,
+  TagLabelProps,
+  TagLeftIcon,
+  TagRightIcon,
+} from './components/tag';
