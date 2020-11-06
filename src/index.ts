@@ -104,3 +104,4 @@ export {
   TagLeftIcon,
   TagRightIcon,
 } from './components/tag';
+export { Spinner, SpinnerProps } from './components/spinner';

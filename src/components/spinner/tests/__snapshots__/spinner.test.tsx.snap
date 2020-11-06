@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-spinner css-1y7joxr"
+  >
+    <span
+      class="css-f8n5zr"
+    >
+      Loading...
+    </span>
+  </div>
+</DocumentFragment>
+`;
