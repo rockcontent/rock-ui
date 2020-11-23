@@ -105,3 +105,15 @@ export {
   TagRightIcon,
 } from './components/tag';
 export { Spinner, SpinnerProps } from './components/spinner';
+export {
+  Tab,
+  TabProps,
+  Tabs,
+  TabsProps,
+  TabList,
+  TabListProps,
+  TabPanel,
+  TabPanelProps,
+  TabPanels,
+  TabPanelsProps,
+} from './components/tabs';
