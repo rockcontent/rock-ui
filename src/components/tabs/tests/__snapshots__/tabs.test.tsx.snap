@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-tabs css-0"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="chakra-tabs__tablist css-k008qs"
+      role="tablist"
+    >
+      <button
+        aria-controls="tabs-1--tabpanel-0"
+        aria-disabled="false"
+        aria-selected="true"
+        class="chakra-tabs__tab css-u93537"
+        id="tabs-1--tab-0"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        One
+      </button>
+      <button
+        aria-controls="tabs-1--tabpanel-1"
+        aria-disabled="false"
+        class="chakra-tabs__tab css-u93537"
+        id="tabs-1--tab-1"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        Two
+      </button>
+    </div>
+    <div
+      class="chakra-tabs__tab-panels css-0"
+    >
+      <div
+        class="chakra-tabs__tab-panel css-0"
+        id="tabs-1--tabpanel-0"
+        role="tabpanel"
+      >
+        <p>
+          one!
+        </p>
+      </div>
+      <div
+        class="chakra-tabs__tab-panel css-0"
+        hidden=""
+        id="tabs-1--tabpanel-1"
+        role="tabpanel"
+      >
+        <p>
+          two!
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
