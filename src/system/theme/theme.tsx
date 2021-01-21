@@ -151,6 +151,15 @@ const rockTheme = extendTheme({
       900: COLORS.WHITE_ALPHA_900,
     },
   },
+  components: {
+    Heading: {
+      baseFont:
+        '"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      baseStyle: {
+        fontWeight: 700,
+      },
+    },
+  },
 });
 
 export { rockTheme as RockUITheme };
