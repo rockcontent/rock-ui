@@ -117,3 +117,5 @@ export {
   TabPanels,
   TabPanelsProps,
 } from './components/tabs';
+
+export { Heading, HeadingProps } from './components/heading';
