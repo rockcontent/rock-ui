@@ -12,7 +12,6 @@ exports[`Tabs renders correctly 1`] = `
     >
       <button
         aria-controls="tabs-1--tabpanel-0"
-        aria-disabled="false"
         aria-selected="true"
         class="chakra-tabs__tab css-u93537"
         id="tabs-1--tab-0"
@@ -24,7 +23,7 @@ exports[`Tabs renders correctly 1`] = `
       </button>
       <button
         aria-controls="tabs-1--tabpanel-1"
-        aria-disabled="false"
+        aria-selected="false"
         class="chakra-tabs__tab css-u93537"
         id="tabs-1--tab-1"
         role="tab"
@@ -35,22 +34,26 @@ exports[`Tabs renders correctly 1`] = `
       </button>
     </div>
     <div
-      class="chakra-tabs__tab-panels css-0"
+      class="chakra-tabs__tab-panels css-8atqhb"
     >
       <div
-        class="chakra-tabs__tab-panel css-0"
+        aria-labelledby="tabs-1--tab-0"
+        class="chakra-tabs__tab-panel css-1jj07fx"
         id="tabs-1--tabpanel-0"
         role="tabpanel"
+        tabindex="0"
       >
         <p>
           one!
         </p>
       </div>
       <div
-        class="chakra-tabs__tab-panel css-0"
+        aria-labelledby="tabs-1--tab-1"
+        class="chakra-tabs__tab-panel css-1jj07fx"
         hidden=""
         id="tabs-1--tabpanel-1"
         role="tabpanel"
+        tabindex="0"
       >
         <p>
           two!

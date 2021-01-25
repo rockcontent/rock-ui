@@ -21,7 +21,7 @@ exports[`tag component tests Tag with close button renders correctly 1`] = `
       B
     </span>
     <button
-      class="css-c7ab4t"
+      class="css-1d2kx9w"
       type="button"
     >
       <svg
@@ -78,7 +78,7 @@ exports[`tag component tests Tag with left icon renders correctly 1`] = `
       C
     </span>
     <button
-      class="css-c7ab4t"
+      class="css-1d2kx9w"
       type="button"
     >
       <svg
