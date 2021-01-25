@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
   Button as BaseButton,
   ButtonProps as BaseButtonProps,
-  ComponentWithAs,
 } from '@chakra-ui/react';
 
 export { BaseButtonProps as ButtonProps };
 
-export const Button: ComponentWithAs<'button', BaseButtonProps> = props => (
-  <BaseButton {...props} ref={props.ref}>
-    {props.children}
-  </BaseButton>
+export const Button = forwardRef<HTMLButtonElement, BaseButtonProps>(
+  (props, ref) => (
+    <BaseButton {...props} ref={ref}>
+      {props.children}
+    </BaseButton>
+  )
 );
