@@ -52,7 +52,7 @@ export const Basic = () => {
       <Checkbox
         style={{ marginRight: '15px' }}
         checked={state.isClearable}
-        defaultIsChecked={state.isClearable}
+        defaultChecked={state.isClearable}
         onChange={toggleClearable}
       >
         Clearable
@@ -60,7 +60,7 @@ export const Basic = () => {
       <Checkbox
         style={{ marginRight: '15px' }}
         checked={state.isSearchable}
-        defaultIsChecked={state.isSearchable}
+        defaultChecked={state.isSearchable}
         onChange={toggleSearchable}
       >
         Searchable
@@ -68,7 +68,7 @@ export const Basic = () => {
       <Checkbox
         style={{ marginRight: '15px' }}
         checked={state.isDisabled}
-        defaultIsChecked={state.isDisabled}
+        defaultChecked={state.isDisabled}
         onChange={toggleDisabled}
       >
         Disabled
@@ -76,7 +76,7 @@ export const Basic = () => {
       <Checkbox
         style={{ marginRight: '15px' }}
         checked={state.isLoading}
-        defaultIsChecked={state.isLoading}
+        defaultChecked={state.isLoading}
         onChange={toggleLoading}
       >
         Loading
@@ -84,7 +84,7 @@ export const Basic = () => {
       <Checkbox
         style={{ marginRight: '15px' }}
         checked={state.isRtl}
-        defaultIsChecked={state.isRtl}
+        defaultChecked={state.isRtl}
         onChange={toggleRtl}
       >
         RTL
