@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Select as BaseSelect,
   SelectProps as BaseSelectProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 type RockUINativeSelectProps = {
   iconSize?: string;

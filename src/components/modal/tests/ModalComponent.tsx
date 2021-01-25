@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FormControl, FormLabel, Input } from '@chakra-ui/core';
+import { FormControl, FormLabel, Input } from '@chakra-ui/react';
 import { Button } from '../../button';
 import { useDisclosure } from '../../../';
 import {

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   ModalContent as BaseModalContent,
   ModalContentProps as BaseModalContentProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseModalContentProps as ModalContentProps };
 

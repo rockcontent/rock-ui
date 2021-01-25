@@ -4,7 +4,7 @@ import {
   TagProps as BaseTagProps,
   TagLeftIcon as BaseTagLeftIcon,
   TagRightIcon as BaseTagRightIcon,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { IconProps } from '../icon';
 
 export { BaseTagProps as TagProps };

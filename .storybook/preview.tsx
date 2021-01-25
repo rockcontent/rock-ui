@@ -1,14 +1,10 @@
-import { CSSReset, RockUITheme, ThemeProvider } from '../src/system/theme';
-import { addDecorator } from '@storybook/react';
-import * as React from 'react';
+import React from "react";
+import { RockUITheme, ThemeProvider } from '../src'
 
-const withRockUI = (StoryFn: Function) => (
-  <ThemeProvider theme={RockUITheme}>
-    <CSSReset />
-    <div id="story-wrapper" style={{ minHeight: '100vh' }}>
-      <StoryFn />
-    </div>
-  </ThemeProvider>
-);
-
-addDecorator(withRockUI);
+export const decorators = [
+  (Story) => (
+    <ThemeProvider resetCSS theme={RockUITheme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];

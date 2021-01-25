@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   FormControl as BaseFormControl,
   FormControlProps as BaseFormControlProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseFormControlProps as FormControlProps };
 

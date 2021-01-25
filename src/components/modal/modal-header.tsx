@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   ModalHeader as BaseModalHeader,
   ModalHeaderProps as BaseModalHeaderProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseModalHeaderProps as ModalHeaderProps };
 

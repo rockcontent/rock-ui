@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Container as BaseContainer,
   ContainerProps as BaseContainerProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseContainerProps as ContainerProps };
 

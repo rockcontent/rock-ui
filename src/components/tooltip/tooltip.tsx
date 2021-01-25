@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Tooltip as BaseTooltip,
   TooltipProps as BaseTooltipProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTooltipProps as TooltipProps };
 

@@ -35,7 +35,7 @@ export {
 } from './components/modal';
 export { Checkbox, CheckboxGroup } from './components/checkbox';
 export { Radio, RadioGroup, useRadio, useRadioGroup } from './components/radio';
-export { useDisclosure } from '@chakra-ui/core';
+export { useDisclosure } from '@chakra-ui/react';
 export { Tooltip } from './components/tooltip';
 export {
   AspectRatio,
@@ -84,12 +84,7 @@ export {
   FormHelperText,
   FormLabel,
 } from './components/form-control';
-export {
-  ThemeProvider,
-  ThemeProviderProps,
-  CSSReset,
-  RockUITheme,
-} from './system/theme';
+export { ThemeProvider, ThemeProviderProps, RockUITheme } from './system/theme';
 export { COLORS } from './constants/colors/colors';
 export { Text } from './components/text';
 export { Link } from './components/link';

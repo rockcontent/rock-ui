@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Grid as BaseGrid, GridProps as BaseGridProps } from '@chakra-ui/core';
+import { Grid as BaseGrid, GridProps as BaseGridProps } from '@chakra-ui/react';
 
 export { BaseGridProps as GridProps };
 

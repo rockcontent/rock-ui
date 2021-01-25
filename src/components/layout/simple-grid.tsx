@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   SimpleGrid as BaseSimpleGrid,
   SimpleGridProps as BaseSimpleGridProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseSimpleGridProps as SimpleGridProps };
 

@@ -7,7 +7,7 @@ import './default.css';
 
 export { Props as AsyncCreatableProps };
 
-export const AsyncCreatableSelect: FC<Props<any>> = props => {
+export const AsyncCreatableSelect: FC<Props<any, boolean>> = props => {
   const { components, className, classNamePrefix, ...restProps } = props;
 
   const customClassNames = className

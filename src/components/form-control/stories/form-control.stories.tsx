@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container } from '@chakra-ui/layout';
-import { Input, HStack, RadioGroup, Radio, Select } from '@chakra-ui/core';
+import { Input, HStack, RadioGroup, Radio, Select } from '@chakra-ui/react';
 import { FormControl, FormLabel, FormHelperText } from '../';
 
 export default {

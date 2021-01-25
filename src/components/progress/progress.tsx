@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Progress as BaseProgress,
   ProgressProps as BaseProgressProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseProgressProps as ProgressProps };
 

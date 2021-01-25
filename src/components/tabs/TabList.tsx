@@ -2,7 +2,7 @@ import React from 'react';
 import {
   TabList as BaseTabList,
   TabListProps as BaseTabListProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTabListProps as TabListProps };
 

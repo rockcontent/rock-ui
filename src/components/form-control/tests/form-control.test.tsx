@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { Input } from '@chakra-ui/core';
+import { Input } from '@chakra-ui/react';
 import { FormControl, FormHelperText, FormLabel } from '../';
 
 describe('Form Control', () => {

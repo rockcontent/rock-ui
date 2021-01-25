@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   TagLabel as BaseTagLabel,
   TagLabelProps as BaseTagLabelProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTagLabelProps as TagLabelProps };
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, Stack, Radio, RadioGroup } from '@chakra-ui/core';
+import { Text, Stack, Radio, RadioGroup } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/layout';
 import { Textarea } from '../';
 

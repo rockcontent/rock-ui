@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   CheckboxGroup as BaseCheckboxGroup,
   CheckboxGroupProps as BaseCheckboxGroupProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseCheckboxGroupProps as CheckboxGroupProps };
 

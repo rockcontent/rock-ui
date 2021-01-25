@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   InputGroup as BaseInputGroup,
   InputGroupProps as BaseInputGroupProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseInputGroupProps as InputGroupProps };
 

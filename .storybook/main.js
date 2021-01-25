@@ -1,3 +1,6 @@
+const path = require("path");
+const toPath = (_path) => path.join(process.cwd(), _path);
+
 module.exports = {
   stories: ['../src/components/**/stories/*.stories.@(ts|tsx)'],
   addons: [
@@ -22,6 +25,8 @@ module.exports = {
     });
 
     config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve.alias['@emotion/core'] = toPath("node_modules/@emotion/react");
+    config.resolve.alias['emotion-theming'] = toPath("node_modules/@emotion/react")
 
     return config;
   },

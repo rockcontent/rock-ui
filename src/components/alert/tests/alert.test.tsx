@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils';
-import { CloseButton } from '@chakra-ui/core';
+import { CloseButton } from '@chakra-ui/react';
 import { Alert, AlertDescription, AlertTitle, AlertIcon } from '../';
 
 describe('Alert', () => {

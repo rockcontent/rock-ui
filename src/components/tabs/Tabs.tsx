@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs as BaseTabs, TabsProps as BaseTabsProps } from '@chakra-ui/core';
+import { Tabs as BaseTabs, TabsProps as BaseTabsProps } from '@chakra-ui/react';
 
 export { BaseTabsProps as TabsProps };
 

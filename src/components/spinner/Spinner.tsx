@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Spinner as BaseSpinner,
   SpinnerProps as BaseSpinnerProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseSpinnerProps as SpinnerProps };
 

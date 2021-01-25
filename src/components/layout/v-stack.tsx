@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   VStack as BaseVStack,
   StackProps as BaseVStackProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseVStackProps as VStackProps };
 

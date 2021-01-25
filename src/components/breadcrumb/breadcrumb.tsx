@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Breadcrumb as BaseBreadcrumb,
   BreadcrumbProps as BaseBreadcrumbProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseBreadcrumbProps as BreadcrumbProps };
 

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   MenuDivider as BaseMenuDivider,
   MenuDividerProps as BaseMenuDividerProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseMenuDividerProps as MenuDividerProps };
 

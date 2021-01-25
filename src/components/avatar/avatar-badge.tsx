@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react';
 import {
   AvatarBadge as BaseAvatarBadge,
   AvatarBadgeProps as BaseAvatarBadgeProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export interface AvatarBadgeProps extends BaseAvatarBadgeProps {
   icon?: ReactElement;

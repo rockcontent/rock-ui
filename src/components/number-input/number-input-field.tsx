@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   NumberInputField as BaseNumberInputField,
   NumberInputFieldProps as BaseNumberInputFieldProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseNumberInputFieldProps as NumberInputFieldProps };
 

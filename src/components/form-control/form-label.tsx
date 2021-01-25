@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   FormLabel as BaseFormLabel,
   FormLabelProps as BaseFormLabelProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseFormLabelProps as FormLabelProps };
 

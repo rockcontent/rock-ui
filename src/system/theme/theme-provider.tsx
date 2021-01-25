@@ -1,12 +1,18 @@
 import React, { FC } from 'react';
 import {
-  ThemeProvider as BaseThemeProvider,
-  ThemeProviderProps as BaseThemeProviderProps,
-} from '@chakra-ui/core';
+  ChakraProvider as BaseThemeProvider,
+  ChakraProviderProps as BaseThemeProviderProps,
+} from '@chakra-ui/react';
+import { GlobalStyles } from './global-styles';
 
 export { BaseThemeProviderProps as ThemeProviderProps };
 
 export const ThemeProvider: FC<BaseThemeProviderProps> = ({
   children,
   ...props
-}) => <BaseThemeProvider {...props}>{children}</BaseThemeProvider>;
+}) => (
+  <BaseThemeProvider {...props}>
+    <GlobalStyles />
+    {children}
+  </BaseThemeProvider>
+);
