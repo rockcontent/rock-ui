@@ -41,7 +41,7 @@ describe('Modal', () => {
     ReactDOM.unmountComponentAtNode(container);
     container.remove();
   });
-  it('call the callback functions', () => {
+  it('call the callback functions', done => {
     // setup a DOM element as a render target
     const container = document.createElement('div');
     // container *must* be attached to document so events work correctly.
@@ -70,8 +70,12 @@ describe('Modal', () => {
         closeBtn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
-    const overlay = document.querySelector('.chakra-modal__overlay');
-    expect(overlay).toBeFalsy();
+    // using timeout strategy due to async animation
+    setTimeout(() => {
+      const overlay = document.querySelector('.chakra-modal__overlay');
+      expect(overlay).toBeFalsy();
+      done();
+    }, 1000);
 
     ReactDOM.unmountComponentAtNode(container);
     container.remove();
