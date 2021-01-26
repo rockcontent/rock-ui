@@ -75,7 +75,7 @@ describe('Modal', () => {
       const overlay = document.querySelector('.chakra-modal__overlay');
       expect(overlay).toBeFalsy();
       done();
-    }, 1000);
+    }, 2000);
 
     ReactDOM.unmountComponentAtNode(container);
     container.remove();
