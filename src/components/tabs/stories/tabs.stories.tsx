@@ -1,5 +1,5 @@
 import React from 'react';
-import { useColorModeValue, Image } from '@chakra-ui/core';
+import { useColorModeValue, Image } from '@chakra-ui/react';
 import { Box, Container, Stack } from '@chakra-ui/layout';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '../';
 

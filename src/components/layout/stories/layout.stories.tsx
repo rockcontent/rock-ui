@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Text } from '@chakra-ui/core';
+import { Image, Text } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
 import {
   AspectRatio,

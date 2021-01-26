@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/layout';
-import { Image } from '@chakra-ui/core';
+import { Image } from '@chakra-ui/react';
 import * as React from 'react';
 import {
   Menu,

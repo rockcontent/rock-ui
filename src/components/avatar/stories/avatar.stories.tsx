@@ -4,7 +4,7 @@ import { QuestionIcon } from '@chakra-ui/icons';
 import { BadgeIcon } from '../../../icons/badge';
 import { Stack } from '../../stack';
 import { Avatar, AvatarBadge, AvatarGroup } from '../';
-import { Wrap } from '@chakra-ui/core';
+import { Wrap } from '@chakra-ui/react';
 
 export default {
   title: 'Avatar',

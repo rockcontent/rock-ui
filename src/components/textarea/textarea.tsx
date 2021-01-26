@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Textarea as BaseTextarea,
   TextareaProps as BaseTextareaProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTextareaProps as TextareaProps };
 

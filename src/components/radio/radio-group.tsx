@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   RadioGroup as BaseRadioGroup,
   RadioGroupProps as BaseRadioGroupProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseRadioGroupProps as RadioGroupProps };
 

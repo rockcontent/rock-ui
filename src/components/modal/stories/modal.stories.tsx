@@ -6,8 +6,8 @@ import {
   Input,
   RadioGroup,
   Radio,
-} from '@chakra-ui/core';
-import { CSSReset, RockUITheme, ThemeProvider } from '../../../system/theme';
+} from '@chakra-ui/react';
+import { RockUITheme, ThemeProvider } from '../../../system/theme';
 import { Button } from '../../button';
 import { useDisclosure } from '../../../';
 import {
@@ -24,8 +24,7 @@ export default {
   title: 'Modal',
   decorators: [
     (Story: any) => (
-      <ThemeProvider theme={RockUITheme}>
-        <CSSReset />
+      <ThemeProvider theme={RockUITheme} resetCSS>
         <Container mt="40px">
           <Story />
         </Container>
@@ -63,8 +62,8 @@ export const Basic = () => {
 export const WithFocus = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const initialRef = React.useRef();
-  const finalRef = React.useRef();
+  const initialRef = React.useRef(null);
+  const finalRef = React.useRef(null);
 
   return (
     <>
@@ -130,9 +129,9 @@ export const VerticallyCenter = () => {
 
 export const ScrollingExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = React.useState('inside');
+  const [scrollBehavior, setScrollBehavior] = React.useState<any>('inside');
 
-  const btnRef = React.useRef();
+  const btnRef = React.useRef(null);
   return (
     <>
       <RadioGroup value={scrollBehavior} onChange={setScrollBehavior}>

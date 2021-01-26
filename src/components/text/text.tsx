@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Text as BaseText, TextProps as BaseTextProps } from '@chakra-ui/core';
+import { Text as BaseText, TextProps as BaseTextProps } from '@chakra-ui/react';
 
 export { BaseTextProps as TextProps };
 

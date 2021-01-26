@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   AlertDescription as BaseAlertDescription,
   AlertDescriptionProps as BaseAlertDescriptionProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseAlertDescriptionProps as AlertDescriptionProps };
 

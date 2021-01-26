@@ -1,4 +1,4 @@
-import { Icon } from '@chakra-ui/core';
+import { Icon } from '@chakra-ui/react';
 import { Container, Stack } from '@chakra-ui/layout';
 import * as React from 'react';
 import {
@@ -7,14 +7,13 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from '../';
-import { ThemeProvider, RockUITheme, CSSReset } from '../../../system/theme';
+import { ThemeProvider, RockUITheme } from '../../../system/theme';
 
 export default {
   title: 'Breadcrumb',
   decorators: [
     (Story: any) => (
-      <ThemeProvider theme={RockUITheme}>
-        <CSSReset />
+      <ThemeProvider theme={RockUITheme} resetCSS>
         <Container mt="40px">
           <Story />
         </Container>

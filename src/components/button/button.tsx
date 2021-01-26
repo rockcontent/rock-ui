@@ -1,15 +1,15 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import {
   Button as BaseButton,
   ButtonProps as BaseButtonProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseButtonProps as ButtonProps };
 
-export const Button: FC<BaseButtonProps> = React.forwardRef(
-  ({ children, ...props }, ref) => (
+export const Button = forwardRef<HTMLButtonElement, BaseButtonProps>(
+  (props, ref) => (
     <BaseButton {...props} ref={ref}>
-      {children}
+      {props.children}
     </BaseButton>
   )
 );

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   BreadcrumbSeparator as BaseBreadcrumbSeparator,
   BreadcrumbSeparatorProps as BaseBreadcrumbSeparatorProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseBreadcrumbSeparatorProps as BreadcrumbSeparatorProps };
 

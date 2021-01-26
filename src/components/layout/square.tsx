@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Square as BaseSquare,
   SquareProps as BaseSquareProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseSquareProps as SquareProps };
 

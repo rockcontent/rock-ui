@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   MenuOptionGroup as BaseMenuOptionGroup,
   MenuOptionGroupProps as BaseMenuOptionGroupProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseMenuOptionGroupProps as MenuOptionGroupProps };
 

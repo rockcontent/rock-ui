@@ -5,7 +5,7 @@ import { Checkbox } from '../';
 
 describe('Checkbox', () => {
   it('renders without crashing', () => {
-    const component = <Checkbox defaultIsChecked>Checkbox</Checkbox>;
+    const component = <Checkbox defaultChecked>Checkbox</Checkbox>;
 
     const { getByText, unmount } = render(component);
 
@@ -18,7 +18,7 @@ describe('Checkbox', () => {
   it('call the callback functions', () => {
     const handleChange = jest.fn();
     const component = (
-      <Checkbox defaultIsChecked onChange={handleChange}>
+      <Checkbox defaultChecked onChange={handleChange}>
         Checkbox
       </Checkbox>
     );

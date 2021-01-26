@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   InputRightElement as BaseInputRightElement,
   InputElementProps as BaseInputRightElementProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseInputRightElementProps as InputRightElementProps };
 

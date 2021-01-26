@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   AlertIcon as BaseAlertIcon,
   AlertIconProps as BaseAlertIconProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseAlertIconProps as AlertIconProps };
 

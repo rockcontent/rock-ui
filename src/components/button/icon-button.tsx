@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   IconButton as BaseIconButton,
   IconButtonProps as BaseIconButtonProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseIconButtonProps as IconButtonProps };
 

@@ -5,7 +5,7 @@ import {
   SliderFilledTrack,
   SliderThumb,
   Flex,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { Container, Stack } from '@chakra-ui/layout';
 import {
   NumberInput,

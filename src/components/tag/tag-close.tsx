@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   TagCloseButton as BaseTagCloseButton,
   TagCloseButtonProps as BaseTagCloseButtonProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTagCloseButtonProps as TagCloseButtonProps };
 

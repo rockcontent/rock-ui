@@ -2,7 +2,7 @@ import React from 'react';
 import {
   TabPanel as BaseTabPanel,
   TabPanelProps as BaseTabPanelProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseTabPanelProps as TabPanelProps };
 

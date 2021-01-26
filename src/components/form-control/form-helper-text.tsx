@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   FormHelperText as BaseFormHelperText,
   HelpTextProps as BaseFormHelperTextProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseFormHelperTextProps as FormHelperTextProps };
 

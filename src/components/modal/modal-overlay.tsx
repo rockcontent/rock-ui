@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   ModalOverlay as BaseModalOverlay,
   ModalOverlayProps as BaseModalOverlayProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseModalOverlayProps as ModalOverlayProps };
 

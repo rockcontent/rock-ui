@@ -20,13 +20,12 @@ In your entry file (e.g `app.tsx`) use the theme provider
 # app.tsx
 
 import * as React from "react"
-import { ThemeProvider, CSSReset, RockUITheme } from "@rockr/rock-ui"
+import { ThemeProvider, RockUITheme } from "@rockr/rock-ui"
 
 // Use at the root of your app
 function App() {
   return (
-    <ThemeProvider theme={RockUITheme}>
-      <CSSReset />
+    <ThemeProvider theme={RockUITheme} resetCSS>
       <App />
     </ThemeProvider>
   )

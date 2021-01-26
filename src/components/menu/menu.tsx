@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Menu as BaseMenu, MenuProps as BaseMenuProps } from '@chakra-ui/core';
+import { Menu as BaseMenu, MenuProps as BaseMenuProps } from '@chakra-ui/react';
 
 export { BaseMenuProps as MenuProps };
 

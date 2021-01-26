@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   AspectRatio as BaseAspectRatio,
   AspectRatioProps as BaseAspectRatioProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseAspectRatioProps as AspectRatioProps };
 

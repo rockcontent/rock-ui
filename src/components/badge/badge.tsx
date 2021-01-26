@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Badge as BaseBadge,
   BadgeProps as BaseBadgeProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseBadgeProps as BadgeProps };
 

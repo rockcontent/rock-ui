@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   MenuButton as BaseMenuButton,
   MenuButtonProps as BaseMenuButtonProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseMenuButtonProps as MenuButtonProps };
 

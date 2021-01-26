@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   StackDivider as BaseStackDivider,
   StackProps as BaseStackDividerProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseStackDividerProps as StackDividerProps };
 

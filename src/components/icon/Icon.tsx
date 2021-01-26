@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Icon as BaseIcon, IconProps as BaseIconProps } from '@chakra-ui/core';
+import { Icon as BaseIcon, IconProps as BaseIconProps } from '@chakra-ui/react';
 
 export { BaseIconProps as IconProps };
 

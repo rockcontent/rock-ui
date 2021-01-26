@@ -1,4 +1,4 @@
-import { CloseButton } from '@chakra-ui/core';
+import { CloseButton } from '@chakra-ui/react';
 import { Container, Stack } from '@chakra-ui/layout';
 import * as React from 'react';
 import { Alert, AlertIcon, AlertTitle, AlertDescription } from '../';

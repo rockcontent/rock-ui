@@ -1,13 +1,25 @@
-import { extendTheme } from '@chakra-ui/core';
+import { extendTheme } from '@chakra-ui/react';
 import { COLORS } from '../../constants/colors/colors';
 
+const fonts = {
+  heading:
+    '"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  body:
+    '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+};
+
 const rockTheme = extendTheme({
-  fonts: {
-    heading:
-      '"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    body:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  styles: {
+    global: {
+      '*': {
+        borderColor: COLORS.GRAY_200,
+      },
+      body: {
+        fontFamily: fonts.body,
+      },
+    },
   },
+  fonts,
   colors: {
     gray: {
       50: COLORS.GRAY_50,

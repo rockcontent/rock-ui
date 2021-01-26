@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Avatar as BaseAvatar,
   AvatarProps as BaseAvatarProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseAvatarProps as AvatarProps };
 

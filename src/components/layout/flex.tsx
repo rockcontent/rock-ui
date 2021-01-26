@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Flex as BaseFlex, FlexProps as BaseFlexProps } from '@chakra-ui/core';
+import { Flex as BaseFlex, FlexProps as BaseFlexProps } from '@chakra-ui/react';
 
 export { BaseFlexProps as FlexProps };
 

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   NumberDecrementStepper as BaseNumberDecrementStepper,
   NumberDecrementStepperProps as BaseNumberDecrementStepperProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseNumberDecrementStepperProps as NumberDecrementStepperProps };
 

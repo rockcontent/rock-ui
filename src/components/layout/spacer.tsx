@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Spacer as BaseSpacer,
   SpacerProps as BaseSpacerProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 export { BaseSpacerProps as SpacerProps };
 

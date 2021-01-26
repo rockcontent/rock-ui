@@ -14,7 +14,7 @@ export default {
 };
 
 export const basic = () => (
-  <Checkbox defaultIsChecked style={{ borderColor: 'rgb(226, 232, 240)' }}>
+  <Checkbox defaultChecked style={{ borderColor: 'rgb(226, 232, 240)' }}>
     Checkbox
   </Checkbox>
 );
@@ -26,7 +26,7 @@ export const disabled = () => (
     </Checkbox>
     <Checkbox
       isDisabled
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
@@ -38,14 +38,14 @@ export const withCustomColor = () => (
   <Stack spacing={10} direction="row">
     <Checkbox
       colorScheme="red"
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
     </Checkbox>
     <Checkbox
       colorScheme="green"
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
@@ -58,7 +58,7 @@ export const withSizes = () => (
     <Checkbox
       size="sm"
       colorScheme="red"
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
@@ -66,7 +66,7 @@ export const withSizes = () => (
     <Checkbox
       size="md"
       colorScheme="green"
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
@@ -74,7 +74,7 @@ export const withSizes = () => (
     <Checkbox
       size="lg"
       colorScheme="orange"
-      defaultIsChecked
+      defaultChecked
       style={{ borderColor: 'rgb(226, 232, 240)' }}
     >
       Checkbox
