@@ -69,7 +69,7 @@
   "description": "Rock Content Design System component kit in React",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.3",
-    "@chakra-ui/react": "^1.1.6",
+    "@chakra-ui/react": "1.1.6",
     "@chakra-ui/system": "1.1.6",
     "@chakra-ui/theme": "1.4.1",
     "@chakra-ui/theme-tools": "1.0.3",
