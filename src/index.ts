@@ -114,3 +114,5 @@ export {
 } from './components/tabs';
 
 export { Heading, HeadingProps } from './components/heading';
+
+export { Icon, IconProps } from './components/icon';
