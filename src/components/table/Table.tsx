@@ -2,11 +2,10 @@ import React from 'react';
 import {
   Table as BaseTable,
   TableProps as BaseTableProps,
-  ComponentWithAs,
 } from '@chakra-ui/react';
 
 export { BaseTableProps as TableProps };
 
-export const Table: ComponentWithAs<'table', BaseTableProps> = props => (
-  <BaseTable {...props}>{props.children}</BaseTable>
+export const Table: React.FC<BaseTableProps> = ({ children, ...props }) => (
+  <BaseTable {...props}>{children}</BaseTable>
 );
