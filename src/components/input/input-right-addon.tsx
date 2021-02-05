@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import {
   InputRightAddon as BaseInputRightAddon,
   InputAddonProps as BaseInputRightAddonProps,
@@ -6,6 +5,4 @@ import {
 
 export { BaseInputRightAddonProps as InputRightAddonProps };
 
-export const InputRightAddon: FC<BaseInputRightAddonProps> = props => (
-  <BaseInputRightAddon {...props} />
-);
+export const InputRightAddon = BaseInputRightAddon;

@@ -54,6 +54,8 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-tsdx": "^0.2.0",
     "husky": "^4.2.5",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "react": "^16.13.1",
@@ -76,6 +78,7 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "framer-motion": "^3.2.2-rc.1",
+    "react-hook-form": "^6.15.1",
     "react-select": "^3.1.0",
     "styled-components": "^5.2.0"
   },

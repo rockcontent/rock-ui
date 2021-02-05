@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import {
   RadioGroup as BaseRadioGroup,
   RadioGroupProps as BaseRadioGroupProps,
@@ -6,6 +5,4 @@ import {
 
 export { BaseRadioGroupProps as RadioGroupProps };
 
-export const RadioGroup: FC<BaseRadioGroupProps> = ({ children, ...props }) => (
-  <BaseRadioGroup {...props}>{children}</BaseRadioGroup>
-);
+export const RadioGroup = BaseRadioGroup;

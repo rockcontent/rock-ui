@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders correctly 1`] = `
+<DocumentFragment>
+  <table
+    class="chakra-table css-0"
+    role="table"
+  >
+    <caption
+      class="css-18i7bby"
+    >
+      Imperial to metric conversion factors
+    </caption>
+    <thead
+      class="css-0"
+    >
+      <tr
+        class="css-0"
+        role="row"
+      >
+        <th
+          class="css-0"
+        >
+          To convert
+        </th>
+        <th
+          class="css-0"
+        >
+          into
+        </th>
+        <th
+          class="css-0"
+          data-is-numeric="true"
+        >
+          multiply by
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="css-0"
+    >
+      <tr
+        class="css-0"
+        role="row"
+      >
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          inches
+        </td>
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          millimetres (mm)
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          role="gridcell"
+        >
+          25.4
+        </td>
+      </tr>
+      <tr
+        class="css-0"
+        role="row"
+      >
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          feet
+        </td>
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          centimetres (cm)
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          role="gridcell"
+        >
+          30.48
+        </td>
+      </tr>
+      <tr
+        class="css-0"
+        role="row"
+      >
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          yards
+        </td>
+        <td
+          class="css-0"
+          role="gridcell"
+        >
+          metres (m)
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          role="gridcell"
+        >
+          0.91444
+        </td>
+      </tr>
+    </tbody>
+    <tfoot
+      class="css-0"
+    >
+      <tr
+        class="css-0"
+        role="row"
+      >
+        <th
+          class="css-0"
+        >
+          To convert
+        </th>
+        <th
+          class="css-0"
+        >
+          into
+        </th>
+        <th
+          class="css-0"
+          data-is-numeric="true"
+        >
+          multiply by
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+</DocumentFragment>
+`;

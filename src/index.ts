@@ -40,11 +40,14 @@ export { Tooltip } from './components/tooltip';
 export {
   AspectRatio,
   Box,
+  BoxProps,
   Center,
   Circle,
   Container,
   Flex,
+  FlexProps,
   Grid,
+  GridProps,
   HStack,
   SimpleGrid,
   Spacer,
@@ -112,6 +115,26 @@ export {
   TabPanels,
   TabPanelsProps,
 } from './components/tabs';
+
+export {
+  Table,
+  TableProps,
+  TableCaption,
+  TableCaptionProps,
+  Tbody,
+  TbodyProps,
+  Td,
+  TdProps,
+  Tfoot,
+  TfootProps,
+  Th,
+  ThProps,
+  Thead,
+  TheadProps,
+  Tr,
+  TrProps,
+} from './components/table';
+export { Switch, SwitchProps } from './components/switch';
 
 export { Heading, HeadingProps } from './components/heading';
 
