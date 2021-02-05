@@ -6,6 +6,7 @@ import {
 
 export { BaseTableCaptionProps as TableCaptionProps };
 
-export const TableCaption: React.FC<BaseTableCaptionProps> = ({ children, ...props }) => (
-  <BaseTableCaption {...props}>{children}</BaseTableCaption>
-);
+export const TableCaption: React.FC<BaseTableCaptionProps> = ({
+  children,
+  ...props
+}) => <BaseTableCaption {...props}>{children}</BaseTableCaption>;

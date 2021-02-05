@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import {
   Input as BaseInput,
   InputProps as BaseInputProps,
@@ -6,6 +5,4 @@ import {
 
 export { BaseInputProps as InputProps };
 
-export const Input: FC<BaseInputProps> = ({ children, ...props }) => (
-  <BaseInput {...props}>{children}</BaseInput>
-);
+export const Input = BaseInput;
