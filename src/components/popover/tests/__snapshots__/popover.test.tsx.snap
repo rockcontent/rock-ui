@@ -29,7 +29,7 @@ exports[`Popover renders correctly 1`] = `
       >
         <div
           class="chakra-popover__arrow css-0"
-          style="box-shadow: -1px 1px 1px 0 whiteAlpha.300; position: absolute; z-index: -1; width: 100%; height: 100%; transform: rotate(45deg);"
+          style="box-shadow: -1px 1px 1px 0 gray.200; position: absolute; z-index: -1; width: 100%; height: 100%; transform: rotate(45deg);"
         />
       </div>
       <button
