@@ -139,3 +139,20 @@ export { Switch, SwitchProps } from './components/switch';
 export { Heading, HeadingProps } from './components/heading';
 
 export { Icon, IconProps } from './components/icon';
+export {
+  Popover,
+  PopoverProps,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverHeader,
+  PopoverHeaderProps,
+  PopoverBody,
+  PopoverBodyProps,
+  PopoverFooter,
+  PopoverFooterProps,
+  PopoverArrow,
+  PopoverArrowProps,
+  PopoverCloseButton,
+  PopoverCloseButtonProps,
+} from './components/popover';
