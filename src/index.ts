@@ -135,7 +135,11 @@ export {
   TrProps,
 } from './components/table';
 export { Switch, SwitchProps } from './components/switch';
-
 export { Heading, HeadingProps } from './components/heading';
-
 export { Icon, IconProps } from './components/icon';
+export {
+  Portal,
+  PortalProps,
+  PortalManager,
+  PortalManagerProps,
+} from './components/portal';
