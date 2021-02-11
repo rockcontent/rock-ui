@@ -143,3 +143,20 @@ export {
   PortalManager,
   PortalManagerProps,
 } from './components/portal';
+export {
+  Popover,
+  PopoverProps,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverHeader,
+  PopoverHeaderProps,
+  PopoverBody,
+  PopoverBodyProps,
+  PopoverFooter,
+  PopoverFooterProps,
+  PopoverArrow,
+  PopoverArrowProps,
+  PopoverCloseButton,
+  PopoverCloseButtonProps,
+} from './components/popover';
