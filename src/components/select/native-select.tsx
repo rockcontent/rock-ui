@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import {
   Select as BaseSelect,
   SelectProps as BaseSelectProps,
@@ -12,6 +12,10 @@ type NativeSelectProps = RockUINativeSelectProps & BaseSelectProps;
 
 export { NativeSelectProps };
 
-export const NativeSelect: FC<NativeSelectProps> = ({ children, ...props }) => (
-  <BaseSelect {...props}>{children}</BaseSelect>
+export const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
+  (props, ref) => (
+    <BaseSelect {...props} ref={ref}>
+      {props.children}
+    </BaseSelect>
+  )
 );

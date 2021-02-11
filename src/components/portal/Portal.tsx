@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Portal as BasePortal,
   PortalProps as BasePortalProps,
@@ -6,6 +6,6 @@ import {
 
 export { BasePortalProps as PortalProps };
 
-export const Portal: React.FC<BasePortalProps> = ({ children, ...props }) => (
-  <BasePortal {...props}>{children}</BasePortal>
+export const Portal: FC<BasePortalProps> = props => (
+  <BasePortal {...props}>{props.children}</BasePortal>
 );

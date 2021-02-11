@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, forwardRef } from 'react';
 import { Props as BaseSelectProps } from 'react-select';
 import makeAnimated from 'react-select/animated';
 import { components as defaultComponents } from './components';
@@ -12,25 +12,28 @@ type RockUISelectProps = {
 
 type SelectProps = RockUISelectProps & BaseSelectProps;
 
-export const Select: FC<SelectProps> = props => {
-  const { components, className, classNamePrefix, ...restProps } = props;
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(
+  (props, ref) => {
+    const { components, className, classNamePrefix, ...restProps } = props;
 
-  const customClassNames = className
-    ? `${className} ${overwriteClassName}`
-    : overwriteClassName;
+    const customClassNames = className
+      ? `${className} ${overwriteClassName}`
+      : overwriteClassName;
 
-  const customComponents = components
-    ? { ...defaultComponents, ...components }
-    : { ...defaultComponents };
+    const customComponents = components
+      ? { ...defaultComponents, ...components }
+      : { ...defaultComponents };
 
-  return (
-    <StyledBaseSelect
-      components={customComponents}
-      className={customClassNames}
-      classNamePrefix={classNamePrefix || overwriteClassPrefix}
-      {...restProps}
-    />
-  );
-};
+    return (
+      <StyledBaseSelect
+        components={customComponents}
+        className={customClassNames}
+        classNamePrefix={classNamePrefix || overwriteClassPrefix}
+        ref={ref}
+        {...restProps}
+      />
+    );
+  }
+);
 
 export { makeAnimated, SelectProps };
