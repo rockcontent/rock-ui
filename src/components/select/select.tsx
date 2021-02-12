@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { Props as BaseSelectProps } from 'react-select';
 import makeAnimated from 'react-select/animated';
 import { components as defaultComponents } from './components';
