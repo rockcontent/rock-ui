@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {
   NumberIncrementStepper as BaseNumberIncrementStepper,
   NumberIncrementStepperProps as BaseNumberIncrementStepperProps,
@@ -6,9 +6,11 @@ import {
 
 export { BaseNumberIncrementStepperProps as NumberIncrementStepperProps };
 
-export const NumberIncrementStepper: FC<BaseNumberIncrementStepperProps> = ({
-  children,
-  ...props
-}) => (
-  <BaseNumberIncrementStepper {...props}>{children}</BaseNumberIncrementStepper>
-);
+export const NumberIncrementStepper = React.forwardRef<
+  HTMLDivElement,
+  BaseNumberIncrementStepperProps
+>(({ children, ...props }, ref: any) => (
+  <BaseNumberIncrementStepper ref={ref} {...props}>
+    {children}
+  </BaseNumberIncrementStepper>
+));

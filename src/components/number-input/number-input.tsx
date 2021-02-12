@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {
   NumberInput as BaseNumberInput,
   NumberInputProps as BaseNumberInputProps,
@@ -6,7 +6,11 @@ import {
 
 export { BaseNumberInputProps as NumberInputProps };
 
-export const NumberInput: FC<BaseNumberInputProps> = ({
-  children,
-  ...props
-}) => <BaseNumberInput {...props}>{children}</BaseNumberInput>;
+export const NumberInput = React.forwardRef<
+  HTMLDivElement,
+  BaseNumberInputProps
+>(({ children, ...props }, ref: any) => (
+  <BaseNumberInput ref={ref} {...props}>
+    {children}
+  </BaseNumberInput>
+));
