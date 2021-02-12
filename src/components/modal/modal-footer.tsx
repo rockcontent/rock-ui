@@ -1,6 +1,14 @@
 import React, { FC } from 'react';
-import { ModalFooter as BaseModalFooter } from '@chakra-ui/react';
+import {
+  ModalFooter as BaseModalFooter,
+  ModalFooterProps as BaseModalFooterProps,
+} from '@chakra-ui/react';
 
-export const ModalFooter: FC = ({ children, ...props }) => (
-  <BaseModalFooter {...props}>{children}</BaseModalFooter>
-);
+export const ModalFooter: FC<BaseModalFooterProps> = React.forwardRef<
+  HTMLElement,
+  BaseModalFooterProps
+>(({ children, ...props }, ref: any) => (
+  <BaseModalFooter {...props} ref={ref}>
+    {children}
+  </BaseModalFooter>
+));
