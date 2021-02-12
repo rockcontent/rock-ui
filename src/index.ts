@@ -135,7 +135,44 @@ export {
   TrProps,
 } from './components/table';
 export { Switch, SwitchProps } from './components/switch';
-
 export { Heading, HeadingProps } from './components/heading';
-
 export { Icon, IconProps } from './components/icon';
+export {
+  Portal,
+  PortalProps,
+  PortalManager,
+  PortalManagerProps,
+} from './components/portal';
+export {
+  Popover,
+  PopoverProps,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverHeader,
+  PopoverHeaderProps,
+  PopoverBody,
+  PopoverBodyProps,
+  PopoverFooter,
+  PopoverFooterProps,
+  PopoverArrow,
+  PopoverArrowProps,
+  PopoverCloseButton,
+  PopoverCloseButtonProps,
+} from './components/popover';
+export {
+  AlertDialog,
+  AlertDialogProps,
+  AlertDialogBody,
+  AlertDialogBodyProps,
+  AlertDialogContent,
+  AlertDialogContentProps,
+  AlertDialogFooter,
+  AlertDialogFooterProps,
+  AlertDialogHeader,
+  AlertDialogHeaderProps,
+  AlertDialogOverlay,
+  AlertDialogOverlayProps,
+  AlertDialogCloseButton,
+  AlertDialogCloseButtonProps,
+} from './components/alertDialog';
