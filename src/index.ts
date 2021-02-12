@@ -160,3 +160,19 @@ export {
   PopoverCloseButton,
   PopoverCloseButtonProps,
 } from './components/popover';
+export {
+  AlertDialog,
+  AlertDialogProps,
+  AlertDialogBody,
+  AlertDialogBodyProps,
+  AlertDialogContent,
+  AlertDialogContentProps,
+  AlertDialogFooter,
+  AlertDialogFooterProps,
+  AlertDialogHeader,
+  AlertDialogHeaderProps,
+  AlertDialogOverlay,
+  AlertDialogOverlayProps,
+  AlertDialogCloseButton,
+  AlertDialogCloseButtonProps,
+} from './components/alertDialog';
