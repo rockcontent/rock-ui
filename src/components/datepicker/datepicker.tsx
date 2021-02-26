@@ -4,8 +4,15 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import TemplateInputDatepicker from './template-input-datepicker';
 
-const Datepicker: React.FC<ReactDatePickerProps> = props => (
-  <ReactDatePicker {...props} customInput={<TemplateInputDatepicker />} />
-);
+const Datepicker = React.forwardRef<
+  ReactDatePicker | null,
+  ReactDatePickerProps
+>((props, ref) => (
+  <ReactDatePicker
+    {...props}
+    customInput={<TemplateInputDatepicker />}
+    ref={ref}
+  />
+));
 
 export { Datepicker, ReactDatePickerProps };
