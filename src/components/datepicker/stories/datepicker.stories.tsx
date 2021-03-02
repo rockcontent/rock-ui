@@ -20,6 +20,7 @@ export const Basic = () => {
       onChange={setStartDate}
       selected={startDate}
       placeholderText="Start Date"
+      isClearable
     />
   );
 };

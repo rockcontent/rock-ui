@@ -1,0 +1,7 @@
+.react-datepicker__close-icon {
+    right: 32px;
+}
+
+.react-datepicker__close-icon::after {
+    background-color: red;
+}
