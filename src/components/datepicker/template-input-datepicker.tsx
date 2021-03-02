@@ -5,7 +5,7 @@ import { CalendarIcon } from '@chakra-ui/icons';
 
 const TemplateInputDatepicker = React.forwardRef((props, ref: any) => (
   <Stack>
-    <InputGroup className="oi">
+    <InputGroup>
       <InputRightElement pointerEvents="none">
         <CalendarIcon color="gray.800" />
       </InputRightElement>
