@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
 
-//`react-datepicker__day react-datepicker__day--002 react-datepicker__day--today`;
-
 export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker {
     border-radius: 6px;
