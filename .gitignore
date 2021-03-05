@@ -7,3 +7,4 @@ dist
 storybook-static/
 package-lock.json
 .idea
+test-coverage
