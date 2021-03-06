@@ -176,3 +176,13 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
+
+export {
+  CalendarOutlineIcon,
+  CheckOutlineIcon,
+  ChevronLeftOutlineIcon,
+  ChevronRightOutlineIcon,
+  ExclamationOutlineIcon,
+  QuestionMarkCircleOutlineIcon,
+  XCircleSolidIcon,
+} from './icons';
