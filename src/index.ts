@@ -176,9 +176,7 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
-<<<<<<< HEAD
 export { Datepicker, ReactDatePickerProps } from './components/datepicker';
-=======
 
 export {
   CalendarOutlineIcon,
@@ -189,4 +187,3 @@ export {
   QuestionMarkCircleOutlineIcon,
   XCircleSolidIcon,
 } from './icons';
->>>>>>> 8d598fbcb2c13e5b6b2a8a50f9f3a02e8497f199
