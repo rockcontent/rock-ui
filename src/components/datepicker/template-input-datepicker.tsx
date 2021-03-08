@@ -9,7 +9,7 @@ const TemplateInputDatepicker = React.forwardRef((props, ref: any) => (
       <InputRightElement pointerEvents="none">
         <CalendarIcon color="gray.800" />
       </InputRightElement>
-      <Input {...props} ref={ref} />
+      <Input {...props} ref={ref} data-testid="test-datepicker" />
     </InputGroup>
   </Stack>
 ));
