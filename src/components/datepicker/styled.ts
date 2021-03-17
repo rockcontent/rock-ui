@@ -77,4 +77,9 @@ export const StyledBaseReactDatePicker = styled.div`
     border-bottom: none;
     background-color: #fff;
   }
+
+  .react-datepicker__current-month {
+    text-transform: capitalize;
+    color: ${COLORS.GRAY_900};
+  }
 `;

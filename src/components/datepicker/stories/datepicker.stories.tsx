@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from '../../layout';
 import { Datepicker } from '../datepicker';
+import { Flex } from '@chakra-ui/react';
 
 export default {
   title: 'Datepicker',
@@ -22,7 +23,7 @@ export const Basic = () => {
     <Datepicker
       onChange={setStartDate}
       selected={startDate}
-      placeholderText="Start Date"
+      placeholderText="Single date"
     />
   );
 };
@@ -38,6 +39,30 @@ export const Clear = () => {
         isClearable
       />
     </>
+  );
+};
+
+export const Range = () => {
+  const [startDate, setStartDate] = useState(new Date('2014/02/08'));
+  const [endDate, setEndDate] = useState(new Date('2014/02/10'));
+  return (
+    <Flex>
+      <Datepicker
+        selected={startDate}
+        onChange={date => setStartDate(date)}
+        selectsStart
+        startDate={startDate}
+        endDate={endDate}
+      />
+      <Datepicker
+        selected={endDate}
+        onChange={date => setEndDate(date)}
+        selectsEnd
+        startDate={startDate}
+        endDate={endDate}
+        minDate={startDate}
+      />
+    </Flex>
   );
 };
 

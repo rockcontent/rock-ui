@@ -21,10 +21,11 @@ describe('Datepicker', () => {
 
   it('Should show filled in inputs when values are provided",', () => {
     const setState = jest.fn();
+    const dateSelected = new Date('August 19, 2020 23:15:30');
     const { getByTestId, unmount } = render(
-      <Datepicker onChange={setState} value="10/01/2020" />
+      <Datepicker onChange={setState} selected={dateSelected} />
     );
-    expect(getByTestId('test-datepicker')).toHaveValue('10/01/2020');
+    expect(getByTestId('test-datepicker')).toHaveValue('08/19/2020');
     unmount();
   });
 

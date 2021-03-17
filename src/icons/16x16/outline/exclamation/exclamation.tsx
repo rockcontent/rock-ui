@@ -8,14 +8,14 @@ export const ExclamationOutlineIcon = createIcon({
     <>
       <mask id="a" fill="#fff">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M9 4c0-.55228-.44772-1-1-1s-1 .44772-1 1v5c0 .55228.44772 1 1 1s1-.44772 1-1V4zm0 9c0 .5523-.44772 1-1 1s-1-.4477-1-1 .44772-1 1-1 1 .4477 1 1z"
         />
       </mask>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9 4c0-.55228-.44772-1-1-1s-1 .44772-1 1v5c0 .55228.44772 1 1 1s1-.44772 1-1V4zm0 9c0 .5523-.44772 1-1 1s-1-.4477-1-1 .44772-1 1-1 1 .4477 1 1z"
         fill="#000"
       />
