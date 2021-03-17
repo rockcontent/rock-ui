@@ -65,6 +65,31 @@ export const Range = () => {
     </Flex>
   );
 };
+export const MonthPicker = () => {
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  return (
+    <Datepicker
+      onChange={setStartDate}
+      selected={startDate}
+      placeholderText="Month Picker"
+      dateFormat="MM/yyyy"
+      showMonthYearPicker
+    />
+  );
+};
+
+export const YearPicker = () => {
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  return (
+    <Datepicker
+      onChange={setStartDate}
+      selected={startDate}
+      placeholderText="Year Picker"
+      dateFormat="yyyy"
+      showYearPicker
+    />
+  );
+};
 
 Clear.story = {
   parameters: {

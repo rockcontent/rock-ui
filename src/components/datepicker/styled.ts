@@ -82,4 +82,42 @@ export const StyledBaseReactDatePicker = styled.div`
     text-transform: capitalize;
     color: ${COLORS.GRAY_900};
   }
+
+  .react-datepicker__month .react-datepicker__month-text,
+  .react-datepicker__month .react-datepicker__quarter-text {
+    color: ${COLORS.GRAY_900};
+    font-size: 12px;
+    font-weight: normal;
+    width: 80px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover:not(.react-datepicker__day--outside-month) {
+      background-color: ${COLORS.BLUE_50};
+      color: ${COLORS.BLUE_500};
+      font-weight: bold;
+    }
+  }
+
+  .react-datepicker__month-text.react-datepicker__month-text--keyboard-selected {
+    font-weight: bold;
+    color: #fff;
+    border-bottom-color: ${COLORS.GRAY_200};
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      width: 20px;
+      left: calc(50% - 10px);
+      height: 2px;
+      border-radius: 1px;
+      background-color: ${COLORS.BLUE_300};
+    }
+  }
 `;
