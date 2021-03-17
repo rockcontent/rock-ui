@@ -38,7 +38,7 @@ const Datepicker = React.forwardRef<
         customInput={<TemplateInputDatepicker />}
         tabIndex={1}
         fixedHeight
-        onSelect={(date, event) => changeTypeCalendar(event)}
+        onSelect={(_, event) => changeTypeCalendar(event)}
         shouldCloseOnSelect={closeOnSelect}
         renderCustomHeader={props => (
           <TemplateHeaderDatepicker
@@ -51,7 +51,6 @@ const Datepicker = React.forwardRef<
         )}
         showMonthYearPicker={monthYearPicker || props.showMonthYearPicker}
         showYearPicker={yearPicker || props.showYearPicker}
-        todayButton="Today"
         clearButtonTitle="Clear"
       />
     </StyledBaseReactDatePicker>
