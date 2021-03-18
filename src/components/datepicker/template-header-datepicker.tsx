@@ -47,13 +47,13 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
   };
 
   const getCalendarYear = () => {
-    setShowMonthYearPicker(prevState => (prevState = false));
+    setShowMonthYearPicker(false);
     setShowYearPicker(prevState => !prevState);
   };
 
   const getCalendarDefault = () => {
-    setShowMonthYearPicker(prevState => (prevState = false));
-    setShowYearPicker(prevState => (prevState = false));
+    setShowMonthYearPicker(false);
+    setShowYearPicker(false);
   };
 
   const getDecreaseYear = () => {
