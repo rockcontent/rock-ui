@@ -1,5 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 import { COLORS } from '../../constants/colors/colors';
+import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
 
 const FONT_FAMILY = {
   heading:
@@ -163,6 +164,7 @@ const rockTheme = extendTheme({
       900: COLORS.WHITE_ALPHA_900,
     },
   },
+  fontSizes: FONT_SIZES,
   components: {
     Heading: {
       baseFont:

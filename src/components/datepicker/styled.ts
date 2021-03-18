@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
+import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
+
+const month = new Date().getMonth();
 
 export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker {
@@ -49,21 +52,6 @@ export const StyledBaseReactDatePicker = styled.div`
     color: ${COLORS.GRAY_500};
   }
 
-  .react-datepicker__day--today {
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 20px;
-      left: calc(50% - 10px);
-      height: 2px;
-      border-radius: 1px;
-      background-color: ${COLORS.BLUE_300};
-    }
-  }
-
   .react-datepicker__day--keyboard-selected {
     background-color: #fff;
   }
@@ -81,12 +69,20 @@ export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker__current-month {
     text-transform: capitalize;
     color: ${COLORS.GRAY_900};
+    padding: 2px 3px;
+
+    &:hover {
+      background-color: ${COLORS.BLUE_50};
+      color: ${COLORS.BLUE_500};
+      text-decoration: none;
+    }
   }
 
+  .react-datepicker__year-text,
   .react-datepicker__month .react-datepicker__month-text,
   .react-datepicker__month .react-datepicker__quarter-text {
     color: ${COLORS.GRAY_900};
-    font-size: 12px;
+    font-size: ${FONT_SIZES.xs};
     font-weight: normal;
     width: 80px;
     padding-top: 11px;
@@ -96,17 +92,26 @@ export const StyledBaseReactDatePicker = styled.div`
       outline: none;
     }
 
-    &:hover:not(.react-datepicker__day--outside-month) {
+    &:hover {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
       font-weight: bold;
     }
   }
 
+  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected.react-datepicker__year-text--today,
+  .react-datepicker__year-text--today.react-datepicker__year-text.react-datepicker__year-text--selected,
+  .react-datepicker__year-text.react-datepicker__year-text--selected,
   .react-datepicker__month-text.react-datepicker__month-text--keyboard-selected {
     font-weight: bold;
     color: #fff;
     border-bottom-color: ${COLORS.GRAY_200};
+    background-color: ${COLORS.BLUE_500};
+  }
+
+  .react-datepicker__day--today,
+  .react-datepicker__year-text--today,
+  .react-datepicker__month-text.react-datepicker__month-${month} {
     position: relative;
 
     &:before {
@@ -119,5 +124,13 @@ export const StyledBaseReactDatePicker = styled.div`
       border-radius: 1px;
       background-color: ${COLORS.BLUE_300};
     }
+  }
+
+  .react-datepicker__year-wrapper {
+    max-width: 252px;
+  }
+
+  .react-datepicker__year-text {
+    flex-grow: 1;
   }
 `;

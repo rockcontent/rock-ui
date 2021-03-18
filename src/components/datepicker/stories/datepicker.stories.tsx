@@ -41,6 +41,12 @@ export const Clear = () => {
     </>
   );
 };
+Clear.parameters = {
+  docs: {
+    storyDescription:
+      'Add the attribute "isClearable" so that the clear button appears in the input.',
+  },
+};
 
 export const Range = () => {
   const [startDate, setStartDate] = useState(new Date('2014/02/08'));
@@ -65,6 +71,12 @@ export const Range = () => {
     </Flex>
   );
 };
+Range.parameters = {
+  docs: {
+    storyDescription:
+      'Add the attribute "selectsStart" in the first date picker and add the attribute "selectsEnd" in the last date picker',
+  },
+};
 export const MonthPicker = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
@@ -77,7 +89,12 @@ export const MonthPicker = () => {
     />
   );
 };
-
+MonthPicker.parameters = {
+  docs: {
+    storyDescription:
+      'Add the attribute "showMonthYearPicker" in the date picker.',
+  },
+};
 export const YearPicker = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
@@ -90,12 +107,8 @@ export const YearPicker = () => {
     />
   );
 };
-
-Clear.story = {
-  parameters: {
-    docs: {
-      storyDescription:
-        'Add the attribute "isClearable" so that the clear button appears in the input.',
-    },
+YearPicker.parameters = {
+  docs: {
+    storyDescription: 'Add the attribute "showYearPicker" in the date picker.',
   },
 };
