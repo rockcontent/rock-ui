@@ -1,17 +1,20 @@
 import React from 'react';
 import { Button } from '../button';
 import { Box } from '../layout';
+import { DatePickerMode } from './datepicker';
 
 type TContainerDatepicker = {
   className?: string;
   children?: React.ReactNode;
   setDate: (date: Date | null) => void;
+  mode: DatePickerMode;
 };
 
 const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
   className,
   children,
   setDate,
+  mode,
 }): JSX.Element => {
   return (
     <Box className={className} px="19px" py="16px">
@@ -23,7 +26,9 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
         mt="5px"
         onClick={() => setDate(new Date())}
       >
-        Today
+        {mode === DatePickerMode.day && 'Today'}
+        {mode === DatePickerMode.month && 'This month'}
+        {mode === DatePickerMode.year && 'This year'}
       </Button>
       <Button
         size="xs"
