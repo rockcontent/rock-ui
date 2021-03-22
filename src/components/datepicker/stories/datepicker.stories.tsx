@@ -31,14 +31,14 @@ export const Basic = () => {
 export const Clear = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   return (
-    <>
+    <Flex>
       <Datepicker
         onChange={setStartDate}
         selected={startDate}
         placeholderText="I have been cleared!"
         isClearable
       />
-    </>
+    </Flex>
   );
 };
 Clear.parameters = {
@@ -50,7 +50,7 @@ Clear.parameters = {
 
 export const Range = () => {
   const [startDate, setStartDate] = useState(new Date('2014/02/08'));
-  const [endDate, setEndDate] = useState(new Date('2014/02/10'));
+  const [endDate, setEndDate] = useState(new Date('2014/02/20'));
   return (
     <Flex>
       <Datepicker
@@ -119,7 +119,7 @@ export const DateRangeWithDisabled = () => {
       onChange={setStartDate}
       selected={startDate}
       placeholderText="Date Range with disabled"
-      minDate={new Date(new Date().setMonth(new Date().getMonth() - 5))}
+      minDate={new Date()}
       maxDate={new Date(new Date().setMonth(new Date().getMonth() + 5))}
       showDisabledMonthNavigation
     />

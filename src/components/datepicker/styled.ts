@@ -8,6 +8,7 @@ export const StyledBaseReactDatePicker = styled.div`
     border-radius: 6px;
     background-color: #fff;
     border-color: ${COLORS.GRAY_200};
+    font-family: ${FONT_FAMILY.body};
   }
 
   .react-datepicker-popper[data-placement^='bottom']
@@ -21,7 +22,7 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 
   .react-datepicker__close-icon {
-    right: 37px;
+    right: 40px;
   }
 
   .react-datepicker__close-icon::after {
@@ -31,11 +32,9 @@ export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker__day-name {
     font-weight: 600;
     color: ${COLORS.GRAY_500};
-    font-family: ${FONT_FAMILY.body};
   }
 
   .react-datepicker__day {
-    font-family: ${FONT_FAMILY.body};
     color: ${COLORS.GRAY_900};
     outline: none;
 
@@ -154,5 +153,17 @@ export const StyledBaseReactDatePicker = styled.div`
       cursor: default;
       color: ${COLORS.GRAY_500};
     }
+  }
+
+  .react-datepicker__day.react-datepicker__day--selected.react-datepicker__day--range-start.react-datepicker__day--in-range {
+    background-color: ${COLORS.BLUE_500};
+    color: #fff;
+  }
+
+  .react-datepicker__day--in-selecting-range,
+  .react-datepicker__day.react-datepicker__day--selected.react-datepicker__day--range-end.react-datepicker__day--in-range,
+  .react-datepicker__day.react-datepicker__day--in-range {
+    background-color: ${COLORS.BLUE_100};
+    color: ${COLORS.GRAY_900};
   }
 `;
