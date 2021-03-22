@@ -3,8 +3,6 @@ import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
 import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
 
-const month = new Date().getMonth();
-
 export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker {
     border-radius: 6px;
@@ -99,7 +97,7 @@ export const StyledBaseReactDatePicker = styled.div`
     }
   }
 
-  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected.react-datepicker__year-text--today,
+  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected,
   .react-datepicker__year-text--today.react-datepicker__year-text.react-datepicker__year-text--selected,
   .react-datepicker__year-text.react-datepicker__year-text--selected,
   .react-datepicker__month-text.react-datepicker__month-text--keyboard-selected {
@@ -110,19 +108,29 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 
   .react-datepicker__day--today,
-  .react-datepicker__year-text--today,
-  .react-datepicker__month-text.react-datepicker__month-${month} {
+  .react-datepicker__year-text--today {
     position: relative;
 
     &:before {
       content: '';
       position: absolute;
-      bottom: 10px;
       width: 20px;
       left: calc(50% - 10px);
       height: 2px;
       border-radius: 1px;
       background-color: ${COLORS.BLUE_300};
+    }
+  }
+
+  .react-datepicker__day--today {
+    &:before {
+      bottom: 4px;
+    }
+  }
+
+  .react-datepicker__year-text--today {
+    &:before {
+      bottom: 10px;
     }
   }
 
@@ -132,5 +140,19 @@ export const StyledBaseReactDatePicker = styled.div`
 
   .react-datepicker__year-text {
     flex-grow: 1;
+  }
+
+  .react-datepicker__year-text--disabled,
+  .react-datepicker__month--disabled,
+  .react-datepicker__day--disabled {
+    color: ${COLORS.GRAY_500};
+    border-radius: 6px;
+    opacity: 40%;
+    background-color: ${COLORS.GRAY_100};
+
+    &[role='button']:hover {
+      cursor: default;
+      color: ${COLORS.GRAY_500};
+    }
   }
 `;
