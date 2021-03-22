@@ -85,7 +85,7 @@ export const MonthPicker = () => {
       selected={startDate}
       placeholderText="Month Picker"
       dateFormat="MM/yyyy"
-      showMonthYearPicker
+      showMonthYearPicker={true}
     />
   );
 };
@@ -103,7 +103,7 @@ export const YearPicker = () => {
       selected={startDate}
       placeholderText="Year Picker"
       dateFormat="yyyy"
-      showYearPicker
+      showYearPicker={true}
     />
   );
 };

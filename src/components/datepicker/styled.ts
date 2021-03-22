@@ -61,6 +61,7 @@ export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker__header {
     border-bottom: none;
     background-color: #fff;
+    padding-top: 0;
   }
 
   .react-datepicker__current-month {
@@ -165,5 +166,17 @@ export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker__day.react-datepicker__day--in-range {
     background-color: ${COLORS.BLUE_100};
     color: ${COLORS.GRAY_900};
+  }
+
+  .react-datepicker-popper {
+    margin-top: 4px;
+  }
+
+  .react-datepicker__month {
+    margin: 0;
+  }
+
+  .react-datepicker__month-container {
+    float: none;
   }
 `;

@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import TemplateInputDatepicker from './template-input-datepicker';
 import TemplateHeaderDatepicker from './template-header-datepicker';
+import ContainerDatepicker from './container-datepicker';
 import { StyledBaseReactDatePicker } from './styled';
 
 export enum DatePickerMode {
@@ -25,8 +26,10 @@ const Datepicker = React.forwardRef<
   const modeLocked = showMonthYearPicker || showYearPicker;
 
   const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
+  const [date, setDate] = useState(props.selected);
 
-  const onSelect = () => {
+  const onSelect = (newDate: Date) => {
+    setDate(newDate);
     if (!modeLocked) {
       toPrevMode();
     }
@@ -50,6 +53,7 @@ const Datepicker = React.forwardRef<
         tabIndex={1}
         fixedHeight
         onSelect={onSelect}
+        selected={date}
         shouldCloseOnSelect={closeOnSelect}
         renderCustomHeader={props => (
           <TemplateHeaderDatepicker
@@ -61,6 +65,9 @@ const Datepicker = React.forwardRef<
         showMonthYearPicker={mode === DatePickerMode.month}
         showYearPicker={mode === DatePickerMode.year}
         clearButtonTitle="Clear"
+        calendarContainer={props => (
+          <ContainerDatepicker {...props} setDate={setDate} />
+        )}
       />
     </StyledBaseReactDatePicker>
   );
