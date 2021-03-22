@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -27,6 +27,20 @@ const Datepicker = React.forwardRef<
 
   const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
   const [date, setDate] = useState(props.selected);
+
+  useEffect(() => {
+    if (!showYearPicker && !showMonthYearPicker) {
+      setMode(DatePickerMode.day);
+    }
+
+    if (showMonthYearPicker) {
+      setMode(DatePickerMode.month);
+    }
+
+    if (showYearPicker) {
+      setMode(DatePickerMode.year);
+    }
+  }, [showMonthYearPicker, showYearPicker]);
 
   const onSelect = (newDate: Date) => {
     setDate(newDate);
