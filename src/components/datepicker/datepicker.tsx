@@ -6,29 +6,40 @@ import TemplateInputDatepicker from './template-input-datepicker';
 import TemplateHeaderDatepicker from './template-header-datepicker';
 import { StyledBaseReactDatePicker } from './styled';
 
+export enum DatePickerMode {
+  year,
+  month,
+  day,
+}
+
 const Datepicker = React.forwardRef<
   ReactDatePicker | null,
   ReactDatePickerProps
 >((props, ref) => {
-  let [monthYearPicker, setMonthYearPicker] = useState<boolean>(false);
-  let [yearPicker, setYearPicker] = useState<boolean>(false);
-  let [closeOnSelect, setCloseOnSelect] = useState<boolean>(false);
+  const {
+    showYearPicker = false,
+    shouldCloseOnSelect = false,
+    showMonthYearPicker = false,
+  } = props;
 
-  const changeTypeCalendar = (event: any) => {
-    const classElement = event.target.className;
-    const day = classElement.indexOf('react-datepicker__day') !== -1;
-    const month = classElement.indexOf('react-datepicker__month-text') !== -1;
+  const modeLocked = showMonthYearPicker || showYearPicker;
 
-    if (day) {
-      setCloseOnSelect(true);
-    } else if (month) {
-      setYearPicker(false);
-      setMonthYearPicker(false);
-    } else {
-      setYearPicker(false);
-      setMonthYearPicker(true);
+  const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
+
+  const onSelect = () => {
+    if (!modeLocked) {
+      toPrevMode();
     }
   };
+
+  const toPrevMode = () => {
+    if (mode === DatePickerMode.day) return;
+    if (mode === DatePickerMode.month) setMode(DatePickerMode.day);
+    if (mode === DatePickerMode.year) setMode(DatePickerMode.month);
+  };
+
+  const closeOnSelect =
+    shouldCloseOnSelect || modeLocked || mode === DatePickerMode.day;
 
   return (
     <StyledBaseReactDatePicker>
@@ -38,19 +49,17 @@ const Datepicker = React.forwardRef<
         customInput={<TemplateInputDatepicker />}
         tabIndex={1}
         fixedHeight
-        onSelect={(_, event) => changeTypeCalendar(event)}
+        onSelect={onSelect}
         shouldCloseOnSelect={closeOnSelect}
         renderCustomHeader={props => (
           <TemplateHeaderDatepicker
             {...props}
-            setShowMonthYearPicker={setMonthYearPicker}
-            setShowYearPicker={setYearPicker}
-            monthYearPicker={monthYearPicker}
-            yearPicker={yearPicker}
+            mode={mode}
+            onChangeMode={setMode}
           />
         )}
-        showMonthYearPicker={monthYearPicker || props.showMonthYearPicker}
-        showYearPicker={yearPicker || props.showYearPicker}
+        showMonthYearPicker={mode === DatePickerMode.month}
+        showYearPicker={mode === DatePickerMode.year}
         clearButtonTitle="Clear"
       />
     </StyledBaseReactDatePicker>

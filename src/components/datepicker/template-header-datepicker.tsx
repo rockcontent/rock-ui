@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Flex, Button, Spacer } from '@chakra-ui/react';
 import { ChevronLeftOutlineIcon, ChevronRightOutlineIcon } from '../../icons';
 import { format } from 'date-fns';
+import { DatePickerMode } from './datepicker';
 
 type TTemplateHeaderDatepicker = {
-  setShowMonthYearPicker: React.Dispatch<React.SetStateAction<boolean>>;
-  setShowYearPicker: React.Dispatch<React.SetStateAction<boolean>>;
-  yearPicker: boolean;
-  monthYearPicker: boolean;
   date: Date;
   decreaseMonth: () => void;
   increaseMonth: () => void;
@@ -17,13 +14,55 @@ type TTemplateHeaderDatepicker = {
   nextMonthButtonDisabled: boolean;
   prevYearButtonDisabled: boolean;
   nextYearButtonDisabled: boolean;
+  mode: DatePickerMode;
+  onChangeMode: (newMode: DatePickerMode) => void;
 };
 
+type TCustomHeaderByModeProps = {
+  decreaseDate: () => void;
+  increaseDate: () => void;
+  onChangeMode: () => void;
+  nextDateButtonDisabled: boolean;
+  prevDateButtonDisabled: boolean;
+  value: string;
+};
+
+const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
+  decreaseDate,
+  increaseDate,
+  onChangeMode,
+  nextDateButtonDisabled,
+  prevDateButtonDisabled,
+  value,
+}) => (
+  <>
+    <Button
+      variant="link"
+      onClick={decreaseDate}
+      disabled={prevDateButtonDisabled}
+    >
+      <ChevronLeftOutlineIcon />
+    </Button>
+    <Spacer />
+    <Button
+      className="react-datepicker__current-month"
+      variant="link"
+      onClick={onChangeMode}
+    >
+      {value}
+    </Button>
+    <Spacer />
+    <Button
+      variant="link"
+      onClick={increaseDate}
+      disabled={nextDateButtonDisabled}
+    >
+      <ChevronRightOutlineIcon />
+    </Button>
+  </>
+);
+
 const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
-  setShowMonthYearPicker,
-  setShowYearPicker,
-  yearPicker,
-  monthYearPicker,
   date,
   decreaseMonth,
   increaseMonth,
@@ -33,131 +72,55 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
   nextMonthButtonDisabled,
   prevYearButtonDisabled,
   nextYearButtonDisabled,
+  onChangeMode,
+  mode,
 }): JSX.Element => {
-  const [period, setPeriod] = useState<String>('');
-
-  const changePeriod = () => {
-    let years = document.getElementsByClassName(
-      'react-datepicker__year-wrapper'
-    );
-    let firstYear = years[0]?.childNodes[0].textContent;
-    let lastYear = years[0]?.childNodes[11].textContent;
-    let newPeriod = `${firstYear} - ${lastYear}`;
-    setPeriod(newPeriod);
-  };
-
-  const getCalendarYear = () => {
-    setShowMonthYearPicker(false);
-    setShowYearPicker(prevState => !prevState);
-  };
-
-  const getCalendarDefault = () => {
-    setShowMonthYearPicker(false);
-    setShowYearPicker(false);
-  };
-
-  const getDecreaseYear = () => {
-    decreaseYear();
-    setTimeout(() => {
-      changePeriod();
-    });
-  };
-
-  const getIncreaseYear = () => {
-    increaseYear();
-    setTimeout(() => {
-      changePeriod();
-    });
-  };
+  const [period, setPeriod] = useState('');
 
   useEffect(() => {
-    changePeriod();
-  }, [yearPicker]);
+    const startYear = 1969;
+    const currentYear = date.getFullYear();
+
+    const index = Math.floor((currentYear - startYear) / 12);
+    const periodStart = startYear + 12 * index;
+    const periodEnd = startYear + 11 + 12 * index;
+
+    setPeriod(`${periodStart}-${periodEnd}`);
+  }, [date]);
 
   return (
     <Flex justifyContent="center">
-      {!monthYearPicker && !yearPicker && (
-        <>
-          <Button
-            variant="link"
-            onClick={decreaseMonth}
-            disabled={prevMonthButtonDisabled}
-          >
-            <ChevronLeftOutlineIcon />
-          </Button>
-          <Spacer />
-          <Button
-            className="react-datepicker__current-month"
-            variant="link"
-            onClick={() => setShowMonthYearPicker(prevState => !prevState)}
-          >
-            {format(date, 'MMMM')}
-          </Button>
-          <Spacer />
-          <Button
-            variant="link"
-            onClick={increaseMonth}
-            disabled={nextMonthButtonDisabled}
-          >
-            <ChevronRightOutlineIcon />
-          </Button>
-        </>
+      {mode === DatePickerMode.day && (
+        <CustomHeaderByMode
+          decreaseDate={decreaseMonth}
+          increaseDate={increaseMonth}
+          value={format(date, 'MMMM')}
+          prevDateButtonDisabled={prevMonthButtonDisabled}
+          nextDateButtonDisabled={nextMonthButtonDisabled}
+          onChangeMode={() => onChangeMode(DatePickerMode.month)}
+        />
       )}
 
-      {monthYearPicker && (
-        <>
-          <Button
-            variant="link"
-            onClick={decreaseYear}
-            disabled={prevMonthButtonDisabled}
-          >
-            <ChevronLeftOutlineIcon />
-          </Button>
-          <Spacer />
-          <Button
-            className="react-datepicker__current-month"
-            variant="link"
-            onClick={getCalendarYear}
-          >
-            {format(date, 'yyyy')}
-          </Button>
-          <Spacer />
-          <Button
-            variant="link"
-            onClick={increaseYear}
-            disabled={nextMonthButtonDisabled}
-          >
-            <ChevronRightOutlineIcon />
-          </Button>
-        </>
+      {mode === DatePickerMode.month && (
+        <CustomHeaderByMode
+          decreaseDate={decreaseYear}
+          increaseDate={increaseYear}
+          value={format(date, 'yyyy')}
+          prevDateButtonDisabled={prevYearButtonDisabled}
+          nextDateButtonDisabled={nextYearButtonDisabled}
+          onChangeMode={() => onChangeMode(DatePickerMode.year)}
+        />
       )}
 
-      {yearPicker && (
-        <>
-          <Button
-            variant="link"
-            onClick={getDecreaseYear}
-            disabled={prevYearButtonDisabled}
-          >
-            <ChevronLeftOutlineIcon />
-          </Button>
-          <Spacer />
-          <Button
-            className="react-datepicker__current-month"
-            variant="link"
-            onClick={getCalendarDefault}
-          >
-            {period}
-          </Button>
-          <Spacer />
-          <Button
-            variant="link"
-            onClick={getIncreaseYear}
-            disabled={nextYearButtonDisabled}
-          >
-            <ChevronRightOutlineIcon />
-          </Button>
-        </>
+      {mode === DatePickerMode.year && (
+        <CustomHeaderByMode
+          decreaseDate={decreaseYear}
+          increaseDate={increaseYear}
+          value={period}
+          prevDateButtonDisabled={prevYearButtonDisabled}
+          nextDateButtonDisabled={nextYearButtonDisabled}
+          onChangeMode={() => onChangeMode(DatePickerMode.day)}
+        />
       )}
     </Flex>
   );
