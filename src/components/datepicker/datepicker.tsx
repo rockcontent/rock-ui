@@ -90,7 +90,6 @@ const Datepicker = React.forwardRef<
             {...props}
             mode={mode}
             toNextMode={toNextMode}
-            onChangeMode={setMode}
           />
         )}
         showMonthYearPicker={mode === DatePickerMode.month}
