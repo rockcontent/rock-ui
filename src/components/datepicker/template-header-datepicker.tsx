@@ -16,7 +16,7 @@ type TTemplateHeaderDatepicker = {
   prevYearButtonDisabled: boolean;
   nextYearButtonDisabled: boolean;
   mode: DatePickerMode;
-  onChangeMode: (newMode: DatePickerMode) => void;
+  toNextMode: () => void;
 };
 
 type TCustomHeaderByModeProps = {
@@ -26,6 +26,7 @@ type TCustomHeaderByModeProps = {
   nextDateButtonDisabled: boolean;
   prevDateButtonDisabled: boolean;
   value: string;
+  changeModeDisabled?: boolean;
 };
 
 const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
@@ -34,6 +35,7 @@ const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
   onChangeMode,
   nextDateButtonDisabled,
   prevDateButtonDisabled,
+  changeModeDisabled,
   value,
 }) => (
   <>
@@ -48,6 +50,7 @@ const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
     <Button
       className="react-datepicker__current-month"
       variant="link"
+      disabled={changeModeDisabled}
       onClick={onChangeMode}
     >
       {value}
@@ -73,8 +76,8 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
   nextMonthButtonDisabled,
   prevYearButtonDisabled,
   nextYearButtonDisabled,
-  onChangeMode,
   mode,
+  toNextMode,
 }): JSX.Element => {
   const [period, setPeriod] = useState('');
 
@@ -98,7 +101,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
           value={format(date, 'MMMM')}
           prevDateButtonDisabled={prevMonthButtonDisabled}
           nextDateButtonDisabled={nextMonthButtonDisabled}
-          onChangeMode={() => onChangeMode(DatePickerMode.month)}
+          onChangeMode={toNextMode}
         />
       )}
 
@@ -109,7 +112,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
           value={format(date, 'yyyy')}
           prevDateButtonDisabled={prevYearButtonDisabled}
           nextDateButtonDisabled={nextYearButtonDisabled}
-          onChangeMode={() => onChangeMode(DatePickerMode.year)}
+          onChangeMode={toNextMode}
         />
       )}
 
@@ -120,7 +123,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
           value={period}
           prevDateButtonDisabled={prevYearButtonDisabled}
           nextDateButtonDisabled={nextYearButtonDisabled}
-          onChangeMode={() => onChangeMode(DatePickerMode.day)}
+          onChangeMode={toNextMode}
         />
       )}
     </Flex>

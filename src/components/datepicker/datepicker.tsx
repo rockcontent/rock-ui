@@ -8,9 +8,9 @@ import ContainerDatepicker from './container-datepicker';
 import { StyledBaseReactDatePicker } from './styled';
 
 export enum DatePickerMode {
-  year,
-  month,
-  day,
+  year = 'year',
+  month = 'month',
+  day = 'day',
 }
 
 const Datepicker = React.forwardRef<
@@ -23,40 +23,56 @@ const Datepicker = React.forwardRef<
     showMonthYearPicker = false,
   } = props;
 
-  const modeLocked = showMonthYearPicker || showYearPicker;
-
+  const [userSelectedMode, setUserSelectedMode] = useState<
+    DatePickerMode | undefined
+  >();
   const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
   const [date, setDate] = useState(props.selected);
 
   useEffect(() => {
     if (!showYearPicker && !showMonthYearPicker) {
       setMode(DatePickerMode.day);
+      setUserSelectedMode(DatePickerMode.day);
     }
 
     if (showMonthYearPicker) {
       setMode(DatePickerMode.month);
+      setUserSelectedMode(DatePickerMode.month);
     }
 
     if (showYearPicker) {
       setMode(DatePickerMode.year);
+      setUserSelectedMode(DatePickerMode.year);
     }
   }, [showMonthYearPicker, showYearPicker]);
 
   const onSelect = (newDate: Date) => {
     setDate(newDate);
-    if (!modeLocked) {
-      toPrevMode();
-    }
+    if (userSelectedMode !== mode) toPrevMode();
   };
 
   const toPrevMode = () => {
-    if (mode === DatePickerMode.day) return;
     if (mode === DatePickerMode.month) setMode(DatePickerMode.day);
     if (mode === DatePickerMode.year) setMode(DatePickerMode.month);
   };
 
+  const toNextMode = () => {
+    if (mode === DatePickerMode.day) setMode(DatePickerMode.month);
+    if (mode === DatePickerMode.month) setMode(DatePickerMode.year);
+
+    if (mode === DatePickerMode.year && userSelectedMode) {
+      setMode(userSelectedMode);
+    }
+
+    if (mode === DatePickerMode.year && !userSelectedMode) {
+      setMode(DatePickerMode.day);
+    }
+  };
+
   const closeOnSelect =
-    shouldCloseOnSelect || modeLocked || mode === DatePickerMode.day;
+    shouldCloseOnSelect ||
+    userSelectedMode === mode ||
+    mode === DatePickerMode.day;
 
   return (
     <StyledBaseReactDatePicker>
@@ -73,6 +89,7 @@ const Datepicker = React.forwardRef<
           <TemplateHeaderDatepicker
             {...props}
             mode={mode}
+            toNextMode={toNextMode}
             onChangeMode={setMode}
           />
         )}
