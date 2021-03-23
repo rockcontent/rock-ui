@@ -8,6 +8,7 @@ type TContainerDatepicker = {
   children?: React.ReactNode;
   setDate: (date: Date | null) => void;
   mode: DatePickerMode;
+  date: Date | null | undefined;
 };
 
 const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
@@ -15,6 +16,7 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
   children,
   setDate,
   mode,
+  date,
 }): JSX.Element => {
   return (
     <Box className={className} px="19px" py="16px">
@@ -36,6 +38,7 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
         w="120px"
         ml="8px"
         mt="5px"
+        isDisabled={!date}
         onClick={() => setDate(null)}
       >
         Clear

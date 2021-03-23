@@ -80,7 +80,12 @@ const Datepicker = React.forwardRef<
         showYearPicker={mode === DatePickerMode.year}
         clearButtonTitle="Clear"
         calendarContainer={props => (
-          <ContainerDatepicker {...props} setDate={setDate} mode={mode} />
+          <ContainerDatepicker
+            {...props}
+            setDate={setDate}
+            mode={mode}
+            date={date}
+          />
         )}
       />
     </StyledBaseReactDatePicker>
