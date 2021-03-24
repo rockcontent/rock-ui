@@ -176,3 +176,15 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
+
+export {
+  Accordion,
+  AccordionProps,
+  AccordionPanel,
+  AccordionPanelProps,
+  AccordionItem,
+  AccordionItemProps,
+  AccordionIcon,
+  AccordionButton,
+  AccordionButtonProps,
+} from './components/accordion';
