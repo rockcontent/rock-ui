@@ -96,7 +96,7 @@ const Datepicker = React.forwardRef<
         {...props}
         ref={componentRef => {
           datepickerRef && (datepickerRef.current = componentRef);
-          ref && (ref.current = componentRef);
+          // ref && (ref.current = componentRef);
         }}
         customInput={<TemplateInputDatepicker />}
         tabIndex={1}
