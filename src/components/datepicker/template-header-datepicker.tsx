@@ -43,6 +43,8 @@ const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
       variant="link"
       onClick={decreaseDate}
       disabled={prevDateButtonDisabled}
+      minW="32px"
+      minH="32px"
     >
       <ChevronLeftOutlineIcon />
     </Button>
@@ -60,6 +62,8 @@ const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
       variant="link"
       onClick={increaseDate}
       disabled={nextDateButtonDisabled}
+      minW="32px"
+      minH="32px"
     >
       <ChevronRightOutlineIcon />
     </Button>

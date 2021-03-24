@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -28,6 +28,7 @@ const Datepicker = React.forwardRef<
   >();
   const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
   const [date, setDate] = useState(props.selected);
+  const datepickerRef = useRef<ReactDatePicker | null>();
 
   useEffect(() => {
     if (!showYearPicker && !showMonthYearPicker) {
@@ -49,6 +50,21 @@ const Datepicker = React.forwardRef<
   const onSelect = (newDate: Date) => {
     setDate(newDate);
     if (userSelectedMode !== mode) toPrevMode();
+  };
+
+  const goToThisDay = () => {
+    datepickerRef?.current?.setOpen(false);
+    setDate(new Date());
+  };
+
+  const goToThisMonth = () => {
+    setDate(new Date());
+    setMode(DatePickerMode.day);
+  };
+
+  const goToThisYear = () => {
+    setDate(new Date());
+    setMode(DatePickerMode.month);
   };
 
   const toPrevMode = () => {
@@ -78,7 +94,10 @@ const Datepicker = React.forwardRef<
     <StyledBaseReactDatePicker>
       <ReactDatePicker
         {...props}
-        ref={ref}
+        ref={componentRef => {
+          datepickerRef && (datepickerRef.current = componentRef);
+          ref && (ref.current = componentRef);
+        }}
         customInput={<TemplateInputDatepicker />}
         tabIndex={1}
         fixedHeight
@@ -98,6 +117,9 @@ const Datepicker = React.forwardRef<
         calendarContainer={props => (
           <ContainerDatepicker
             {...props}
+            goToThisDay={goToThisDay}
+            goToThisMonth={goToThisMonth}
+            goToThisYear={goToThisYear}
             setDate={setDate}
             mode={mode}
             date={date}

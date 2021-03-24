@@ -58,10 +58,16 @@ export const StyledBaseReactDatePicker = styled.div`
     background-color: ${COLORS.BLUE_500};
   }
 
+  .react-datepicker__year,
+  .react-datepicker__header.react-datepicker__header--custom {
+    margin: 0;
+  }
+
   .react-datepicker__header {
     border-bottom: none;
     background-color: #fff;
     padding-top: 0;
+    max-width: 252px;
   }
 
   .react-datepicker__current-month {
@@ -76,15 +82,17 @@ export const StyledBaseReactDatePicker = styled.div`
     }
   }
 
+  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected,
   .react-datepicker__year-text,
   .react-datepicker__month .react-datepicker__month-text,
   .react-datepicker__month .react-datepicker__quarter-text {
     color: ${COLORS.GRAY_900};
     font-size: ${FONT_SIZES.xs};
     font-weight: normal;
-    width: 80px;
+    width: 78px;
     padding-top: 11px;
     padding-bottom: 11px;
+    background-color: #fff;
 
     &:focus {
       outline: none;
@@ -97,7 +105,7 @@ export const StyledBaseReactDatePicker = styled.div`
     }
   }
 
-  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected,
+  .react-datepicker__year-text.react-datepicker__year-text--keyboard-selected.react-datepicker__year-text--today,
   .react-datepicker__year-text--today.react-datepicker__year-text.react-datepicker__year-text--selected,
   .react-datepicker__year-text.react-datepicker__year-text--selected,
   .react-datepicker__month-text.react-datepicker__month-text--keyboard-selected {

@@ -9,6 +9,9 @@ type TContainerDatepicker = {
   setDate: (date: Date | null) => void;
   mode: DatePickerMode;
   date: Date | null | undefined;
+  goToThisDay: () => void;
+  goToThisMonth: () => void;
+  goToThisYear: () => void;
 };
 
 const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
@@ -17,16 +20,29 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
   setDate,
   mode,
   date,
+  goToThisDay,
+  goToThisMonth,
+  goToThisYear,
 }): JSX.Element => {
+  const gotToThis = () => {
+    if (mode === DatePickerMode.day) {
+      goToThisDay();
+    } else if (mode === DatePickerMode.month) {
+      goToThisMonth();
+    } else {
+      goToThisYear();
+    }
+  };
+
   return (
-    <Box className={className} px="19px" py="16px">
+    <Box className={className} px="20px" py="16px" maxW="288px">
       <Box style={{ position: 'relative' }}>{children}</Box>
       <Button
         size="xs"
-        bg="gray.200"
+        bg="gray.100"
         w="120px"
         mt="5px"
-        onClick={() => setDate(new Date())}
+        onClick={() => gotToThis()}
       >
         {mode === DatePickerMode.day && 'Today'}
         {mode === DatePickerMode.month && 'This month'}
@@ -34,9 +50,9 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
       </Button>
       <Button
         size="xs"
-        bg="gray.200"
+        bg="gray.100"
         w="120px"
-        ml="8px"
+        ml="6px"
         mt="5px"
         isDisabled={!date}
         onClick={() => setDate(null)}
