@@ -19,7 +19,7 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
             variant="ghost"
             aria-label="Open calendar"
             onClick={onClick}
-            icon={<CalendarOutlineIcon color="gray.800" />}
+            icon={<CalendarOutlineIcon color="gray.800" w="16px" h="16px" />}
           />
         </InputRightElement>
         <Input {...props} ref={ref} data-testid="test-datepicker" />

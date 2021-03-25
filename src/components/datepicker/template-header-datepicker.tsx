@@ -102,7 +102,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
         <CustomHeaderByMode
           decreaseDate={decreaseMonth}
           increaseDate={increaseMonth}
-          value={format(date, 'MMMM')}
+          value={format(date, 'MMMM yyyy')}
           prevDateButtonDisabled={prevMonthButtonDisabled}
           nextDateButtonDisabled={nextMonthButtonDisabled}
           onChangeMode={toNextMode}

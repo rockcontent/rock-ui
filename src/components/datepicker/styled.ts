@@ -29,9 +29,22 @@ export const StyledBaseReactDatePicker = styled.div`
     background-color: ${COLORS.GRAY_500};
   }
 
+  .react-datepicker__day {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    margin: 2px;
+    line-height: 32px;
+  }
+
   .react-datepicker__day-name {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
     font-weight: 600;
     color: ${COLORS.GRAY_500};
+    font-size: 14px;
+    margin: 2px;
   }
 
   .react-datepicker__day {
@@ -67,13 +80,13 @@ export const StyledBaseReactDatePicker = styled.div`
     border-bottom: none;
     background-color: #fff;
     padding-top: 0;
-    max-width: 252px;
   }
 
   .react-datepicker__current-month {
     text-transform: capitalize;
     color: ${COLORS.GRAY_900};
-    padding: 2px 3px;
+    padding: 12px 12px;
+    font-size: 14px;
 
     &:hover {
       background-color: ${COLORS.BLUE_50};

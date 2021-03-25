@@ -132,7 +132,7 @@ export const DisableDatepicker = () => {
     <Datepicker
       onChange={setStartDate}
       selected={startDate}
-      placeholderText="Disable datepicker"
+      placeholderText="Disable Date Picker"
       disabled
     />
   );
