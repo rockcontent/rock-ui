@@ -189,6 +189,8 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 `;
 
+//DayPicker_transitionContainer DayPicker_transitionContainer_1 DayPicker_transitionContainer__horizontal DayPicker_transitionContainer__horizontal_2
+//CalendarMonthGrid_month__horizontal CalendarMonthGrid_month__horizontal_1
 export const StyledBaseRangePicker = styled.div`
   .DayPicker {
     border-radius: 6px;
@@ -203,12 +205,27 @@ export const StyledBaseRangePicker = styled.div`
     color: ${COLORS.GRAY_900};
   }
 
-  // .CalendarMonth:first-child {
-  //   border-right: 1px solid red;
+  // .CalendarMonthGrid_month__horizontal:nth-child(2) {
+  //   border-right: 1px solid ${COLORS.GRAY_200};
+  //   transition: all 0.5s;
+
+  //   // &:before {
+  //   //   content: '';
+  //   //   position: absolute;
+  //   //   top: 16px;
+  //   //   bottom: 16px;
+  //   //   right: calc(50% - 1px);
+  //   //   width: 1px;
+  //   //   background-color: ${COLORS.GRAY_200};
+  //   //   z-index: 100;
+  //   // }
   // }
 
+  .CalendarMonth:first-child {
+    // border-right: 1px solid red;
+  }
+
   .DayPicker_weekHeader_li {
-    // height: 32px;
     small {
       color: ${COLORS.GRAY_500};
       font-size: 12px;

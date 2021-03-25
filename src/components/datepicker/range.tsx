@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { StyledBaseRangePicker } from './styled';
 import { DayPickerRangeController } from 'react-dates';
@@ -75,9 +75,32 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
     // const momentStartDate = startDate ? moment(startDate) : null;
     // const momentEndDate = endDate ? moment(endDate) : null;
 
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      if (containerRef) {
+      }
+    }, [containerRef]);
+
     const [focusedInput, setFocusedInput] = useState<
       'startDate' | 'endDate' | null
     >(null);
+
+    useEffect(() => {
+      const listener = (event: MouseEvent) => {
+        if (!containerRef) return;
+
+        const clickOutside = !containerRef?.current?.contains(
+          event?.target as Node
+        );
+
+        if (clickOutside) setFocusedInput(null);
+      };
+
+      document.addEventListener('mousedown', listener);
+
+      return () => document.removeEventListener('mousedown', listener);
+    }, []);
 
     const changeFocus = (newFocus: 'startDate' | 'endDate' | null) => {
       if (newFocus === 'endDate' && !startDate) {
@@ -88,7 +111,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
     };
 
     return (
-      <Box>
+      <Box ref={containerRef}>
         <Flex pb="1">
           <Box pr="2">
             <TemplateInputDatepicker
@@ -127,7 +150,6 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
                 onChangeStartDate(newStartDate);
                 onChangeEndDate(newEndDate);
               }}
-              onNextMonthClick={console.log}
               daySize={36}
               renderNavNextButton={({ onClick }) => (
                 <ChevronButton
@@ -144,7 +166,9 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
                 />
               )}
               hideKeyboardShortcutsPanel
-              renderDayContents={date => <div>{date.date()}</div>}
+              renderDayContents={date => (
+                <div key={date.milliseconds()}>{date.date()}</div>
+              )}
               focusedInput={focusedInput}
               onFocusChange={setFocusedInput}
               initialVisibleMonth={() => initialVisibleMonth || moment()}
