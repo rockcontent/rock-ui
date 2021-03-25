@@ -25,7 +25,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
       DatePickerMode | undefined
     >();
     const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
-    const [date, setDate] = useState(props.selected);
+    const [date, setDate] = useState<any>(props.selected);
     const datepickerRef = useRef<ReactDatePicker | null>();
 
     useEffect(() => {
@@ -57,20 +57,24 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
 
     const goToThisMonth = () => {
       setDate(new Date());
-      setMode(DatePickerMode.day);
       datepickerRef?.current?.setOpen(false);
-      setTimeout(() => {
-        datepickerRef?.current?.setOpen(true);
-      });
+      if (userSelectedMode !== mode) {
+        toPrevMode();
+        setTimeout(() => {
+          datepickerRef?.current?.setOpen(true);
+        });
+      }
     };
 
     const goToThisYear = () => {
       setDate(new Date());
-      setMode(DatePickerMode.month);
       datepickerRef?.current?.setOpen(false);
-      setTimeout(() => {
-        datepickerRef?.current?.setOpen(true);
-      });
+      if (userSelectedMode !== mode) {
+        toPrevMode();
+        setTimeout(() => {
+          datepickerRef?.current?.setOpen(true);
+        });
+      }
     };
 
     const toPrevMode = () => {
@@ -109,6 +113,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           fixedHeight
           onSelect={onSelect}
           selected={date}
+          onChange={date => setDate(date)}
           shouldCloseOnSelect={closeOnSelect}
           renderCustomHeader={props => (
             <TemplateHeaderDatepicker
@@ -120,6 +125,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           showMonthYearPicker={mode === DatePickerMode.month}
           showYearPicker={mode === DatePickerMode.year}
           clearButtonTitle="Clear"
+          formatWeekDay={nameOfDay => nameOfDay.substr(0, 1)}
           calendarContainer={props => (
             <ContainerDatepicker
               {...props}

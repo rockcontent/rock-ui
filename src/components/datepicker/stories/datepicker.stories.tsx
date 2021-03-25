@@ -5,7 +5,7 @@ import { Flex } from '@chakra-ui/react';
 import { RangePicker } from '../range';
 
 export default {
-  title: 'Datepicker',
+  title: 'Date Picker',
   parameters: {
     componentSubtitle: 'A simple and reusable datepicker component for React.',
   },
