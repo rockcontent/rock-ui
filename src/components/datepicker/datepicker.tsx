@@ -14,7 +14,7 @@ export enum DatePickerMode {
 }
 
 const Datepicker = React.forwardRef<
-  ReactDatePicker | null,
+  React.MutableRefObject<ReactDatePicker | null | undefined>,
   ReactDatePickerProps
 >((props, ref) => {
   const {
@@ -60,11 +60,19 @@ const Datepicker = React.forwardRef<
   const goToThisMonth = () => {
     setDate(new Date());
     setMode(DatePickerMode.day);
+    datepickerRef?.current?.setOpen(false);
+    setTimeout(() => {
+      datepickerRef?.current?.setOpen(true);
+    });
   };
 
   const goToThisYear = () => {
     setDate(new Date());
     setMode(DatePickerMode.month);
+    datepickerRef?.current?.setOpen(false);
+    setTimeout(() => {
+      datepickerRef?.current?.setOpen(true);
+    });
   };
 
   const toPrevMode = () => {
@@ -96,7 +104,7 @@ const Datepicker = React.forwardRef<
         {...props}
         ref={componentRef => {
           datepickerRef && (datepickerRef.current = componentRef);
-          // ref && (ref.current = componentRef);
+          ref && (ref.current = componentRef);
         }}
         customInput={<TemplateInputDatepicker />}
         tabIndex={1}
