@@ -14,8 +14,8 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
       <InputGroup>
         <InputRightElement>
           <IconButton
-            h="2.1rem"
-            mr="0.4rem"
+            borderRadius="2px"
+            size="sm"
             variant="ghost"
             aria-label="Open calendar"
             onClick={onClick}

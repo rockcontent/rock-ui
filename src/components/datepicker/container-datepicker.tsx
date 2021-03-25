@@ -35,7 +35,13 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
   };
 
   return (
-    <Box className={className} px="20px" py="16px" maxW="288px">
+    <Box
+      className={className}
+      px="20px"
+      py="16px"
+      maxW="288px"
+      boxShadow="base"
+    >
       <Box style={{ position: 'relative' }}>{children}</Box>
       <Button
         size="xs"
