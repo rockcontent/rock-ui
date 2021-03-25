@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container } from '../../layout';
 import { Datepicker } from '../datepicker';
 import { Flex } from '@chakra-ui/react';
+import { RangePicker } from '../range';
 
 export default {
   title: 'Datepicker',
@@ -29,7 +30,9 @@ export const Basic = () => {
 };
 
 export const Clear = () => {
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [startDate, setStartDate] = useState<Date | null | undefined>(
+    new Date()
+  );
   return (
     <Flex>
       <Datepicker
@@ -49,24 +52,15 @@ Clear.parameters = {
 };
 
 export const Range = () => {
-  const [startDate, setStartDate] = useState(new Date('2014/02/08'));
-  const [endDate, setEndDate] = useState(new Date('2014/02/20'));
+  const [startDate, setStartDate] = useState<moment.Moment>(null);
+  const [endDate, setEndDate] = useState<moment.Moment>(null);
   return (
     <Flex>
-      <Datepicker
-        selected={startDate}
-        onChange={date => setStartDate(date)}
-        selectsStart
+      <RangePicker
         startDate={startDate}
         endDate={endDate}
-      />
-      <Datepicker
-        selected={endDate}
-        onChange={date => setEndDate(date)}
-        selectsEnd
-        startDate={startDate}
-        endDate={endDate}
-        minDate={startDate}
+        onChangeStartDate={setStartDate}
+        onChangeEndDate={setEndDate}
       />
     </Flex>
   );

@@ -180,3 +180,104 @@ export const StyledBaseReactDatePicker = styled.div`
     float: none;
   }
 `;
+
+export const StyledBaseRangePicker = styled.div`
+  .DayPicker {
+    border-radius: 6px;
+  }
+
+  .CalendarMonth_caption {
+    padding-bottom: 58px;
+  }
+
+  .CalendarMonth_caption {
+    font-size: 14px;
+    color: ${COLORS.GRAY_900};
+  }
+
+  // .CalendarMonth:first-child {
+  //   border-right: 1px solid red;
+  // }
+
+  .DayPicker_weekHeader_li {
+    // height: 32px;
+    small {
+      color: ${COLORS.GRAY_500};
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .CalendarDay {
+    background-color: #fff;
+    border: none;
+    font-family: ${FONT_FAMILY.body};
+    color: ${COLORS.GRAY_900};
+    padding: 2px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 6px;
+    }
+  }
+
+  .CalendarDay__default:hover {
+    background: #fff;
+    border: none;
+
+    div {
+      background-color: ${COLORS.BLUE_50};
+      color: ${COLORS.BLUE_500};
+      font-weight: bold;
+    }
+  }
+
+  .CalendarDay__today {
+    div {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        left: calc(50% - 10px);
+        bottom: 4px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: ${COLORS.BLUE_300};
+      }
+    }
+  }
+
+  .CalendarDay__selected_start,
+  .CalendarDay__selected_start:hover {
+    color: #fff;
+    font-weight: bold;
+
+    div {
+      background-color: ${COLORS.BLUE_500};
+      color: #fff;
+
+      &:before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .CalendarDay__selected_end,
+  .CalendarDay__selected_end:hover,
+  .CalendarDay__hovered_span,
+  .CalendarDay__hovered_span:hover,
+  .CalendarDay__selected_span,
+  .CalendarDay__selected_span:hover {
+    div {
+      background-color: ${COLORS.BLUE_100};
+      color: ${COLORS.GRAY_900};
+      font-weight: normal;
+    }
+  }
+`;

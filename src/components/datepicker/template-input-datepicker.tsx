@@ -1,10 +1,10 @@
 import React from 'react';
 import { Stack } from '../stack';
-import { Input, InputRightElement, InputGroup } from '../input';
+import { Input, InputRightElement, InputGroup, InputProps } from '../input';
 import { IconButton } from '../button';
 import { CalendarOutlineIcon } from '../../icons';
 
-type TTemplateInputDatepicker = {
+type TTemplateInputDatepicker = InputProps & {
   onClick?: () => void;
 };
 
