@@ -6,20 +6,30 @@ import { CalendarOutlineIcon } from '../../icons';
 
 type TTemplateInputDatepicker = InputProps & {
   onClick?: () => void;
+  isDisabled: boolean | undefined;
 };
 
 const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
-  ({ onClick, ...props }, ref: any) => (
+  ({ onClick, isDisabled, ...props }, ref: any) => (
     <Stack>
       <InputGroup>
         <InputRightElement>
           <IconButton
+            disabled={isDisabled}
             borderRadius="2px"
             size="sm"
             variant="ghost"
             aria-label="Open calendar"
             onClick={onClick}
-            icon={<CalendarOutlineIcon color="gray.800" w="16px" h="16px" />}
+            icon={
+              <CalendarOutlineIcon
+                color="gray.800"
+                w="16px"
+                h="16px"
+                title="Open calendar"
+                alt="Open calendar"
+              />
+            }
           />
         </InputRightElement>
         <Input {...props} ref={ref} data-testid="test-datepicker" />

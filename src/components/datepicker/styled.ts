@@ -51,7 +51,7 @@ export const StyledBaseReactDatePicker = styled.div`
     color: ${COLORS.GRAY_900};
     outline: none;
 
-    &:hover:not(.react-datepicker__day--selected):not(.react-datepicker__day--outside-month) {
+    &:hover:not(.react-datepicker__day--selected) {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
       font-weight: bold;
@@ -89,9 +89,21 @@ export const StyledBaseReactDatePicker = styled.div`
     font-size: 14px;
 
     &:hover {
+      text-decoration: none;
+    }
+
+    &:hover:not(.react-datepicker__current-month-year) {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
-      text-decoration: none;
+      font-weight: normal;
+    }
+
+    &.react-datepicker__current-month-year {
+      cursor: default;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
 
@@ -172,8 +184,9 @@ export const StyledBaseReactDatePicker = styled.div`
     background-color: ${COLORS.GRAY_100};
 
     &[role='button']:hover {
-      cursor: default;
+      cursor: not-allowed;
       color: ${COLORS.GRAY_500};
+      opacity: 40%;
     }
   }
 

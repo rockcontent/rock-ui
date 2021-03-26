@@ -108,7 +108,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
             datepickerRef && (datepickerRef.current = componentRef);
             ref && (ref.current = componentRef);
           }}
-          customInput={<TemplateInputDatepicker />}
+          customInput={<TemplateInputDatepicker isDisabled={props.disabled} />}
           tabIndex={1}
           fixedHeight
           onSelect={onSelect}
