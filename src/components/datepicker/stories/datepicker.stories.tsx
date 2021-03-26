@@ -106,7 +106,7 @@ YearPicker.parameters = {
     storyDescription: 'Add the attribute "showYearPicker" in the date picker.',
   },
 };
-export const DateRangeWithDisabled = () => {
+export const DateRangeWithDisabledNavigationShown = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
     <Datepicker
@@ -119,25 +119,25 @@ export const DateRangeWithDisabled = () => {
     />
   );
 };
-DateRangeWithDisabled.parameters = {
+DateRangeWithDisabledNavigationShown.parameters = {
   docs: {
     storyDescription:
       'Add the "showDisabledMonthNavigation" attribute to disable navigation for a certain period.',
   },
 };
 
-export const DisableDatepicker = () => {
+export const DisableDatePicker = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
     <Datepicker
       onChange={setStartDate}
       selected={startDate}
-      placeholderText="Disable datepicker"
+      placeholderText="Disable Date Picker"
       disabled
     />
   );
 };
-DisableDatepicker.parameters = {
+DisableDatePicker.parameters = {
   docs: {
     storyDescription:
       'Add the "disabled" attribute to disable navigation for a certain period.',
