@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../button';
-import { Box } from '../layout';
+import { Box, Flex } from '../layout';
 import { DatePickerMode } from './datepicker';
 
 type TContainerDatepicker = {
@@ -37,28 +37,30 @@ const ContainerDatepicker: React.FC<TContainerDatepicker> = ({
   return (
     <Box className={className} px="20px" py="16px" boxShadow="base">
       <Box style={{ position: 'relative' }}>{children}</Box>
-      <Button
-        size="xs"
-        bg="gray.100"
-        w="120px"
-        mt="5px"
-        onClick={() => gotToThis()}
-      >
-        {mode === DatePickerMode.day && 'Today'}
-        {mode === DatePickerMode.month && 'This month'}
-        {mode === DatePickerMode.year && 'This year'}
-      </Button>
-      <Button
-        size="xs"
-        bg="gray.100"
-        w="120px"
-        ml="6px"
-        mt="5px"
-        isDisabled={!date}
-        onClick={() => setDate(null)}
-      >
-        Clear
-      </Button>
+      <Flex justifyContent="center" alignItems="center">
+        <Button
+          size="xs"
+          bg="gray.100"
+          w="120px"
+          mt="5px"
+          onClick={() => gotToThis()}
+        >
+          {mode === DatePickerMode.day && 'Today'}
+          {mode === DatePickerMode.month && 'This month'}
+          {mode === DatePickerMode.year && 'This year'}
+        </Button>
+        <Button
+          size="xs"
+          bg="gray.100"
+          w="120px"
+          ml="6px"
+          mt="5px"
+          isDisabled={!date}
+          onClick={() => setDate(null)}
+        >
+          Clear
+        </Button>
+      </Flex>
     </Box>
   );
 };

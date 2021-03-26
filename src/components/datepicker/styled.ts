@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
 import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
+// import { XCircleSolidIcon } from '../../icons';
+const xCircle = require('../../icons/16x16/solid/x-circle/x-circle.svg');
 
 export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker {
@@ -26,13 +28,14 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 
   .react-datepicker__close-icon::after {
-    background-color: ${COLORS.GRAY_500};
+    background-color: transparent;
+    content: url('${xCircle}');
   }
 
   .react-datepicker__day {
     width: 32px;
     height: 32px;
-    font-size: 12px;
+    font-size: ${FONT_SIZES.xs};
     margin: 2px;
     line-height: 32px;
   }
@@ -43,7 +46,7 @@ export const StyledBaseReactDatePicker = styled.div`
     line-height: 32px;
     font-weight: 600;
     color: ${COLORS.GRAY_500};
-    font-size: 14px;
+    font-size: ${FONT_SIZES.sm};
     margin: 2px;
   }
 
@@ -51,7 +54,8 @@ export const StyledBaseReactDatePicker = styled.div`
     color: ${COLORS.GRAY_900};
     outline: none;
 
-    &:hover:not(.react-datepicker__day--selected) {
+    &:hover:not(.react-datepicker__day--selected),
+    &.react-datepicker__day--disabled {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
       font-weight: bold;
@@ -86,7 +90,7 @@ export const StyledBaseReactDatePicker = styled.div`
     text-transform: capitalize;
     color: ${COLORS.GRAY_900};
     padding: 12px 12px;
-    font-size: 14px;
+    font-size: ${FONT_SIZES.sm};
 
     &:hover {
       text-decoration: none;
@@ -225,7 +229,7 @@ export const StyledBaseRangePicker = styled.div`
   }
 
   .CalendarMonth_caption {
-    font-size: 14px;
+    font-size: ${FONT_SIZES.sm};
     color: ${COLORS.GRAY_900};
   }
 
@@ -237,7 +241,7 @@ export const StyledBaseRangePicker = styled.div`
     // height: 32px;
     small {
       color: ${COLORS.GRAY_500};
-      font-size: 12px;
+      font-size: ${FONT_SIZES.xs};
       font-weight: bold;
     }
   }

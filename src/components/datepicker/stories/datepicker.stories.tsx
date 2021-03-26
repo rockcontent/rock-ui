@@ -126,7 +126,7 @@ DateRangeWithDisabledNavigationShown.parameters = {
   },
 };
 
-export const DisableDatepicker = () => {
+export const DisableDatePicker = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
     <Datepicker
@@ -137,7 +137,7 @@ export const DisableDatepicker = () => {
     />
   );
 };
-DisableDatepicker.parameters = {
+DisableDatePicker.parameters = {
   docs: {
     storyDescription:
       'Add the "disabled" attribute to disable navigation for a certain period.',
