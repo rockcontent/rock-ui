@@ -41,24 +41,19 @@ const ChevronButton: React.FC<ChevronButtonProps> = ({
   right,
   left,
 }) => (
-  <Flex
-    h="33px"
-    alignItems="center"
-    justifyContent="center"
+  <IconButton
     position="absolute"
     right={right}
     left={left}
+    aria-label="Next month"
+    onClick={onClick}
+    icon={<Icon />}
+    size="sm"
     top="18px"
-  >
-    <IconButton
-      aria-label="Next month"
-      onClick={onClick}
-      as={Icon}
-      bg="transparent"
-      size="16px"
-      _hover={{ bg: 'transparent' }}
-    />
-  </Flex>
+    variant="ghost"
+    bg="transparent"
+    _hover={{ bg: 'transparent' }}
+  />
 );
 
 const RangePicker = React.forwardRef<any | null, RangePickerProps>(
@@ -171,7 +166,9 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
               )}
               focusedInput={focusedInput}
               onFocusChange={setFocusedInput}
-              initialVisibleMonth={() => initialVisibleMonth || moment()}
+              initialVisibleMonth={() =>
+                startDate || initialVisibleMonth || moment()
+              }
             />
           </StyledBaseRangePicker>
         )}

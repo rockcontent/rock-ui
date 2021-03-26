@@ -22,7 +22,12 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
             icon={<CalendarOutlineIcon color="gray.800" />}
           />
         </InputRightElement>
-        <Input {...props} ref={ref} data-testid="test-datepicker" />
+        <Input
+          {...props}
+          borderWidth="2px"
+          ref={ref}
+          data-testid="test-datepicker"
+        />
       </InputGroup>
     </Stack>
   )

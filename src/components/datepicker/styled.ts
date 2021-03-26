@@ -194,6 +194,7 @@ export const StyledBaseReactDatePicker = styled.div`
 export const StyledBaseRangePicker = styled.div`
   .DayPicker {
     border-radius: 6px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
   .CalendarMonth_caption {
@@ -205,21 +206,13 @@ export const StyledBaseRangePicker = styled.div`
     color: ${COLORS.GRAY_900};
   }
 
-  // .CalendarMonthGrid_month__horizontal:nth-child(2) {
-  //   border-right: 1px solid ${COLORS.GRAY_200};
-  //   transition: all 0.5s;
+  .CalendarMonth {
+    background-color: transparent;
+  }
 
-  //   // &:before {
-  //   //   content: '';
-  //   //   position: absolute;
-  //   //   top: 16px;
-  //   //   bottom: 16px;
-  //   //   right: calc(50% - 1px);
-  //   //   width: 1px;
-  //   //   background-color: ${COLORS.GRAY_200};
-  //   //   z-index: 100;
-  //   // }
-  // }
+  .CalendarMonthGrid_month__horizontal:nth-child(2) {
+    background-color: transparent;
+  }
 
   .CalendarMonth:first-child {
     // border-right: 1px solid red;
@@ -247,6 +240,21 @@ export const StyledBaseRangePicker = styled.div`
       width: 32px !important;
       height: 32px !important;
       border-radius: 6px;
+    }
+  }
+
+  .DayPicker_transitionContainer {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      right: calc(50% - 1px);
+      width: 1px;
+      background-color: ${COLORS.GRAY_200};
+      z-index: 100;
     }
   }
 
@@ -279,7 +287,9 @@ export const StyledBaseRangePicker = styled.div`
   }
 
   .CalendarDay__selected_start,
-  .CalendarDay__selected_start:hover {
+  .CalendarDay__selected_start:hover,
+  .CalendarDay__selected_end,
+  .CalendarDay__selected_end:hover {
     color: #fff;
     font-weight: bold;
 
@@ -293,8 +303,6 @@ export const StyledBaseRangePicker = styled.div`
     }
   }
 
-  .CalendarDay__selected_end,
-  .CalendarDay__selected_end:hover,
   .CalendarDay__hovered_span,
   .CalendarDay__hovered_span:hover,
   .CalendarDay__selected_span,
