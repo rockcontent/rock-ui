@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
 import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
-// import { XCircleSolidIcon } from '../../icons';
 const xCircle = require('../../icons/16x16/solid/x-circle/x-circle.svg');
 
 export const StyledBaseReactDatePicker = styled.div`
@@ -24,7 +23,7 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 
   .react-datepicker__close-icon {
-    right: 40px;
+    right: 34px;
   }
 
   .react-datepicker__close-icon::after {
@@ -46,7 +45,7 @@ export const StyledBaseReactDatePicker = styled.div`
     line-height: 32px;
     font-weight: 600;
     color: ${COLORS.GRAY_500};
-    font-size: ${FONT_SIZES.sm};
+    font-size: ${FONT_SIZES.xs};
     margin: 2px;
   }
 
@@ -54,8 +53,7 @@ export const StyledBaseReactDatePicker = styled.div`
     color: ${COLORS.GRAY_900};
     outline: none;
 
-    &:hover:not(.react-datepicker__day--selected),
-    &.react-datepicker__day--disabled {
+    &:hover:not(.react-datepicker__day--selected) {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
       font-weight: bold;
@@ -89,7 +87,7 @@ export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker__current-month {
     text-transform: capitalize;
     color: ${COLORS.GRAY_900};
-    padding: 12px 12px;
+    padding: 8px 12px;
     font-size: ${FONT_SIZES.sm};
 
     &:hover {
@@ -227,7 +225,8 @@ export const StyledBaseRangePicker = styled.div`
   }
 
   .CalendarMonth_caption {
-    padding-bottom: 58px;
+    padding-bottom: 41px;
+    padding-top: 23px;
   }
 
   .CalendarMonth_caption {
@@ -247,6 +246,10 @@ export const StyledBaseRangePicker = styled.div`
     // border-right: 1px solid red;
   }
 
+  .DayPicker_weekHeader {
+    top: 54px;
+  }
+
   .DayPicker_weekHeader_li {
     small {
       color: ${COLORS.GRAY_500};
@@ -259,6 +262,7 @@ export const StyledBaseRangePicker = styled.div`
     background-color: #fff;
     border: none;
     font-family: ${FONT_FAMILY.body};
+    font-size: ${FONT_SIZES.xs};
     color: ${COLORS.GRAY_900};
     padding: 2px;
 

@@ -29,28 +29,6 @@ export const Basic = () => {
   );
 };
 
-export const Clear = () => {
-  const [startDate, setStartDate] = useState<Date | null | undefined | any>(
-    new Date()
-  );
-  return (
-    <Flex>
-      <Datepicker
-        onChange={setStartDate}
-        selected={startDate}
-        placeholderText="I have been cleared!"
-        isClearable
-      />
-    </Flex>
-  );
-};
-Clear.parameters = {
-  docs: {
-    storyDescription:
-      'Add the attribute "isClearable" so that the clear button appears in the input.',
-  },
-};
-
 export const Range = () => {
   const [startDate, setStartDate] = useState<moment.Moment | null>(null);
   const [endDate, setEndDate] = useState<moment.Moment | null>(null);
