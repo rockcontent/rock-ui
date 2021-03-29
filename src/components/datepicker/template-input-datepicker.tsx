@@ -6,7 +6,7 @@ import { CalendarOutlineIcon } from '../../icons';
 
 type TTemplateInputDatepicker = InputProps & {
   onClick?: () => void;
-  isDisabled: boolean | undefined;
+  isDisabled?: boolean | undefined;
 };
 
 const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
@@ -36,7 +36,7 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
           {...props}
           borderWidth="2px"
           ref={ref}
-          data-testid="test-datepicker"
+          data-testid="test-datepicker-input"
         />
       </InputGroup>
     </Stack>

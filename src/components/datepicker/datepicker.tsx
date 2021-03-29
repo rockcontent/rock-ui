@@ -113,12 +113,14 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           fixedHeight
           onSelect={onSelect}
           selected={date}
+          data-testid="test-datepicker"
           onChange={date => setDate(date)}
           shouldCloseOnSelect={closeOnSelect}
           renderCustomHeader={props => (
             <TemplateHeaderDatepicker
               {...props}
               mode={mode}
+              data-testid="test-template-header"
               toNextMode={toNextMode}
             />
           )}

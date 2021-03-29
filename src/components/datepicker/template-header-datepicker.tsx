@@ -56,6 +56,7 @@ const CustomHeaderByMode: React.FC<TCustomHeaderByModeProps> = ({
       variant="link"
       disabled={changeModeDisabled}
       onClick={onChangeMode}
+      data-testid="test-datepicker-header-button"
     >
       {value}
     </Button>

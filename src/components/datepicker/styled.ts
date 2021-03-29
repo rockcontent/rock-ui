@@ -219,8 +219,6 @@ export const StyledBaseReactDatePicker = styled.div`
   }
 `;
 
-//DayPicker_transitionContainer DayPicker_transitionContainer_1 DayPicker_transitionContainer__horizontal DayPicker_transitionContainer__horizontal_2
-//CalendarMonthGrid_month__horizontal CalendarMonthGrid_month__horizontal_1
 export const StyledBaseRangePicker = styled.div`
   .DayPicker {
     border-radius: 6px;
@@ -333,7 +331,7 @@ export const StyledBaseRangePicker = styled.div`
     }
   }
 
-  .CalendarDay__hovered_span,
+  .CalendarDay__hovered_span:not(.CalendarDay__after_hovered_start),
   .CalendarDay__hovered_span:hover,
   .CalendarDay__selected_span,
   .CalendarDay__selected_span:hover {

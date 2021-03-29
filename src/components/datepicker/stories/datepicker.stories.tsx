@@ -19,7 +19,7 @@ export default {
 };
 
 export const Basic = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
   return (
     <Datepicker
       onChange={setStartDate}
@@ -30,7 +30,7 @@ export const Basic = () => {
 };
 
 export const Clear = () => {
-  const [startDate, setStartDate] = useState<Date | null | undefined>(
+  const [startDate, setStartDate] = useState<Date | null | undefined | any>(
     new Date()
   );
   return (
@@ -52,8 +52,8 @@ Clear.parameters = {
 };
 
 export const Range = () => {
-  const [startDate, setStartDate] = useState<moment.Moment>(null);
-  const [endDate, setEndDate] = useState<moment.Moment>(null);
+  const [startDate, setStartDate] = useState<moment.Moment | null>(null);
+  const [endDate, setEndDate] = useState<moment.Moment | null>(null);
   return (
     <Flex>
       <RangePicker
@@ -72,7 +72,7 @@ Range.parameters = {
   },
 };
 export const MonthPicker = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
   return (
     <Datepicker
       onChange={setStartDate}
@@ -90,7 +90,7 @@ MonthPicker.parameters = {
   },
 };
 export const YearPicker = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
   return (
     <Datepicker
       onChange={setStartDate}
@@ -106,20 +106,20 @@ YearPicker.parameters = {
     storyDescription: 'Add the attribute "showYearPicker" in the date picker.',
   },
 };
-export const DateRangeWithDisabledNavigationShown = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+export const DateWithDisabledNavigationShown = () => {
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
   return (
     <Datepicker
       onChange={setStartDate}
       selected={startDate}
-      placeholderText="Date Range with disabled"
+      placeholderText="Date with disabled"
       minDate={new Date()}
       maxDate={new Date(new Date().setMonth(new Date().getMonth() + 5))}
       showDisabledMonthNavigation
     />
   );
 };
-DateRangeWithDisabledNavigationShown.parameters = {
+DateWithDisabledNavigationShown.parameters = {
   docs: {
     storyDescription:
       'Add the "showDisabledMonthNavigation" attribute to disable navigation for a certain period.',
@@ -127,7 +127,7 @@ DateRangeWithDisabledNavigationShown.parameters = {
 };
 
 export const DisableDatePicker = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
   return (
     <Datepicker
       onChange={setStartDate}

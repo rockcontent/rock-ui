@@ -67,9 +67,6 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
       initialVisibleMonth,
     } = props;
 
-    // const momentStartDate = startDate ? moment(startDate) : null;
-    // const momentEndDate = endDate ? moment(endDate) : null;
-
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
