@@ -102,6 +102,11 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
       setFocusedInput(newFocus);
     };
 
+    const onClear = () => {
+      onChangeStartDate(null);
+      onChangeEndDate(null);
+    };
+
     return (
       <Box ref={containerRef}>
         <Flex pb="1">
@@ -109,9 +114,12 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
             <TemplateInputDatepicker
               w="281px"
               onFocus={() => changeFocus('startDate')}
-              value={startDate?.format(dateFormat || 'DD/MM/YYYY')}
+              value={startDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
               isReadOnly
               onChange={e => onChangeStartDate(moment(e.target.value))}
+              onClick={() => changeFocus('startDate')}
+              clearButton={!!startDate}
+              onClear={onClear}
             />
           </Box>
 
@@ -119,9 +127,12 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
             <TemplateInputDatepicker
               w="281px"
               onFocus={() => changeFocus('endDate')}
-              value={endDate?.format(dateFormat || 'DD/MM/YYYY')}
+              value={endDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
               isReadOnly
               onChange={e => onChangeEndDate(moment(e.target.value))}
+              onClick={() => changeFocus('endDate')}
+              clearButton={!!endDate}
+              onClear={onClear}
             />
           </Box>
         </Flex>
