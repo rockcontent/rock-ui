@@ -48,7 +48,7 @@ const ChevronButton: React.FC<ChevronButtonProps> = ({
     aria-label="Next month"
     onClick={onClick}
     icon={<Icon />}
-    size="sm"
+    size="md"
     top="18px"
     variant="ghost"
     bg="transparent"
@@ -146,20 +146,22 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
               renderNavNextButton={({ onClick }) => (
                 <ChevronButton
                   onClick={onClick}
-                  right="32px"
+                  right="16px"
                   Icon={ChevronRightOutlineIcon}
                 />
               )}
               renderNavPrevButton={({ onClick }) => (
                 <ChevronButton
                   onClick={onClick}
-                  left="32px"
+                  left="16px"
                   Icon={ChevronLeftOutlineIcon}
                 />
               )}
               hideKeyboardShortcutsPanel
               renderDayContents={date => (
-                <div key={date.milliseconds()}>{date.date()}</div>
+                <Box key={date.milliseconds()} fontSize="xs">
+                  {date.date()}
+                </Box>
               )}
               focusedInput={focusedInput}
               onFocusChange={setFocusedInput}

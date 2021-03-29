@@ -223,6 +223,7 @@ export const StyledBaseRangePicker = styled.div`
   .DayPicker {
     border-radius: 6px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid ${COLORS.GRAY_200};
   }
 
   .CalendarMonth_caption {
@@ -268,21 +269,6 @@ export const StyledBaseRangePicker = styled.div`
       width: 32px !important;
       height: 32px !important;
       border-radius: 6px;
-    }
-  }
-
-  .DayPicker_transitionContainer {
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 18px;
-      bottom: 18px;
-      right: calc(50% - 1px);
-      width: 1px;
-      background-color: ${COLORS.GRAY_200};
-      z-index: 100;
     }
   }
 

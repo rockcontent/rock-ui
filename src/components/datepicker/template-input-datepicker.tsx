@@ -16,7 +16,7 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
         <InputRightElement>
           <IconButton
             disabled={isDisabled}
-            borderRadius="2px"
+            // borderRadius="2px"
             size="sm"
             variant="ghost"
             aria-label="Open calendar"
