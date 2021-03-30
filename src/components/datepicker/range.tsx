@@ -69,11 +69,6 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
 
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-      if (containerRef) {
-      }
-    }, [containerRef]);
-
     const [focusedInput, setFocusedInput] = useState<
       'startDate' | 'endDate' | null
     >(null);

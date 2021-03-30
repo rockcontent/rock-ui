@@ -176,7 +176,12 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
-export { Datepicker, ReactDatePickerProps } from './components/datepicker';
+export {
+  Datepicker,
+  ReactDatePickerProps,
+  RangePicker,
+  RangePickerProps,
+} from './components/datepicker';
 
 export {
   CalendarOutlineIcon,
