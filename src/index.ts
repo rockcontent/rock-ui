@@ -176,6 +176,7 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
+
 export { Datepicker, ReactDatePickerProps } from './components/datepicker';
 
 export {
@@ -187,3 +188,15 @@ export {
   QuestionMarkCircleOutlineIcon,
   XCircleSolidIcon,
 } from './icons';
+
+export {
+  Accordion,
+  AccordionProps,
+  AccordionPanel,
+  AccordionPanelProps,
+  AccordionItem,
+  AccordionItemProps,
+  AccordionIcon,
+  AccordionButton,
+  AccordionButtonProps,
+} from './components/accordion';

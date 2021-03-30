@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should render accordion 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-accordion css-0"
+  >
+    <div
+      class="chakra-accordion__item css-1fsnuue"
+    >
+      <h2>
+        <button
+          aria-controls="accordion-panel-1"
+          aria-expanded="false"
+          class="chakra-accordion__button css-9179w8"
+          id="accordion-button-1"
+          type="button"
+        >
+          <div
+            class="css-1eziwv"
+          >
+            Section 1 title
+          </div>
+          <svg
+            aria-hidden="true"
+            class="chakra-icon css-3bodus"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </h2>
+      <div
+        class="chakra-collapse"
+        style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+      >
+        <div
+          aria-labelledby="accordion-button-1"
+          class="chakra-accordion__panel css-b0qdn7"
+          id="accordion-panel-1"
+          role="region"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-accordion__item css-1fsnuue"
+    >
+      <h2>
+        <button
+          aria-controls="accordion-panel-2"
+          aria-expanded="false"
+          class="chakra-accordion__button css-9179w8"
+          id="accordion-button-2"
+          type="button"
+        >
+          <div
+            class="css-1eziwv"
+          >
+            Section 2 title
+          </div>
+          <svg
+            aria-hidden="true"
+            class="chakra-icon css-3bodus"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </h2>
+      <div
+        class="chakra-collapse"
+        style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+      >
+        <div
+          aria-labelledby="accordion-button-2"
+          class="chakra-accordion__panel css-b0qdn7"
+          id="accordion-panel-2"
+          role="region"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
