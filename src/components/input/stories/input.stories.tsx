@@ -25,6 +25,8 @@ export default {
 
 export const basic = () => <Input placeholder="Basic usage" />;
 
+export const disabled = () => <Input placeholder="Basic usage" disabled />;
+
 export const withSizes = () => (
   <Stack spacing={3}>
     <Input placeholder="large size" size="lg" />

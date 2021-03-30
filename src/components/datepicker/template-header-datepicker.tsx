@@ -96,7 +96,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
     const periodStart = startYear + 12 * index;
     const periodEnd = startYear + 11 + 12 * index;
 
-    setPeriod(`${periodStart}-${periodEnd}`);
+    setPeriod(`${periodStart} - ${periodEnd}`);
   }, [date]);
 
   return (
