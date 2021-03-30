@@ -97,7 +97,6 @@ export const StyledBaseReactDatePicker = styled.div`
     &:hover:not(.react-datepicker__current-month-year) {
       background-color: ${COLORS.BLUE_50};
       color: ${COLORS.BLUE_500};
-      font-weight: normal;
     }
 
     &.react-datepicker__current-month-year {
@@ -189,6 +188,8 @@ export const StyledBaseReactDatePicker = styled.div`
       cursor: not-allowed;
       color: ${COLORS.GRAY_500};
       opacity: 40%;
+      font-weight: normal;
+      background-color: ${COLORS.GRAY_100};
     }
   }
 
@@ -290,6 +291,7 @@ export const StyledBaseRangePicker = styled.div`
   .CalendarDay__today {
     div {
       position: relative;
+      font-weight: bold;
 
       &:before {
         content: '';

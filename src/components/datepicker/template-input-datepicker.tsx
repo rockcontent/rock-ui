@@ -60,8 +60,10 @@ const TemplateInputDatepicker = React.forwardRef<any, TTemplateInputDatepicker>(
           </InputRightElement>
           <Input
             {...props}
-            borderWidth="1px"
-            _focus={{ borderWidth: '2px' }}
+            _focus={{
+              shadow: '0 0 0 1px #225ed8!important',
+              borderColor: '#225ED8',
+            }}
             ref={ref}
             data-testid="test-datepicker-input"
           />
