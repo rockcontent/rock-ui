@@ -176,6 +176,22 @@ export {
   AlertDialogCloseButton,
   AlertDialogCloseButtonProps,
 } from './components/alertDialog';
+export {
+  Datepicker,
+  ReactDatePickerProps,
+  RangePicker,
+  RangePickerProps,
+} from './components/datepicker';
+
+export {
+  CalendarOutlineIcon,
+  CheckOutlineIcon,
+  ChevronLeftOutlineIcon,
+  ChevronRightOutlineIcon,
+  ExclamationOutlineIcon,
+  QuestionMarkCircleOutlineIcon,
+  XCircleSolidIcon,
+} from './icons';
 
 export {
   Accordion,

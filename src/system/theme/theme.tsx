@@ -1,7 +1,8 @@
 import { extendTheme } from '@chakra-ui/react';
 import { COLORS } from '../../constants/colors/colors';
+import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
 
-const fonts = {
+const FONT_FAMILY = {
   heading:
     '"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   body:
@@ -15,11 +16,11 @@ const rockTheme = extendTheme({
         borderColor: COLORS.GRAY_200,
       },
       body: {
-        fontFamily: fonts.body,
+        fontFamily: FONT_FAMILY.body,
       },
     },
   },
-  fonts,
+  FONT_FAMILY,
   colors: {
     gray: {
       50: COLORS.GRAY_50,
@@ -163,6 +164,7 @@ const rockTheme = extendTheme({
       900: COLORS.WHITE_ALPHA_900,
     },
   },
+  fontSizes: FONT_SIZES,
   components: {
     Heading: {
       baseFont:
@@ -174,4 +176,4 @@ const rockTheme = extendTheme({
   },
 });
 
-export { rockTheme as RockUITheme };
+export { rockTheme as RockUITheme, FONT_FAMILY };

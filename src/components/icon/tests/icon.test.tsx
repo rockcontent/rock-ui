@@ -25,7 +25,6 @@ describe('Heading', () => {
     const icon = document.querySelector('.chakra-icon');
 
     expect(icon).toBeTruthy();
-    console.log(icon);
     expect(icon && icon.getElementsByTagName('path')).toBeTruthy();
 
     ReactDOM.unmountComponentAtNode(container);
