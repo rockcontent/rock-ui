@@ -9,12 +9,6 @@ import moment from 'moment';
 import { Box, Flex, IconButton } from '@chakra-ui/react';
 import TemplateInputDatepicker from './template-input-datepicker';
 
-export enum DatePickerMode {
-  year = 'year',
-  month = 'month',
-  day = 'day',
-}
-
 moment.updateLocale('en', {
   weekdaysMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 });

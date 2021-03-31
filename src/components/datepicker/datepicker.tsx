@@ -6,12 +6,7 @@ import TemplateInputDatepicker from './template-input-datepicker';
 import TemplateHeaderDatepicker from './template-header-datepicker';
 import ContainerDatepicker from './container-datepicker';
 import { StyledBaseReactDatePicker } from './styled';
-
-export enum DatePickerMode {
-  year = 'year',
-  month = 'month',
-  day = 'day',
-}
+import DatePickerMode from './utils/datepicker-mode';
 
 const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
   (props, ref: any) => {

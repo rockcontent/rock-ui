@@ -10,7 +10,7 @@ module.exports = {
         modules: true,
       }),
       svg({
-        base64: false,
+        base64: true,
       })
     );
     return config;

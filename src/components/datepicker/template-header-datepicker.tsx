@@ -3,7 +3,7 @@ import { Flex, Spacer } from '../layout';
 import { Button } from '../button';
 import { ChevronLeftOutlineIcon, ChevronRightOutlineIcon } from '../../icons';
 import { format } from 'date-fns';
-import { DatePickerMode } from './datepicker';
+import DatePickerMode from './utils/datepicker-mode';
 
 type TTemplateHeaderDatepicker = {
   date: Date;
