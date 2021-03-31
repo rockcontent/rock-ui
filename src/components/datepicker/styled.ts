@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FONT_FAMILY } from '../../system/theme/theme';
 import { COLORS } from '../../constants/colors/colors';
 import { FONT_SIZES } from '../../constants/font-sizes/font-sizes';
-const xCircle = require('../../icons/16x16/solid/x-circle/x-circle.svg');
+import xCircle from './utils/x-circle.svg';
 
 export const StyledBaseReactDatePicker = styled.div`
   .react-datepicker {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../button';
 import { Box, Flex } from '../layout';
-import { DatePickerMode } from './datepicker';
+import DatePickerMode from './utils/datepicker-mode';
 
 type TContainerDatepicker = {
   className?: string;
