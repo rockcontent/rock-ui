@@ -7,7 +7,6 @@ import { CheckOutlineIcon, ExclamationOutlineIcon } from '../../icons';
 const stepStyleByStatus = {
   current: {
     bg: 'blue.500',
-    borderColor: 'transparent',
     borderColor: 'blue.100',
     color: 'white',
   },
