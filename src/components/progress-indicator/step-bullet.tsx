@@ -62,6 +62,9 @@ const StepBullet: React.FC<StepBulletProps> = ({
   const hideBorder =
     !disabled && (done || error || (current && type !== 'bullet'));
 
+  const stepIncompleteClass =
+    !done && !error && !current ? 'progress-step__bullet--incomplete' : '';
+
   return (
     <Flex
       borderRadius="full"
@@ -74,7 +77,7 @@ const StepBullet: React.FC<StepBulletProps> = ({
       opacity={disabled ? 0.4 : 1}
       {...stylesByStatus}
       borderColor={hideBorder ? 'transparent' : stylesByStatus.borderColor}
-      className="progress-step__bullet"
+      className={`progress-step__bullet ${stepIncompleteClass}`}
     >
       {showText && (
         <Text

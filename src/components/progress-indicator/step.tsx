@@ -12,6 +12,14 @@ const Container = styled(Flex)`
     .progress-step__title {
       color: ${({ accentColor }) => accentColor};
     }
+
+    .progress-step__bullet--incomplete {
+      border-color: ${({ baseColor }) => baseColor} !important;
+
+      p {
+        color: ${({ accentColor }) => accentColor} !important;
+      }
+    }
   }
 
   &.progress-step--completed:not(.progress-step--disabled):hover {
