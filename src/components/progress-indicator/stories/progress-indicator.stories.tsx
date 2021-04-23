@@ -1,7 +1,7 @@
 import { Container } from '@chakra-ui/layout';
 import * as React from 'react';
 import { ProgressIndicator } from '../';
-import Step from '../step';
+import { Step } from '../step';
 import { Text } from '@chakra-ui/react';
 
 export default {
@@ -16,7 +16,7 @@ export default {
 };
 
 export const basicHorizontal = () => (
-  <ProgressIndicator mode="horizontal">
+  <ProgressIndicator mode="vertical" colorScheme="yellow">
     <Step title="Content requested" type="bullet" done />
     <Step title="Ongoing brief" type="bullet" />
     <Step title="Ongoing brief" type="bullet" error />
