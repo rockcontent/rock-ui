@@ -8,4 +8,6 @@ export default interface StepProps extends StepBulletProps {
   title?: string;
   subtitle?: string;
   children?: JSX.Element;
+  disabled?: boolean;
+  colorScheme?: string;
 }

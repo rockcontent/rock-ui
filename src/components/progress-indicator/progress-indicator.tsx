@@ -5,11 +5,13 @@ import { ProgressMode } from './entities/progress-mode';
 export interface ProgressIndicatorProps extends FlexProps {
   children: JSX.Element[] | JSX.Element;
   mode?: ProgressMode;
+  colorScheme?: string;
 }
 
 export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
   mode,
   children,
+  colorScheme = 'blue',
   ...props
 }) => {
   const childList: JSX.Element[] = Array.isArray(children)
@@ -17,9 +19,9 @@ export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
     : [children];
 
   return (
-    <Flex direction={mode === 'horizontal' ? 'row' : 'column'} {...props}>
+    <Flex direction={mode === 'vertical' ? 'column' : 'row'} {...props}>
       {childList.map((child, index) =>
-        React.cloneElement(child, { index: index + 1, mode })
+        React.cloneElement(child, { index: index + 1, mode, colorScheme })
       )}
     </Flex>
   );

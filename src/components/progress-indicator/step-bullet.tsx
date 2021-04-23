@@ -3,11 +3,10 @@ import { Flex, Text } from '@chakra-ui/react';
 import { StepBulletProps } from './entities/step-bullet-props';
 
 import { CheckOutlineIcon, ExclamationOutlineIcon } from '../../icons';
+import { ColorScheme, useColorscheme } from '../../utils/hooks/use-colorscheme';
 
 const stepStyleByStatus = {
   current: {
-    bg: 'blue.500',
-    borderColor: 'blue.100',
     color: 'white',
   },
 
@@ -31,13 +30,19 @@ const stepStyleByStatus = {
 };
 
 const getStyleByStepStatus = (
-  current?: boolean,
-  done?: boolean,
-  error?: boolean
+  current: boolean | undefined,
+  done: boolean | undefined,
+  error: boolean | undefined,
+  colorScheme: ColorScheme
 ) => {
   if (done) return stepStyleByStatus.done;
   if (error) return stepStyleByStatus.error;
-  if (current) return stepStyleByStatus.current;
+  if (current)
+    return {
+      ...stepStyleByStatus.current,
+      bg: colorScheme.accent,
+      borderColor: colorScheme.base,
+    };
 
   return stepStyleByStatus.incomplete;
 };
@@ -47,11 +52,15 @@ const StepBullet: React.FC<StepBulletProps> = ({
   type = 'number',
   current,
   done,
+  colorScheme = 'blue',
   error,
+  disabled,
 }) => {
-  const stylesByStatus = getStyleByStepStatus(current, done, error);
+  const colors = useColorscheme(colorScheme);
+  const stylesByStatus = getStyleByStepStatus(current, done, error, colors);
   const showText = type === 'number' && !done && !error;
-  const hideBorder = done || error || (current && type !== 'bullet');
+  const hideBorder =
+    !disabled && (done || error || (current && type !== 'bullet'));
 
   return (
     <Flex
@@ -62,33 +71,37 @@ const StepBullet: React.FC<StepBulletProps> = ({
       borderWidth={type === 'bullet' ? '4px' : '2px'}
       justifyContent="center"
       alignItems="center"
+      opacity={disabled ? 0.4 : 1}
       {...stylesByStatus}
       borderColor={hideBorder ? 'transparent' : stylesByStatus.borderColor}
+      className="progress-step__bullet"
     >
       {showText && (
         <Text
           fontSize="sm"
           lineHeight="4"
-          fontWeight="medium"
+          fontWeight={current ? 'bold' : 'medium'}
           color={stylesByStatus.color}
         >
           {index}
         </Text>
       )}
 
-      {(() => {
-        if (done) {
-          return <CheckOutlineIcon color={stylesByStatus.color} w="12px" />;
-        }
+      {done && !error && (
+        <CheckOutlineIcon
+          fill={stylesByStatus.color}
+          className="progress-step__icon"
+          w="16px"
+        />
+      )}
 
-        if (error) {
-          return (
-            <ExclamationOutlineIcon color={stylesByStatus.color} w="12px" />
-          );
-        }
-
-        return '';
-      })()}
+      {error && !done && (
+        <ExclamationOutlineIcon
+          fill={stylesByStatus.color}
+          className="progress-step__icon"
+          w="16px"
+        />
+      )}
     </Flex>
   );
 };
