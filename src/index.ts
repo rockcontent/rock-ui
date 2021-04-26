@@ -204,3 +204,10 @@ export {
   AccordionButton,
   AccordionButtonProps,
 } from './components/accordion';
+
+export {
+  ProgressIndicatorProps,
+  ProgressIndicator,
+  Step,
+  StepProps,
+} from './components/progress-indicator';

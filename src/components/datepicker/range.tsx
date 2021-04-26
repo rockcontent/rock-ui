@@ -16,6 +16,8 @@ moment.updateLocale('en', {
 type RangePickerProps = {
   startDate: moment.Moment | null;
   endDate: moment.Moment | null;
+  startDatePlaceholder?: string;
+  endDatePlaceholder?: string;
   onChangeStartDate: (date: moment.Moment | null) => void;
   onChangeEndDate: (date: moment.Moment | null) => void;
   initialVisibleMonth?: moment.Moment;
@@ -59,6 +61,8 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
       endDate,
       dateFormat,
       initialVisibleMonth,
+      startDatePlaceholder,
+      endDatePlaceholder,
     } = props;
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -105,6 +109,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
               onFocus={() => changeFocus('startDate')}
               value={startDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
               isReadOnly
+              placeholder={startDatePlaceholder}
               onChange={e => onChangeStartDate(moment(e.target.value))}
               onClick={() => changeFocus('startDate')}
               clearButton={!!startDate}
@@ -115,6 +120,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
           <Box pl="2">
             <TemplateInputDatepicker
               w="281px"
+              placeholder={endDatePlaceholder}
               onFocus={() => changeFocus('endDate')}
               value={endDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
               isReadOnly

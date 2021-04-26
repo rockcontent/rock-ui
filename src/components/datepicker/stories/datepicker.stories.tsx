@@ -37,6 +37,8 @@ export const Range = () => {
       <RangePicker
         startDate={startDate}
         endDate={endDate}
+        startDatePlaceholder="Start Date"
+        endDatePlaceholder="End Date"
         onChangeStartDate={setStartDate}
         onChangeEndDate={setEndDate}
       />
