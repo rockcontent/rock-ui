@@ -21,7 +21,12 @@ export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
   return (
     <Flex direction={mode === 'vertical' ? 'column' : 'row'} {...props}>
       {childList.map((child, index) =>
-        React.cloneElement(child, { index: index + 1, mode, colorScheme })
+        React.cloneElement(child, {
+          index: index + 1,
+          mode,
+          colorScheme,
+          key: index,
+        })
       )}
     </Flex>
   );

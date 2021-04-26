@@ -6,25 +6,25 @@ export const StepContainer = styled(Flex)`
 
   &:not(.progress-step--disabled):hover {
     .progress-step__title {
-      color: ${({ accentColor }) => accentColor};
+      color: ${({ accentcolor }) => accentcolor};
     }
 
     .progress-step__bullet--incomplete {
-      border-color: ${({ baseColor }) => baseColor} !important;
+      border-color: ${({ basecolor }) => basecolor} !important;
 
       p {
-        color: ${({ accentColor }) => accentColor} !important;
+        color: ${({ accentcolor }) => accentcolor} !important;
       }
     }
   }
 
   &.progress-step--completed:not(.progress-step--disabled):hover {
     .progress-step__bullet {
-      background-color: ${({ baseColor }) => baseColor};
+      background-color: ${({ basecolor }) => basecolor};
     }
 
     .progress-step__icon {
-      fill: ${({ accentColor }) => accentColor};
+      fill: ${({ accentcolor }) => accentcolor};
     }
   }
 

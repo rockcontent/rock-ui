@@ -31,8 +31,8 @@ export const Step: React.FC<StepProps> = ({
     <StepContainer
       cursor={disabled ? 'not-allowed' : ''}
       h="80px"
-      accentColor={colors.accent}
-      baseColor={colors.base}
+      accentcolor={colors.accent}
+      basecolor={colors.base}
       position="relative"
       className={`${containerClass} ${disabledClass} ${completedClass}`}
     >

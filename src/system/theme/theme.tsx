@@ -20,7 +20,12 @@ const rockTheme = extendTheme({
       },
     },
   },
-  FONT_FAMILY,
+
+  fonts: {
+    body: FONT_FAMILY.body,
+    heading: FONT_FAMILY.heading,
+  },
+
   colors: {
     gray: {
       50: COLORS.GRAY_50,

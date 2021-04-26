@@ -2,9 +2,12 @@
     "extends": [
       "tsdx"
     ],
-    "settings": {
+  "rules": {
+    "no-dupe-keys": "off"
+  },
+  "settings": {
       "react": {
-        "version": "detect"  
+        "version": "detect"
       }
     }
   }
