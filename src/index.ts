@@ -211,3 +211,16 @@ export {
   Step,
   StepProps,
 } from './components/progress-indicator';
+
+export {
+  Fade,
+  FadeProps,
+  ScaleFade,
+  ScaleFadeProps,
+  Slide,
+  SlideProps,
+  SlideFade,
+  SlideFadeProps,
+  Collapse,
+  CollapseProps,
+} from './components/transition';

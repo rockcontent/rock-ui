@@ -1,10 +1,10 @@
 {
-    "extends": [
+  "extends": [
       "tsdx"
     ],
-    "settings": {
-      "react": {
-        "version": "detect"  
-      }
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   }
+}
