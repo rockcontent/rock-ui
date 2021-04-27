@@ -9,7 +9,7 @@ export interface ProgressIndicatorProps extends FlexProps {
 }
 
 export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
-  mode,
+  mode = 'horizontal',
   children,
   colorScheme = 'blue',
   ...props
@@ -20,12 +20,13 @@ export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
 
   return (
     <Flex direction={mode === 'vertical' ? 'column' : 'row'} {...props}>
-      {childList.map((child, index) =>
+      {React.Children.map(childList, (child, index) =>
         React.cloneElement(child, {
           index: index + 1,
           mode,
           colorScheme,
           key: index,
+          ...child.props,
         })
       )}
     </Flex>

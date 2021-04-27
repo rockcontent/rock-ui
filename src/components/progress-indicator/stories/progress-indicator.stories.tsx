@@ -6,6 +6,7 @@ import { Text } from '@chakra-ui/react';
 
 export default {
   title: 'Progress Indicator',
+  component: ProgressIndicator,
   decorators: [
     (Story: any) => (
       <Container mt="40px">
@@ -15,25 +16,13 @@ export default {
   ],
 };
 
-export const basicHorizontal = () => (
-  <ProgressIndicator mode="vertical" colorScheme="yellow">
+export const horizontal = () => (
+  <ProgressIndicator mode="horizontal" colorScheme="blue">
     <Step title="Content requested" type="bullet" done />
     <Step title="Ongoing brief" type="bullet" />
     <Step title="Ongoing brief" type="bullet" error />
     <Step
-      title="Brief alterations"
-      type="bullet"
-      current
-      subtitle="Available in 2 days"
-    />
-  </ProgressIndicator>
-);
-
-export const horizontal = () => (
-  <ProgressIndicator mode="horizontal" colorScheme="green">
-    <Step title="Content requested" type="bullet" done />
-    <Step title="Ongoing brief" type="bullet" />
-    <Step
+      colorScheme="red"
       title="Brief alterations"
       type="bullet"
       current
@@ -43,7 +32,7 @@ export const horizontal = () => (
 );
 
 export const vertical = () => (
-  <ProgressIndicator mode="vertical" colorScheme="orange">
+  <ProgressIndicator mode="vertical" colorScheme="blue">
     <Step title="Content requested" done />
     <Step title="Content requested" />
     <Step title="Ongoing brief" error disabled />
