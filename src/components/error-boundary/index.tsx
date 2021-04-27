@@ -6,7 +6,6 @@ export default class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error: Error) {
-    console.log('<<<<<<<<<<<<<<<<<<<<<<<<');
     console.warn(error.message);
   }
 
