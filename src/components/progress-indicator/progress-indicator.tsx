@@ -4,7 +4,13 @@ import { ProgressMode } from './entities/progress-mode';
 
 export interface ProgressIndicatorProps extends FlexProps {
   children: JSX.Element[] | JSX.Element;
+  /**
+   * Defines the orientation of the progress
+   */
   mode?: ProgressMode;
+  /**
+   * Defines the colorscheme of the progress
+   */
   colorScheme?: string;
 }
 

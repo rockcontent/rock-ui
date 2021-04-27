@@ -7,6 +7,9 @@ import { Text } from '@chakra-ui/react';
 export default {
   title: 'Progress Indicator',
   component: ProgressIndicator,
+  subcomponents: {
+    Step,
+  },
   decorators: [
     (Story: any) => (
       <Container mt="40px">
