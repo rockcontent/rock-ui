@@ -4,10 +4,8 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-const SkeletonCircle = React.forwardRef<HTMLDivElement, SkeletonProps>(
-  ({ children, ...props }) => (
-    <BaseSkeletonCircle {...props}>{children}</BaseSkeletonCircle>
-  )
+const SkeletonCircle: React.FC<SkeletonProps> = ({ children, ...props }) => (
+  <BaseSkeletonCircle {...props}>{children}</BaseSkeletonCircle>
 );
 
 export default SkeletonCircle;
