@@ -224,3 +224,13 @@ export {
   Collapse,
   CollapseProps,
 } from './components/transition';
+
+export { Divider, DividerProps } from './components/divider';
+
+export {
+  Skeleton,
+  SkeletonProps,
+  SkeletonText,
+  SkeletonTextProps,
+  SkeletonCircle,
+} from './components/skeleton';

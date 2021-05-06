@@ -107,7 +107,7 @@ export const CustomRadio = () => {
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: 'framework',
     defaultValue: 'react',
-    onChange: console.log,
+    // onChange: console.log,
   });
 
   const group = getRootProps();
