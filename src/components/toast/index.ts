@@ -1,1 +1,1 @@
-export { useToast } from './toast';
+export { useToast, createStandaloneToast } from './toast';
