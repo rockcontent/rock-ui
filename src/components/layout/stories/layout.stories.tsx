@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { PhoneIcon } from '@chakra-ui/icons';
 import { Image, Text } from '@chakra-ui/react';
-import { CheckIcon, PhoneIcon, SettingsIcon } from '@chakra-ui/icons';
+import * as React from 'react';
 import {
   AspectRatio,
   Box,
@@ -8,19 +8,19 @@ import {
   Circle,
   Container,
   Flex,
+  Grid,
+  GridItem,
   HStack,
+  ListItem,
+  OrderedList,
   SimpleGrid,
   Spacer,
   Square,
   Stack,
+  StackDivider,
+  UnorderedList,
   VStack,
   Wrap,
-  StackDivider,
-  Grid,
-  GridItem,
-  ListItem,
-  OrderedList,
-  UnorderedList,
 } from '../';
 
 export default {
