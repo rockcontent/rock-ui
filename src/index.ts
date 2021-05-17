@@ -48,6 +48,8 @@ export {
   FlexProps,
   Grid,
   GridProps,
+  GridItem,
+  GridItemProps,
   HStack,
   SimpleGrid,
   Spacer,
@@ -56,6 +58,14 @@ export {
   StackDivider,
   VStack,
   Wrap,
+  List,
+  ListProps,
+  ListItem,
+  ListItemProps,
+  OrderedList,
+  OrderedListProps,
+  UnorderedList,
+  UnorderedListProps,
 } from './components/layout';
 export { Textarea } from './components/textarea';
 export {
@@ -137,6 +147,7 @@ export {
 export { Switch, SwitchProps } from './components/switch';
 export { Heading, HeadingProps } from './components/heading';
 export { Icon, IconProps } from './components/icon';
+export { Image, ImageProps } from './components/image';
 export {
   Portal,
   PortalProps,
