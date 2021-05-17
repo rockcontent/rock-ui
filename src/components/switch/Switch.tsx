@@ -6,6 +6,6 @@ import {
 
 export { BaseSwitchProps as SwitchProps };
 
-export const Switch: React.FC<BaseSwitchProps> = ({ children, ...props }) => (
-  <BaseSwitch {...props}>{children}</BaseSwitch>
+export const Switch = React.forwardRef<HTMLInputElement, BaseSwitchProps>(
+  ({ children, ...props }) => <BaseSwitch {...props}>{children}</BaseSwitch>
 );
