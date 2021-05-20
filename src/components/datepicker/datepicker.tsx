@@ -14,13 +14,15 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
       showYearPicker = false,
       shouldCloseOnSelect = false,
       showMonthYearPicker = false,
+      onChange,
+      selected,
     } = props;
 
     const [userSelectedMode, setUserSelectedMode] = useState<
       DatePickerMode | undefined
     >();
     const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
-    const [date, setDate] = useState<any>(props.selected);
+
     const datepickerRef = useRef<ReactDatePicker | null>();
 
     useEffect(() => {
@@ -40,18 +42,21 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
       }
     }, [showMonthYearPicker, showYearPicker]);
 
-    const onSelect = (newDate: Date) => {
-      setDate(newDate);
+    const onChangeHandler = (
+      date: Date | [Date, Date] | /* for selectsRange */ null,
+      event?: React.SyntheticEvent<any> | undefined
+    ) => {
+      onChange(date, event);
       if (userSelectedMode !== mode) toPrevMode();
     };
 
     const goToThisDay = () => {
       datepickerRef?.current?.setOpen(false);
-      setDate(new Date());
+      onChangeHandler(new Date());
     };
 
     const goToThisMonth = () => {
-      setDate(new Date());
+      onChangeHandler(new Date());
       datepickerRef?.current?.setOpen(false);
       if (userSelectedMode !== mode) {
         toPrevMode();
@@ -62,7 +67,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
     };
 
     const goToThisYear = () => {
-      setDate(new Date());
+      onChangeHandler(new Date());
       datepickerRef?.current?.setOpen(false);
       if (userSelectedMode !== mode) {
         toPrevMode();
@@ -107,10 +112,9 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           tabIndex={1}
           fixedHeight
           isClearable
-          onSelect={onSelect}
-          selected={date}
+          selected={selected}
           data-testid="test-datepicker"
-          onChange={date => setDate(date)}
+          onChange={onChangeHandler}
           shouldCloseOnSelect={closeOnSelect}
           renderCustomHeader={props => (
             <TemplateHeaderDatepicker
@@ -130,9 +134,9 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
               goToThisDay={goToThisDay}
               goToThisMonth={goToThisMonth}
               goToThisYear={goToThisYear}
-              setDate={setDate}
+              setDate={onChangeHandler}
               mode={mode}
-              date={date}
+              date={selected}
             />
           )}
         />
