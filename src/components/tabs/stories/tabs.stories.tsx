@@ -147,7 +147,7 @@ export const TabsOnChange: React.FC = () => {
   const bg = colors[tabIndex];
 
   return (
-    <Tabs onChange={index => setTabIndex(index)} bg={bg}>
+    <Tabs onChange={(index) => setTabIndex(index)} bg={bg}>
       <TabList>
         <Tab>Red</Tab>
         <Tab>Teal</Tab>

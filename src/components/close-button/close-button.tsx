@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {
   CloseButton as BaseCloseButton,
   CloseButtonProps as BaseCloseButtonProps,
@@ -6,11 +6,11 @@ import {
 
 export { BaseCloseButtonProps as CloseButtonProps };
 
-export const CloseButton: FC<BaseCloseButtonProps> = ({
-  children,
-  ...props
-}) => (
+export const CloseButton = React.forwardRef<
+  HTMLInputElement,
+  BaseCloseButtonProps
+>(({ children, ...props }) => (
   <BaseCloseButton {...props} className="closeButtonChakra">
     {children}
   </BaseCloseButton>
-);
+));

@@ -5,13 +5,13 @@ import { AsyncCreatableSelect } from '../';
 import { colourOptions } from '../constants';
 
 const filterColors = (inputValue: string) => {
-  return colourOptions.filter(i =>
+  return colourOptions.filter((i) =>
     i.label.toLowerCase().includes(inputValue.toLowerCase())
   );
 };
 
 const promiseOptions = (inputValue: string) =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve(filterColors(inputValue));
     }, 1000);
