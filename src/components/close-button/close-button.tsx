@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   CloseButton as BaseCloseButton,
   CloseButtonProps as BaseCloseButtonProps,
