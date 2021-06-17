@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Image, Text } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
+import { Image, Text } from '@chakra-ui/react';
+import * as React from 'react';
 import {
   AspectRatio,
   Box,
@@ -9,14 +9,18 @@ import {
   Container,
   Flex,
   Grid,
+  GridItem,
   HStack,
+  ListItem,
+  OrderedList,
   SimpleGrid,
   Spacer,
   Square,
   Stack,
+  StackDivider,
+  UnorderedList,
   VStack,
   Wrap,
-  StackDivider,
 } from '../';
 
 export default {
@@ -279,3 +283,79 @@ export const wrap = () => (
     </Wrap>
   </Stack>
 );
+
+export const UnorderedListExample = () => (
+  <UnorderedList>
+    <ListItem>Lorem ipsum dolor sit amet</ListItem>
+    <ListItem>Consectetur adipiscing elit</ListItem>
+    <ListItem>Integer molestie lorem at massa</ListItem>
+    <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+  </UnorderedList>
+);
+
+export const OrderedListExample = () => (
+  <OrderedList>
+    <ListItem>Lorem ipsum dolor sit amet</ListItem>
+    <ListItem>Consectetur adipiscing elit</ListItem>
+    <ListItem>Integer molestie lorem at massa</ListItem>
+    <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+  </OrderedList>
+);
+
+export const TemplateColumns = () => (
+  <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+    <Box w="100%" h="10" bg="blue.500" />
+    <Box w="100%" h="10" bg="blue.500" />
+    <Box w="100%" h="10" bg="blue.500" />
+    <Box w="100%" h="10" bg="blue.500" />
+    <Box w="100%" h="10" bg="blue.500" />
+  </Grid>
+);
+
+TemplateColumns.parameters = {
+  docs: {
+    description: {
+      story:
+        "Here's an example of using grid template columns with the grid component, and applying a gap or space between the grid items.",
+    },
+  },
+};
+
+export const SpanningColumns = () => (
+  <Grid
+    h="200px"
+    templateRows="repeat(2, 1fr)"
+    templateColumns="repeat(5, 1fr)"
+    gap={4}
+  >
+    <GridItem rowSpan={2} colSpan={1} bg="tomato" />
+    <GridItem colSpan={2} bg="papayawhip" />
+    <GridItem colSpan={2} bg="papayawhip" />
+    <GridItem colSpan={4} bg="tomato" />
+  </Grid>
+);
+
+SpanningColumns.parameters = {
+  docs: {
+    description: {
+      story:
+        'In some layouts, you may need certain grid items to span specific amount of columns or rows instead of an even distribution. To achieve this, you need to pass the colSpan prop to the GridItem component to span across columns and also pass the rowSpan component to span across rows. You also need to specify the templateColumns and templateRows.',
+    },
+  },
+};
+
+export const StartingAndEndingLines = () => (
+  <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+    <GridItem colSpan={2} h="10" bg="tomato" />
+    <GridItem colStart={4} colEnd={6} h="10" bg="papayawhip" />
+  </Grid>
+);
+
+StartingAndEndingLines.parameters = {
+  docs: {
+    description: {
+      story:
+        'Pass the colStart and colEnd prop to GridItem component to make an element start or end at the nth grid position.',
+    },
+  },
+};

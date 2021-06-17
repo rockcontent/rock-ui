@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from '../../layout';
 import { Datepicker } from '../datepicker';
 import { Flex } from '@chakra-ui/react';
@@ -20,6 +20,7 @@ export default {
 
 export const Basic = () => {
   const [startDate, setStartDate] = useState<Date | null | any>(null);
+
   return (
     <Datepicker
       onChange={setStartDate}
