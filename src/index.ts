@@ -253,3 +253,5 @@ export {
   UseClickableProps,
   UseClickableReturn,
 } from './components/clickable';
+
+export { useCounter, UseCounterProps } from './hooks/counter';
