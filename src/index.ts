@@ -253,3 +253,20 @@ export {
   UseClickableProps,
   UseClickableReturn,
 } from './components/clickable';
+
+export {
+  ColorMode,
+  ColorModeContext,
+  ColorModeOptions,
+  ColorModeProvider,
+  ColorModeProviderProps,
+  ColorModeScript,
+  DarkMode,
+  LightMode,
+  StorageManager,
+  cookieStorageManager,
+  localStorageManager,
+  storageKey,
+  useColorMode,
+  useColorModeValue,
+} from './components/color-mode';
