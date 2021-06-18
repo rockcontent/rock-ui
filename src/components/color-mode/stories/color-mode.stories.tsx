@@ -1,7 +1,12 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Box, Button } from '@chakra-ui/react';
 import * as React from 'react';
-import { useColorModeValue, useColorMode } from '../index';
+import {
+  useColorModeValue,
+  useColorMode,
+  ColorModeProvider,
+  ColorModeOptions,
+} from '../index';
 
 export default {
   title: 'Color Mode',
@@ -13,26 +18,38 @@ export default {
 
 export const useColorModeValueExample = () => {
   const Icon = useColorModeValue(MoonIcon, SunIcon);
+  const options: ColorModeOptions = {
+    initialColorMode: 'light',
+  };
   return (
-    <Box>
-      <Icon />
-    </Box>
+    <ColorModeProvider options={options}>
+      <Box bg="gray.500" maxWidth="max-content" p={6}>
+        <Icon />
+      </Box>
+    </ColorModeProvider>
   );
 };
 
 export const BasicExample = () => {
+  const Icon = useColorModeValue(MoonIcon, SunIcon);
   const { colorMode, toggleColorMode } = useColorMode();
+  const options: ColorModeOptions = {
+    initialColorMode: 'dark',
+  };
   return (
     <header>
-      <Button
-        _focus={{ outline: 'none' }}
-        onClick={toggleColorMode}
-        color={colorMode === 'light' ? 'gray.500' : 'white'}
-        bg={colorMode === 'light' ? 'whiteAlpha.500' : 'gray.500'}
-        colorScheme={colorMode === 'light' ? 'white' : 'black'}
-      >
-        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-      </Button>
+      <ColorModeProvider options={options}>
+        <Button
+          _focus={{ outline: 'none' }}
+          onClick={toggleColorMode}
+          rightIcon={<Icon />}
+          color={colorMode === 'light' ? 'gray.500' : 'blue.500'}
+          // bg={colorMode === 'light' ? 'whiteAlpha.500' : 'gray.500'}
+          // colorScheme={colorMode === 'light' ? 'white' : 'black'}
+        >
+          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+        </Button>
+      </ColorModeProvider>
     </header>
   );
 };
