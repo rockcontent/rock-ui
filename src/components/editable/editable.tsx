@@ -8,6 +8,7 @@ import {
   EditableInputProps as BaseEditableInputProps,
   useEditableState as BaseUseEditableState,
   useEditableControls as BaseUseEditableControls,
+  useEditable as BaseUseEditable,
 } from '@chakra-ui/react';
 
 export { BaseEditableProps as EditableProps };
@@ -41,3 +42,4 @@ export const EditableInput = React.forwardRef<
 
 export { BaseUseEditableState as useEditableState };
 export { BaseUseEditableControls as useEditableControls };
+export { BaseUseEditable as useEditable };

@@ -7,4 +7,5 @@ export {
   EditableInput,
   useEditableState,
   useEditableControls,
+  useEditable,
 } from './editable';
