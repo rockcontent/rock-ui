@@ -44,8 +44,6 @@ export const BasicExample = () => {
           onClick={toggleColorMode}
           rightIcon={<Icon />}
           color={colorMode === 'light' ? 'gray.500' : 'blue.500'}
-          // bg={colorMode === 'light' ? 'whiteAlpha.500' : 'gray.500'}
-          // colorScheme={colorMode === 'light' ? 'white' : 'black'}
         >
           Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
         </Button>
