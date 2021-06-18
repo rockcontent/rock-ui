@@ -246,6 +246,8 @@ export {
   SkeletonCircle,
 } from './components/skeleton';
 
+export { CloseButton } from './components/close-button';
+
 export {
   Clickable,
   ClickableProps,
@@ -255,3 +257,4 @@ export {
 } from './components/clickable';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
+
