@@ -247,3 +247,14 @@ export {
 } from './components/skeleton';
 
 export { CloseButton } from './components/close-button';
+
+export {
+  Clickable,
+  ClickableProps,
+  useClickable,
+  UseClickableProps,
+  UseClickableReturn,
+} from './components/clickable';
+
+export { useCounter, UseCounterProps } from './hooks/counter';
+
