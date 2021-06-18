@@ -246,6 +246,8 @@ export {
   SkeletonCircle,
 } from './components/skeleton';
 
+export { CloseButton } from './components/close-button';
+
 export {
   Clickable,
   ClickableProps,
@@ -270,3 +272,5 @@ export {
   useColorMode,
   useColorModeValue,
 } from './components/color-mode';
+
+export { useCounter, UseCounterProps } from './hooks/counter';

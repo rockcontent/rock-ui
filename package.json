@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint --fix"
     }
   },
   "prettier": {
@@ -50,6 +50,7 @@
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
     "@testing-library/user-event": "^13.1.9",
+    "@testing-library/react-hooks": "^7.0.0",
     "@types/react": "^16.9.46",
     "@types/react-dates": "^21.8.1",
     "@types/react-dom": "^16.9.8",
