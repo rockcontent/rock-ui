@@ -245,3 +245,11 @@ export {
   SkeletonTextProps,
   SkeletonCircle,
 } from './components/skeleton';
+
+export {
+  Clickable,
+  ClickableProps,
+  useClickable,
+  UseClickableProps,
+  UseClickableReturn,
+} from './components/clickable';
