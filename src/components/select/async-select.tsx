@@ -10,7 +10,7 @@ import './default.css';
 
 export type AsyncProps = BaseAsyncProps<any> & Props;
 
-export const AsyncSelect: FC<AsyncProps> = (props) => {
+export const AsyncSelect: FC<AsyncProps> = props => {
   const { components, className, classNamePrefix, ...restProps } = props;
 
   const customClassNames = className

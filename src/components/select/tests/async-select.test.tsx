@@ -5,7 +5,7 @@ import { AsyncSelect } from '../';
 import { colourOptions } from '../constants';
 
 const filterColors = (inputValue: any) => {
-  return colourOptions.filter((i) =>
+  return colourOptions.filter(i =>
     i.label.toLowerCase().includes(inputValue.toLowerCase())
   );
 };

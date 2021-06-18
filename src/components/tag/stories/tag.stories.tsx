@@ -20,7 +20,7 @@ export const basic = () => <Tag>Simple Tag</Tag>;
 
 export const multipleSizes = () => (
   <HStack spacing={4}>
-    {['sm', 'md', 'lg'].map((size) => (
+    {['sm', 'md', 'lg'].map(size => (
       <Tag size={size} key={size} variant="solid" colorScheme="teal">
         Teal
       </Tag>
@@ -30,7 +30,7 @@ export const multipleSizes = () => (
 
 export const withLeftIcon = () => (
   <HStack spacing={4}>
-    {['sm', 'md', 'lg'].map((size) => (
+    {['sm', 'md', 'lg'].map(size => (
       <Tag size={size} key={size} variant="subtle" colorScheme="blue">
         <TagLeftIcon boxSize="12px" as={AddIcon} />
         <TagLabel>Rock Content</TagLabel>
@@ -41,7 +41,7 @@ export const withLeftIcon = () => (
 
 export const withCloseButton = () => (
   <HStack spacing={4}>
-    {['sm', 'md', 'lg'].map((size) => (
+    {['sm', 'md', 'lg'].map(size => (
       <Tag
         size={size}
         key={size}

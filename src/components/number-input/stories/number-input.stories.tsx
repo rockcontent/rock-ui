@@ -99,7 +99,7 @@ export const WithFormattedValue = () => {
 
   return (
     <NumberInput
-      onChange={(valueString) => setValue(parse(valueString))}
+      onChange={valueString => setValue(parse(valueString))}
       value={format(value)}
       max={50}
     >
