@@ -245,3 +245,5 @@ export {
   SkeletonTextProps,
   SkeletonCircle,
 } from './components/skeleton';
+
+export { CloseButton } from './components/close-button';
