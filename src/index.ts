@@ -1,6 +1,5 @@
 export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
 export { Badge } from './components/badge';
-export { CloseButton } from './components/close-button';
 export { Button, IconButton, IconButtonProps } from './components/button';
 export {
   Alert,
