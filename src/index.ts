@@ -274,3 +274,18 @@ export {
 } from './components/color-mode';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
+
+export {
+  PinInput,
+  PinInputContext,
+  PinInputField,
+  PinInputFieldProps,
+  PinInputProps,
+  PinInputProvider,
+  UsePinInputFieldProps,
+  UsePinInputProps,
+  UsePinInputReturn,
+  usePinInput,
+  usePinInputContext,
+  usePinInputField,
+} from './components/pin-input';
