@@ -257,3 +257,9 @@ export {
 } from './components/clickable';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
+
+export {
+  EnvironmentProvider,
+  EnvironmentProviderProps,
+  useEnvironment,
+} from './components/env';

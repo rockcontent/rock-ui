@@ -7,6 +7,10 @@ import { useEnvironment, EnvironmentProvider } from '..';
 
 export default {
   title: 'Environment',
+  parameters: {
+    componentSubtitle:
+      'To get it working, you need to wrap your app in EnvironmentProvider and call the useEnvironment hook anywhere in your app to get access to the correct window and document.',
+  },
 };
 
 type PortalProps = {
