@@ -13,6 +13,19 @@ export {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from './components/breadcrumb';
+
+export {
+  Editable,
+  EditableProps,
+  EditablePreviewProps,
+  EditablePreview,
+  EditableInputProps,
+  EditableInput,
+  useEditableState,
+  useEditableControls,
+  useEditable,
+} from './components/editable';
+
 export {
   Menu,
   MenuButton,
