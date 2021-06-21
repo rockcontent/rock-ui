@@ -1,4 +1,4 @@
-import { Box } from 'components/layout';
+import { Box } from '@chakra-ui/layout';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Frame from 'react-frame-component';
