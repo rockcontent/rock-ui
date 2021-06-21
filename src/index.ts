@@ -273,4 +273,10 @@ export {
   useColorModeValue,
 } from './components/color-mode';
 
+export {
+  BaseBreakpointConfig,
+  Breakpoints,
+  createBreakpoints,
+} from './components/theme-tools';
+
 export { useCounter, UseCounterProps } from './hooks/counter';
