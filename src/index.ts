@@ -23,7 +23,18 @@ export {
   MenuList,
   MenuOptionGroup,
 } from './components/menu';
-export { Progress } from './components/progress';
+export {
+  CircularProgress,
+  CircularProgressProps,
+  CircularProgressLabel,
+  CircularProgressLabelProps,
+  Progress,
+  ProgressProps,
+  ProgressLabel,
+  ProgressLabelProps,
+  ProgressTrackProps,
+  ProgressFilledTrackProps,
+} from './components/progress';
 export {
   Modal,
   ModalOverlay,
