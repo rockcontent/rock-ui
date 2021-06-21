@@ -273,4 +273,10 @@ export {
   useColorModeValue,
 } from './components/color-mode';
 
+export {
+  LiveRegion,
+  LiveRegionOptions,
+  useLiveRegion,
+} from './components/live-region';
+
 export { useCounter, UseCounterProps } from './hooks/counter';
