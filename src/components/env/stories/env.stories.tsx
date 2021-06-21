@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/layout';
+import { Box, Heading } from '@chakra-ui/layout';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Frame from 'react-frame-component';
@@ -25,7 +25,7 @@ const Portal = ({ children }: PortalProps) => {
 export const WithIframe = () => {
   return (
     <Box className="App">
-      <h1>Hello CodeSandbox</h1>
+      <Heading>Hello CodeSandbox</Heading>
       <h2>Start editing to see some magic happen!</h2>
       <Portal>Outside iframe</Portal>
       <Frame style={{ background: 'yellow' }}>
@@ -69,13 +69,13 @@ const WindowSize = () => {
 
 export const SizeWithinIframe = () => {
   return (
-    <>
+    <Box>
       <WindowSize />
       <Frame style={{ background: 'yellow', width: '100%', maxWidth: '300px' }}>
         <EnvironmentProvider>
           <WindowSize />
         </EnvironmentProvider>
       </Frame>
-    </>
+    </Box>
   );
 };
