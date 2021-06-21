@@ -256,4 +256,21 @@ export {
   UseClickableReturn,
 } from './components/clickable';
 
+export {
+  ColorMode,
+  ColorModeContext,
+  ColorModeOptions,
+  ColorModeProvider,
+  ColorModeProviderProps,
+  ColorModeScript,
+  DarkMode,
+  LightMode,
+  StorageManager,
+  cookieStorageManager,
+  localStorageManager,
+  storageKey,
+  useColorMode,
+  useColorModeValue,
+} from './components/color-mode';
+
 export { useCounter, UseCounterProps } from './hooks/counter';
