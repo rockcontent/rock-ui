@@ -13,6 +13,7 @@ export {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from './components/breadcrumb';
+export { Code, CodeProps } from 'components/code';
 export {
   Menu,
   MenuButton,
