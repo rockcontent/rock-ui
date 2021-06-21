@@ -18,7 +18,7 @@ const Portal = ({ children }: PortalProps) => {
   return createPortal(children, env.document.body);
 };
 
-export function WithIframe() {
+export const WithIframe = () => {
   return (
     <Box className="App">
       <h1>Hello CodeSandbox</h1>
@@ -32,9 +32,9 @@ export function WithIframe() {
       </Frame>
     </Box>
   );
-}
+};
 
-function useWindow() {
+const useWindow = () => {
   const { window: win } = useEnvironment();
   const [match, setMatch] = useState(false);
 
@@ -56,14 +56,14 @@ function useWindow() {
     h: win.innerHeight,
     match,
   };
-}
+};
 
-function WindowSize() {
+const WindowSize = () => {
   const details = useWindow();
   return <pre>{JSON.stringify(details)}</pre>;
-}
+};
 
-export function SizeWithinIframe() {
+export const SizeWithinIframe = () => {
   return (
     <>
       <WindowSize />
@@ -74,4 +74,4 @@ export function SizeWithinIframe() {
       </Frame>
     </>
   );
-}
+};
