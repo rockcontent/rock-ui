@@ -279,4 +279,10 @@ export {
   useLiveRegion,
 } from './components/live-region';
 
+export {
+  BaseBreakpointConfig,
+  Breakpoints,
+  createBreakpoints,
+} from './components/theme-tools';
+
 export { useCounter, UseCounterProps } from './hooks/counter';
