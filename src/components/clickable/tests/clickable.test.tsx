@@ -8,7 +8,7 @@ describe('clickable', () => {
 
     expect(screen.getByText('clickable')).toMatchInlineSnapshot(`
     <button
-      class="chakra-button css-oqfhsh"
+      class="chakra-button css-5c2176"
       type="button"
     >
       clickable
@@ -26,7 +26,7 @@ describe('clickable', () => {
     expect(screen.getByText('clickable')).toMatchInlineSnapshot(`
     <button
       aria-disabled="true"
-      class="chakra-button css-oqfhsh"
+      class="chakra-button css-5c2176"
       type="button"
     >
       clickable
