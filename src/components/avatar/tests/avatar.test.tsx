@@ -14,7 +14,7 @@ describe('Avatar', () => {
 
   /**
    * Test skipped because I haven't figured out why the img tag is not
-   * beign rendered as expected.
+   * being rendered as expected.
    * @see https://github.com/chakra-ui/chakra-ui/blob/e0f9649e092ca87420159c9a9467509ba450600c/packages/avatar/tests/avatar.test.tsx#L20
    */
   test.skip('renders image avatar', async () => {
