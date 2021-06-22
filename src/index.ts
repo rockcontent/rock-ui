@@ -274,6 +274,12 @@ export {
 } from './components/color-mode';
 
 export {
+  LiveRegion,
+  LiveRegionOptions,
+  useLiveRegion,
+} from './components/live-region';
+
+export {
   BaseBreakpointConfig,
   Breakpoints,
   createBreakpoints,
