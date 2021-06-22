@@ -319,6 +319,7 @@ export {
 } from './components/skip-nav';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
 
 export {
   EnvironmentProvider,
@@ -340,6 +341,8 @@ export {
   usePinInputContext,
   usePinInputField,
 } from './components/pin-input';
+
+export { useBoolean } from './hooks/use-boolean';
 
 export {
   VisuallyHidden,
