@@ -341,3 +341,11 @@ export {
   usePinInputContext,
   usePinInputField,
 } from './components/pin-input';
+
+export {
+  VisuallyHidden,
+  VisuallyHiddenProps,
+} from './components/visually-hidden';
+
+export { ControlBox, ControlBoxProps } from './components/control-box';
+
