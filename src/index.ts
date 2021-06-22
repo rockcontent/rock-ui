@@ -321,6 +321,12 @@ export {
 export { useCounter, UseCounterProps } from './hooks/counter';
 
 export {
+  EnvironmentProvider,
+  EnvironmentProviderProps,
+  useEnvironment,
+} from './components/env';
+
+export {
   PinInput,
   PinInputContext,
   PinInputField,
@@ -334,3 +340,4 @@ export {
   usePinInputContext,
   usePinInputField,
 } from './components/pin-input';
+

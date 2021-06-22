@@ -1387,6 +1387,13 @@
     "@chakra-ui/utils" "1.2.0"
     "@chakra-ui/visually-hidden" "1.0.4"
 
+"@chakra-ui/react-env@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react-env/-/react-env-1.0.4.tgz#b053d44d61b63dcf5997b24bdf2454bdcdb1b1ed"
+  integrity sha512-FkZR/WW7WI6LR3Wgm+OeuDhTNCcD77U/yWAxSo1tvEqqL5uUvD6Bi/Ko9E3lI5yhdoJ4t99ksf1vUBlrMG92vw==
+  dependencies:
+    "@chakra-ui/utils" "1.8.0"
+
 "@chakra-ui/react@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-1.3.2.tgz#6004d9120a6638c86a0c8c364d015f6b5884ecc4"
@@ -3656,6 +3663,13 @@
   integrity sha512-i7NPZZpPte3jtVOoW+eLB7G/jsX5OM6GqQnH+lC0nq0rqwlK0x8WcMEvYDgFWqWhWMlTltTimzdMax6wYfZssA==
   dependencies:
     "@types/react" "^16"
+
+"@types/react-frame-component@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-frame-component/-/react-frame-component-4.1.1.tgz#1d8293c062c1d43555ca80494a7b94e3088ad39e"
+  integrity sha512-7soxaTJ030rtC2lFlaFzzJyCY4rsPwOLxfw/eGnbEq/wq80e71outSL6dUXM9bOh2qMhM1xnp+EMEhjdVvIlkA==
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-outside-click-handler@*":
   version "1.3.0"
@@ -12859,6 +12873,11 @@ react-focus-lock@^2.1.0:
     react-clientside-effect "^1.2.2"
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
+
+react-frame-component@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-5.1.0.tgz#a4bd4c598a19103050ea7a1a562e6e03164f724d"
+  integrity sha512-5L55L2aMzTbA+fUy5EEl1pxTXbKGGtF3giZkkTExf0lw8AQ4u1ZvZDUVBcynKl7CA7F2aF+RZUL17B+fRE9+DA==
 
 react-helmet-async@^1.0.2, react-helmet-async@^1.0.7:
   version "1.0.9"
