@@ -300,4 +300,11 @@ export {
   createBreakpoints,
 } from './components/theme-tools';
 
+export {
+  SkipNavContent,
+  SkipNavContentProps,
+  SkipNavLink,
+  SkipNavLinkProps,
+} from './components/skip-nav';
+
 export { useCounter, UseCounterProps } from './hooks/counter';
