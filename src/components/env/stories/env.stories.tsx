@@ -30,7 +30,7 @@ export const WithIframe = () => {
       <Portal>Outside iframe</Portal>
       <Frame style={{ background: 'yellow' }}>
         <EnvironmentProvider>
-          <span>Welcome home</span>
+          <Box as="span">Welcome home</Box>
           <Portal>Inside iframe</Portal>
         </EnvironmentProvider>
       </Frame>
