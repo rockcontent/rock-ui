@@ -340,3 +340,10 @@ export {
   usePinInputContext,
   usePinInputField,
 } from './components/pin-input';
+
+export {
+  Descendant,
+  DescendantOptions,
+  DescendantsManager,
+  createDescendantContext,
+} from './components/descendants';
