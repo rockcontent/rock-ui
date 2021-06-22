@@ -13,7 +13,7 @@ import {
 } from '../';
 
 describe('Popover', () => {
-  it.skip('Popover renders correctly', () => {
+  it('Popover renders correctly', () => {
     const { asFragment } = render(
       <Popover placement="right-start">
         <PopoverTrigger>

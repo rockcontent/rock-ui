@@ -1,1 +1,1 @@
-export { useCounter, UseCounterProps } from './use-counter';
+export * from './use-counter';

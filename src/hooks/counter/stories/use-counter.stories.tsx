@@ -2,7 +2,7 @@
 import { Container, Flex, Box } from '@chakra-ui/layout';
 import { Button, Code, Input } from '@chakra-ui/react';
 import * as React from 'react';
-import { useCounter } from '../';
+import { useCounter } from '../index';
 
 export default {
   title: 'Counter',

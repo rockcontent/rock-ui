@@ -1,40 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popover renders correctly 1`] = `
+exports[`Popover Popover renders correctly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="popover-content-2"
+    aria-controls="popover-content-3205597192-2"
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="popover-trigger-2"
+    id="popover-trigger-3205597192-2"
   >
     Trigger
   </button>
   <div
-    class="css-0"
-    style="visibility: hidden; position: absolute; left: 0px; top: 0px;"
+    class="chakra-popover__popper css-0"
+    data-popper-escaped=""
+    data-popper-placement="right-start"
+    data-popper-reference-hidden=""
+    style="visibility: hidden; min-width: max-content; inset: 0 auto auto 0; margin: 0px; --popper-transform-origin: left top; position: absolute; left: 0px; top: 0px; transform: translate(8px, 0px);"
   >
     <section
-      aria-describedby="popover-body-2"
-      aria-labelledby="popover-header-2"
+      aria-describedby="popover-body-3205597192-2"
+      aria-labelledby="popover-header-3205597192-2"
       class="chakra-popover__content css-1ab1jlb"
-      id="popover-content-2"
+      id="popover-content-3205597192-2"
       role="dialog"
-      style="transform-origin: left top; opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
       tabindex="-1"
     >
       <div
         class="chakra-popover__arrow-positioner css-0"
-        style="width: 8px; height: 8px; z-index: -1; left: -4px;"
+        data-popper-arrow=""
+        style="z-index: -1; --popper-arrow-size-half: calc(var(--popper-arrow-size, 8px) / 2); --popper-arrow-offset: calc(var(--popper-arrow-size-half) * -1); position: absolute; top: 0px; transform: translate(0px, 8px);"
       >
         <div
           class="chakra-popover__arrow css-0"
-          style="box-shadow: -1px 1px 1px 0 gray.200; position: absolute; z-index: -1; width: 100%; height: 100%; transform: rotate(45deg);"
+          data-popper-arrow-inner=""
+          style="transform: rotate(45deg); top: 0px; left: 0px; width: 100%; height: 100%; position: absolute; z-index: inherit; box-shadow: -1px 1px 1px 0 var(--popper-arrow-shadow-color);"
         />
       </div>
       <button
         aria-label="Close"
-        class="css-15k60nl"
+        class="css-1w3y7qm"
         type="button"
       >
         <svg
@@ -51,13 +56,13 @@ exports[`Popover renders correctly 1`] = `
       </button>
       <header
         class="chakra-popover__header css-0"
-        id="popover-header-2"
+        id="popover-header-3205597192-2"
       >
         Confirmation!
       </header>
       <div
         class="chakra-popover__body css-0"
-        id="popover-body-2"
+        id="popover-body-3205597192-2"
       >
         Are you sure you want to have that milkshake?
       </div>
