@@ -1,1 +1,2 @@
-export { Progress, ProgressProps } from './progress';
+export * from './progress';
+export * from './circular-progress';
