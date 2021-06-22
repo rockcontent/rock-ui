@@ -38,7 +38,18 @@ export {
   MenuList,
   MenuOptionGroup,
 } from './components/menu';
-export { Progress } from './components/progress';
+export {
+  CircularProgress,
+  CircularProgressProps,
+  CircularProgressLabel,
+  CircularProgressLabelProps,
+  Progress,
+  ProgressProps,
+  ProgressLabel,
+  ProgressLabelProps,
+  ProgressTrackProps,
+  ProgressFilledTrackProps,
+} from './components/progress';
 export {
   Modal,
   ModalOverlay,
@@ -308,3 +319,25 @@ export {
 } from './components/skip-nav';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
+
+export {
+  EnvironmentProvider,
+  EnvironmentProviderProps,
+  useEnvironment,
+} from './components/env';
+
+export {
+  PinInput,
+  PinInputContext,
+  PinInputField,
+  PinInputFieldProps,
+  PinInputProps,
+  PinInputProvider,
+  UsePinInputFieldProps,
+  UsePinInputProps,
+  UsePinInputReturn,
+  usePinInput,
+  usePinInputContext,
+  usePinInputField,
+} from './components/pin-input';
+

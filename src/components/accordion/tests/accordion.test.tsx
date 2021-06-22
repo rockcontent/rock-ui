@@ -109,8 +109,8 @@ describe('Accordion', () => {
     expect(last).toHaveFocus();
   });
 
-  // test the only one accordion can be visible + is not togglable
-  it('only one accordion can be visible + is not togglable', () => {
+  // test the only one accordion can be visible + is not toggleAble
+  it('only one accordion can be visible + is not toggleAble', () => {
     render(
       <Accordion>
         <AccordionItem>
@@ -137,8 +137,8 @@ describe('Accordion', () => {
     fireEvent.click(firstAccordion);
     expect(firstAccordion).toHaveAttribute('aria-expanded', 'true');
   });
-  // test the only one accordion can be visible + is togglable
-  it('only one accordion can be visible + is togglable', () => {
+  // test the only one accordion can be visible + is toggleAble
+  it('only one accordion can be visible + is toggleAble', () => {
     render(
       <Accordion allowToggle>
         <AccordionItem>
@@ -166,8 +166,8 @@ describe('Accordion', () => {
     expect(firstAccordion).toHaveAttribute('aria-expanded', 'false');
   });
 
-  // test that multiple accordions can be opened + is togglable
-  it('multiple accordions can be opened + is togglable', () => {
+  // test that multiple accordions can be opened + is toggleAble
+  it('multiple accordions can be opened + is toggleAble', () => {
     render(
       <Accordion allowMultiple>
         <AccordionItem>
@@ -256,8 +256,8 @@ describe('Accordion', () => {
     waitFor(() => expect(last).toHaveFocus());
   });
 
-  // test that aria-contols for button is same as id for panel
-  it('aria-contols for button is same as id for panel', () => {
+  // test that aria-controls for button is same as id for panel
+  it('aria-controls for button is same as id for panel', () => {
     render(
       <Accordion>
         <AccordionItem>
