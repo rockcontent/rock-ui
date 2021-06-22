@@ -1707,7 +1707,7 @@
     "@chakra-ui/theme-tools" "1.1.7"
     "@chakra-ui/utils" "1.8.0"
 
-"@chakra-ui/toast@1.2.8":
+"@chakra-ui/toast@1.2.8", "@chakra-ui/toast@^1.2.8":
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/@chakra-ui/toast/-/toast-1.2.8.tgz#903075674e0cf73f384a740835c6f51044ae1d9c"
   integrity sha512-00MxuNXWvdWvAS4D5BDfQlL1/3qcZfZeLnJwTU774t/+yjh5j5/GFLoOBwKboX0ViGrcH7MoCgvUfkaAJ1Yd1w==
