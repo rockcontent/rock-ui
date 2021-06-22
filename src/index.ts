@@ -341,3 +341,5 @@ export {
   usePinInputContext,
   usePinInputField,
 } from './components/pin-input';
+
+export { useBoolean } from './hooks/use-boolean';
