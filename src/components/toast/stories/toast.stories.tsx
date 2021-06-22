@@ -1,5 +1,5 @@
 import { Container, Wrap, WrapItem } from '@chakra-ui/layout';
-import { createStandaloneToast, ToastPosition } from '@chakra-ui/toast';
+import { createStandaloneToast, ToastPosition } from '@chakra-ui/react';
 import * as React from 'react';
 import { useToast } from '../';
 import { Button } from '../../button';
