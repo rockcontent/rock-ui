@@ -343,3 +343,10 @@ export {
 } from './components/pin-input';
 
 export { useBoolean } from './hooks/use-boolean';
+
+export {
+  VisuallyHidden,
+  VisuallyHiddenProps,
+} from './components/visually-hidden';
+
+export { ControlBox, ControlBoxProps } from './components/control-box';
