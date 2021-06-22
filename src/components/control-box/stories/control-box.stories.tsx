@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Container } from '@chakra-ui/layout';
 import { ControlBox } from '../';
-// import { Text } from '../../text';
 import { VisuallyHidden } from '../../visually-hidden';
 import { Icon } from '../../icon';
 import { Box } from '../../layout';
