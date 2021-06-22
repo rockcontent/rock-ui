@@ -14,6 +14,8 @@ export {
   BreadcrumbSeparator,
 } from './components/breadcrumb';
 
+export { Code, CodeProps } from './components/code';
+
 export {
   Editable,
   EditableProps,
@@ -268,5 +270,34 @@ export {
   UseClickableProps,
   UseClickableReturn,
 } from './components/clickable';
+
+export {
+  ColorMode,
+  ColorModeContext,
+  ColorModeOptions,
+  ColorModeProvider,
+  ColorModeProviderProps,
+  ColorModeScript,
+  DarkMode,
+  LightMode,
+  StorageManager,
+  cookieStorageManager,
+  localStorageManager,
+  storageKey,
+  useColorMode,
+  useColorModeValue,
+} from './components/color-mode';
+
+export {
+  LiveRegion,
+  LiveRegionOptions,
+  useLiveRegion,
+} from './components/live-region';
+
+export {
+  BaseBreakpointConfig,
+  Breakpoints,
+  createBreakpoints,
+} from './components/theme-tools';
 
 export { useCounter, UseCounterProps } from './hooks/counter';
