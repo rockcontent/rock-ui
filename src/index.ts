@@ -318,9 +318,6 @@ export {
   SkipNavLinkProps,
 } from './components/skip-nav';
 
-export { useCounter, UseCounterProps } from './hooks/counter';
-export { usePopper, UsePopperProps, Placement } from './hooks/popper';
-
 export {
   EnvironmentProvider,
   EnvironmentProviderProps,
@@ -342,11 +339,14 @@ export {
   usePinInputField,
 } from './components/pin-input';
 
-export { useBoolean } from './hooks/use-boolean';
-
 export {
   VisuallyHidden,
   VisuallyHiddenProps,
 } from './components/visually-hidden';
 
 export { ControlBox, ControlBoxProps } from './components/control-box';
+
+export { useBoolean } from './hooks/use-boolean';
+export { useClipboard } from './hooks/use-clipboard';
+export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
