@@ -350,3 +350,9 @@ export {
 } from './components/visually-hidden';
 
 export { ControlBox, ControlBoxProps } from './components/control-box';
+
+export {
+  UseControllableStateProps,
+  useControllableProp,
+  useControllableState,
+} from './hooks/use-controllable';
