@@ -350,3 +350,5 @@ export {
 } from './components/visually-hidden';
 
 export { ControlBox, ControlBoxProps } from './components/control-box';
+
+export { useMediaQuery } from './hooks/use-media-query';
