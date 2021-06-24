@@ -7,13 +7,13 @@ describe('clickable', () => {
     render(<Clickable>clickable</Clickable>);
 
     expect(screen.getByText('clickable')).toMatchInlineSnapshot(`
-    <button
-      class="chakra-button css-oqfhsh"
-      type="button"
-    >
-      clickable
-    </button>
-  `);
+      <button
+        class="chakra-button css-5c2176"
+        type="button"
+      >
+        clickable
+      </button>
+    `);
   });
 
   it('should render when disabled and focusable', () => {
@@ -24,14 +24,14 @@ describe('clickable', () => {
     );
 
     expect(screen.getByText('clickable')).toMatchInlineSnapshot(`
-    <button
-      aria-disabled="true"
-      class="chakra-button css-oqfhsh"
-      type="button"
-    >
-      clickable
-    </button>
-  `);
+      <button
+        aria-disabled="true"
+        class="chakra-button css-5c2176"
+        type="button"
+      >
+        clickable
+      </button>
+    `);
   });
 
   it('should click correctly', () => {

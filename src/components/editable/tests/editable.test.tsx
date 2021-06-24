@@ -61,7 +61,7 @@ describe('Editable', () => {
 
     // calls `onSubmit` with previous value when "enter" pressed after cancelling
     fireEvent.keyDown(input, { key: 'Enter' });
-    expect(onSubmit).toHaveBeenCalledWith('World');
+    expect(onSubmit).toHaveBeenCalledWith('Hello World');
   });
 
   it('controlled: handles callbacks correctly', () => {
