@@ -183,8 +183,8 @@ describe('with defaultBreakpoint', () => {
   });
 
   it('base value is used if no breakpoint matches', () => {
-    const values = { base: 'base', md: 'md' };
-    const html = ssrRenderWithDefaultBreakpoint(values, 'sm');
+    const myValues = { base: 'base', md: 'md' };
+    const html = ssrRenderWithDefaultBreakpoint(myValues, 'sm');
     expect(html).toContain('base');
   });
 });
