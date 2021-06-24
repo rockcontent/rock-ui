@@ -318,9 +318,6 @@ export {
   SkipNavLinkProps,
 } from './components/skip-nav';
 
-export { useCounter, UseCounterProps } from './hooks/counter';
-export { usePopper, UsePopperProps, Placement } from './hooks/popper';
-
 export {
   EnvironmentProvider,
   EnvironmentProviderProps,
@@ -342,7 +339,45 @@ export {
   usePinInputField,
 } from './components/pin-input';
 
-export { useBoolean } from './hooks/use-boolean';
+export {
+  Stat,
+  StatProps,
+  StatArrow,
+  StatArrowProps,
+  StatGroup,
+  StatGroupProps,
+  StatHelpText,
+  StatHelpTextProps,
+  StatNumber,
+  StatNumberProps,
+  StatLabel,
+  StatLabelProps,
+} from './components/stat';
+
+export {
+  Slider,
+  SliderProps,
+  SliderProvider,
+  SliderFilledTrack,
+  SliderFilledTrackProps,
+  SliderMark,
+  SliderMarkProps,
+  SliderThumb,
+  SliderThumbProps,
+  SliderTrack,
+  SliderTrackProps,
+  UseSliderProps,
+  UseSliderReturn,
+  useSlider,
+  useSliderContext,
+} from './components/slider';
+
+export {
+  Descendant,
+  DescendantOptions,
+  DescendantsManager,
+  createDescendantContext,
+} from './components/descendants';
 
 export {
   VisuallyHidden,
@@ -351,4 +386,15 @@ export {
 
 export { ControlBox, ControlBoxProps } from './components/control-box';
 
+export {
+  UseControllableStateProps,
+  useControllableProp,
+  useControllableState,
+} from './hooks/use-controllable';
+export { useBoolean } from './hooks/use-boolean';
+export { useClipboard } from './hooks/use-clipboard';
+export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
+export { useBreakpointValue } from './hooks/breakpoint-value';
+export { useMergeRefs, assignRef } from './hooks/use-merge-refs';
 export { useTheme } from './hooks/use-theme';
