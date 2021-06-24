@@ -340,6 +340,13 @@ export {
 } from './components/pin-input';
 
 export {
+  Descendant,
+  DescendantOptions,
+  DescendantsManager,
+  createDescendantContext,
+} from './components/descendants';
+
+export {
   VisuallyHidden,
   VisuallyHiddenProps,
 } from './components/visually-hidden';
