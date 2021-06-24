@@ -18,7 +18,7 @@ describe('tag component tests', () => {
     const { getByTestId } = render(
       <Tag data-testid="tag">
         <TagLabel data-testid="label">B</TagLabel>
-        <TagCloseButton data-testid="close-btn" />
+        <TagCloseButton aria-label="Close Button" data-testid="close-btn" />
       </Tag>
     );
     expect(getByTestId('tag')).toBeInTheDocument();
