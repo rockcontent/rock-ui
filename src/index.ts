@@ -340,6 +340,24 @@ export {
 } from './components/pin-input';
 
 export {
+  Slider,
+  SliderProps,
+  SliderProvider,
+  SliderFilledTrack,
+  SliderFilledTrackProps,
+  SliderMark,
+  SliderMarkProps,
+  SliderThumb,
+  SliderThumbProps,
+  SliderTrack,
+  SliderTrackProps,
+  UseSliderProps,
+  UseSliderReturn,
+  useSlider,
+  useSliderContext,
+} from './components/slider';
+
+export {
   Descendant,
   DescendantOptions,
   DescendantsManager,
