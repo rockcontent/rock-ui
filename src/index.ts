@@ -318,10 +318,6 @@ export {
   SkipNavLinkProps,
 } from './components/skip-nav';
 
-export { useCounter, UseCounterProps } from './hooks/counter';
-export { usePopper, UsePopperProps, Placement } from './hooks/popper';
-export { useBreakpointValue } from './hooks/breakpoint-value';
-
 export {
   EnvironmentProvider,
   EnvironmentProviderProps,
@@ -358,3 +354,7 @@ export {
 export { ControlBox, ControlBoxProps } from './components/control-box';
 
 export { useBoolean } from './hooks/use-boolean';
+export { useClipboard } from './hooks/use-clipboard';
+export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
+export { useBreakpointValue } from './hooks/breakpoint-value';
