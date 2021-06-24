@@ -353,6 +353,11 @@ export {
 
 export { ControlBox, ControlBoxProps } from './components/control-box';
 
+export {
+  UseControllableStateProps,
+  useControllableProp,
+  useControllableState,
+} from './hooks/use-controllable';
 export { useBoolean } from './hooks/use-boolean';
 export { useClipboard } from './hooks/use-clipboard';
 export { useCounter, UseCounterProps } from './hooks/counter';
