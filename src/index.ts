@@ -318,9 +318,6 @@ export {
   SkipNavLinkProps,
 } from './components/skip-nav';
 
-export { useCounter, UseCounterProps } from './hooks/counter';
-export { usePopper, UsePopperProps, Placement } from './hooks/popper';
-
 export {
   EnvironmentProvider,
   EnvironmentProviderProps,
@@ -342,7 +339,12 @@ export {
   usePinInputField,
 } from './components/pin-input';
 
-export { useBoolean } from './hooks/use-boolean';
+export {
+  Descendant,
+  DescendantOptions,
+  DescendantsManager,
+  createDescendantContext,
+} from './components/descendants';
 
 export {
   VisuallyHidden,
@@ -356,3 +358,8 @@ export {
   useControllableProp,
   useControllableState,
 } from './hooks/use-controllable';
+export { useBoolean } from './hooks/use-boolean';
+export { useClipboard } from './hooks/use-clipboard';
+export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
+export { useBreakpointValue } from './hooks/breakpoint-value';
