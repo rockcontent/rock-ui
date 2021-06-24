@@ -340,6 +340,21 @@ export {
 } from './components/pin-input';
 
 export {
+  Stat,
+  StatProps,
+  StatArrow,
+  StatArrowProps,
+  StatGroup,
+  StatGroupProps,
+  StatHelpText,
+  StatHelpTextProps,
+  StatNumber,
+  StatNumberProps,
+  StatLabel,
+  StatLabelProps,
+} from './components/stat';
+
+export {
   Slider,
   SliderProps,
   SliderProvider,
@@ -383,3 +398,6 @@ export { usePopper, UsePopperProps, Placement } from './hooks/popper';
 export { useBreakpointValue } from './hooks/breakpoint-value';
 export { useMergeRefs, assignRef } from './hooks/use-merge-refs';
 export { useToken } from './hooks/use-token';
+export { useTheme } from './hooks/use-theme';
+export { usePrefersReducedMotion } from './hooks/use-prefers-reduce-motion';
+export { useMediaQuery } from './hooks/use-media-query';
