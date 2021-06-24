@@ -340,6 +340,21 @@ export {
 } from './components/pin-input';
 
 export {
+  Stat,
+  StatProps,
+  StatArrow,
+  StatArrowProps,
+  StatGroup,
+  StatGroupProps,
+  StatHelpText,
+  StatHelpTextProps,
+  StatNumber,
+  StatNumberProps,
+  StatLabel,
+  StatLabelProps,
+} from './components/stat';
+
+export {
   Slider,
   SliderProps,
   SliderProvider,
