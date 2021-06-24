@@ -318,8 +318,6 @@ export {
   SkipNavLinkProps,
 } from './components/skip-nav';
 
-export { useCounter, UseCounterProps } from './hooks/counter';
-
 export {
   EnvironmentProvider,
   EnvironmentProviderProps,
@@ -358,3 +356,28 @@ export {
   useSlider,
   useSliderContext,
 } from './components/slider';
+
+export {
+  Descendant,
+  DescendantOptions,
+  DescendantsManager,
+  createDescendantContext,
+} from './components/descendants';
+
+export {
+  VisuallyHidden,
+  VisuallyHiddenProps,
+} from './components/visually-hidden';
+
+export { ControlBox, ControlBoxProps } from './components/control-box';
+
+export {
+  UseControllableStateProps,
+  useControllableProp,
+  useControllableState,
+} from './hooks/use-controllable';
+export { useBoolean } from './hooks/use-boolean';
+export { useClipboard } from './hooks/use-clipboard';
+export { useCounter, UseCounterProps } from './hooks/counter';
+export { usePopper, UsePopperProps, Placement } from './hooks/popper';
+export { useBreakpointValue } from './hooks/breakpoint-value';

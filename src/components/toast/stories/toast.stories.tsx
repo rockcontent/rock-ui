@@ -1,5 +1,5 @@
 import { Container, Wrap, WrapItem } from '@chakra-ui/layout';
-import { createStandaloneToast, ToastPosition } from '@chakra-ui/toast';
+import { createStandaloneToast, ToastPosition } from '@chakra-ui/react';
 import * as React from 'react';
 import { useToast } from '../';
 import { Button } from '../../button';
@@ -68,11 +68,11 @@ CustomComponent.parameters = {
 export const Status = () => {
   const toast = useToast();
   type TStatusToast = 'info' | 'warning' | 'success' | 'error' | undefined;
-  const status: TStatusToast[] = ['success', 'error', 'warning', 'info'];
+  const statusList: TStatusToast[] = ['success', 'error', 'warning', 'info'];
 
   return (
     <Wrap>
-      {status.map((status, i) => (
+      {statusList.map((status, i) => (
         <WrapItem key={i}>
           <Button
             onClick={() =>
