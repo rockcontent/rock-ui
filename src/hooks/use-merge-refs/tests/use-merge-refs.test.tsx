@@ -1,6 +1,7 @@
 import React from 'react';
-import * as ReactDOM from 'react-dom';
 import { useMergeRefs } from '../';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
 
 const App = () => {
   const ref1 = React.useRef(null);
@@ -13,8 +14,8 @@ const App = () => {
 
 describe('useMergeRefs', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { getByText } = render(<App />);
+
+    expect(getByText('app')).toBeTruthy();
   });
 });
