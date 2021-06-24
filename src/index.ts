@@ -381,3 +381,4 @@ export { useClipboard } from './hooks/use-clipboard';
 export { useCounter, UseCounterProps } from './hooks/counter';
 export { usePopper, UsePopperProps, Placement } from './hooks/popper';
 export { useBreakpointValue } from './hooks/breakpoint-value';
+export { useMergeRefs, assignRef } from './hooks/use-merge-refs';
