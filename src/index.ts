@@ -320,6 +320,7 @@ export {
 
 export { useCounter, UseCounterProps } from './hooks/counter';
 export { usePopper, UsePopperProps, Placement } from './hooks/popper';
+export { useBreakpointValue } from './hooks/breakpoint-value';
 
 export {
   EnvironmentProvider,
