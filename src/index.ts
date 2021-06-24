@@ -341,3 +341,4 @@ export {
   usePinInputField,
 } from './components/pin-input';
 
+export { Kbd, KbdProps } from './components/kbd';
