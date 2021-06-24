@@ -400,3 +400,7 @@ export { useMergeRefs, assignRef } from './hooks/use-merge-refs';
 export { useTheme } from './hooks/use-theme';
 export { usePrefersReducedMotion } from './hooks/use-prefers-reduce-motion';
 export { useMediaQuery } from './hooks/use-media-query';
+export {
+  useOutsideClick,
+  UseOutsideClickProps,
+} from './hooks/use-outside-click';
