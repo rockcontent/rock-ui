@@ -75,6 +75,37 @@ describe('Datepicker', () => {
     unmount();
   });
 
+  it('Locale should change to pt-BR', () => {
+    const setState = jest.fn();
+    const { unmount, getByTestId } = render(
+      <Datepicker
+        onChange={setState}
+        selected={new Date('2020-06-10')}
+        open
+        locale="pt-BR"
+      />
+    );
+
+    const headerButton = getByTestId('test-datepicker-header-button');
+
+    expect(headerButton.textContent?.toLowerCase()).toContain('junho');
+
+    unmount();
+  });
+
+  it('Default Locale should be en-US', () => {
+    const setState = jest.fn();
+    const { unmount, getByTestId } = render(
+      <Datepicker onChange={setState} selected={new Date('2020-06-06')} open />
+    );
+
+    const headerButton = getByTestId('test-datepicker-header-button');
+
+    expect(headerButton.textContent?.toLowerCase()).toContain('june');
+
+    unmount();
+  });
+
   it('Should stay the same when clicking on the title three times', () => {
     const setState = jest.fn();
     const { unmount, getByTestId, baseElement } = render(

@@ -30,6 +30,19 @@ export const Basic = () => {
   );
 };
 
+export const InPortuguese = () => {
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
+
+  return (
+    <Datepicker
+      onChange={setStartDate}
+      selected={startDate}
+      placeholderText="Single date"
+      locale="pt-BR"
+    />
+  );
+};
+
 export const Range = () => {
   const [startDate, setStartDate] = useState<moment.Moment | null>(null);
   const [endDate, setEndDate] = useState<moment.Moment | null>(null);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Flex, Spacer } from '../layout';
 import { Button } from '../button';
 import { ChevronLeftOutlineIcon, ChevronRightOutlineIcon } from '../../icons';
@@ -17,6 +17,7 @@ type TTemplateHeaderDatepicker = {
   nextYearButtonDisabled: boolean;
   mode: DatePickerMode;
   toNextMode: () => void;
+  locale?: Locale;
 };
 
 type TCustomHeaderByModeProps = {
@@ -85,6 +86,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
   nextYearButtonDisabled,
   mode,
   toNextMode,
+  locale,
 }): JSX.Element => {
   const [period, setPeriod] = useState('');
 
@@ -99,13 +101,22 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
     setPeriod(`${periodStart} - ${periodEnd}`);
   }, [date]);
 
+  const formatWithLocale = useCallback(
+    (date: Date, dateFormat: string) => {
+      if (!locale) return format(date, dateFormat);
+
+      return format(date, dateFormat, { locale });
+    },
+    [locale]
+  );
+
   return (
     <Flex justifyContent="center">
       {mode === DatePickerMode.day && (
         <CustomHeaderByMode
           decreaseDate={decreaseMonth}
           increaseDate={increaseMonth}
-          value={format(date, 'MMMM yyyy')}
+          value={formatWithLocale(date, 'MMMM yyyy')}
           prevDateButtonDisabled={prevMonthButtonDisabled}
           nextDateButtonDisabled={nextMonthButtonDisabled}
           onChangeMode={toNextMode}
@@ -116,7 +127,7 @@ const TemplateHeaderDatepicker: React.FC<TTemplateHeaderDatepicker> = ({
         <CustomHeaderByMode
           decreaseDate={decreaseYear}
           increaseDate={increaseYear}
-          value={format(date, 'yyyy')}
+          value={formatWithLocale(date, 'yyyy')}
           prevDateButtonDisabled={prevYearButtonDisabled}
           nextDateButtonDisabled={nextYearButtonDisabled}
           onChangeMode={toNextMode}
