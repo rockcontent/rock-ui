@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from '@chakra-ui/layout';
 import { EnvironmentProvider } from '@chakra-ui/react-env';
-import { useBreakpointValue } from '../';
-import { Box, useBreakpoint, Code } from '@chakra-ui/react';
+import { useBreakpointValue, useBreakpoint } from '../';
+import { Box, Code } from '@chakra-ui/react';
 import Frame from 'react-frame-component';
 
 export default {
