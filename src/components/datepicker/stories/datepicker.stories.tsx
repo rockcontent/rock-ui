@@ -1,7 +1,7 @@
+import { Flex } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { Container } from '../../layout';
 import { Datepicker } from '../datepicker';
-import { Flex } from '@chakra-ui/react';
 import { RangePicker } from '../range';
 
 export default {
@@ -26,6 +26,19 @@ export const Basic = () => {
       onChange={setStartDate}
       selected={startDate}
       placeholderText="Single date"
+    />
+  );
+};
+
+export const InPortuguese = () => {
+  const [startDate, setStartDate] = useState<Date | null | any>(null);
+
+  return (
+    <Datepicker
+      onChange={setStartDate}
+      selected={startDate}
+      placeholderText="Single date"
+      locale="pt-BR"
     />
   );
 };
