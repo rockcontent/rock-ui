@@ -10,8 +10,9 @@ import './default.css';
 
 export { BaseCreatableProps as CreatableProps };
 
-export const CreatableSelect: FC<BaseCreatableProps<any, boolean> &
-  Props> = props => {
+export const CreatableSelect: FC<BaseCreatableProps<any, boolean> & Props> = (
+  props
+) => {
   const { components, className, classNamePrefix, ...restProps } = props;
 
   const customClassNames = className

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container } from '../../layout';
 import { Datepicker } from '../datepicker';
 import { Flex } from '@chakra-ui/react';

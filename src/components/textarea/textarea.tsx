@@ -9,6 +9,8 @@ export { BaseTextareaProps as TextareaProps };
 export const Textarea = React.forwardRef<
   HTMLTextAreaElement,
   BaseTextareaProps
->(({ children, ...props }) => (
-  <BaseTextarea {...props}>{children}</BaseTextarea>
+>(({ children, ...props }, ref) => (
+  <BaseTextarea ref={ref} {...props}>
+    {children}
+  </BaseTextarea>
 ));

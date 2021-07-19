@@ -58,7 +58,7 @@ export const Controlled = () => {
       <Switch
         isChecked={checked}
         colorScheme="blue"
-        onChange={e => setChecked(e.target.checked)}
+        onChange={(e) => setChecked(e.target.checked)}
       />
     </>
   );

@@ -112,7 +112,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
                 value={startDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
                 isReadOnly
                 placeholder={startDatePlaceholder}
-                onChange={e => onChangeStartDate(moment(e.target.value))}
+                onChange={(e) => onChangeStartDate(moment(e.target.value))}
                 onClick={() => changeFocus('startDate')}
                 clearButton={!!startDate}
                 onClear={onClear}
@@ -126,7 +126,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
                 onFocus={() => changeFocus('endDate')}
                 value={endDate?.format(dateFormat || 'DD/MM/YYYY') || ''}
                 isReadOnly
-                onChange={e => onChangeEndDate(moment(e.target.value))}
+                onChange={(e) => onChangeEndDate(moment(e.target.value))}
                 onClick={() => changeFocus('endDate')}
                 clearButton={!!endDate}
                 onClear={onClear}
@@ -166,7 +166,7 @@ const RangePicker = React.forwardRef<any | null, RangePickerProps>(
                   />
                 )}
                 hideKeyboardShortcutsPanel
-                renderDayContents={date => (
+                renderDayContents={(date) => (
                   <Box key={date.milliseconds()} fontSize="xs">
                     {date.date()}
                   </Box>
