@@ -9,4 +9,8 @@ export { BasePopoverContentProps as PopoverContentProps };
 export const PopoverContent: React.FC<BasePopoverContentProps> = ({
   children,
   ...props
-}) => <BasePopoverContent {...props}>{children}</BasePopoverContent>;
+}) => (
+  <BasePopoverContent background={props.background || 'white'} {...props}>
+    {children}
+  </BasePopoverContent>
+);

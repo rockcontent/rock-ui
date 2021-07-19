@@ -7,5 +7,9 @@ import {
 export { BaseSwitchProps as SwitchProps };
 
 export const Switch = React.forwardRef<HTMLInputElement, BaseSwitchProps>(
-  ({ children, ...props }) => <BaseSwitch {...props}>{children}</BaseSwitch>
+  ({ children, ...props }, ref) => (
+    <BaseSwitch ref={ref} {...props}>
+      {children}
+    </BaseSwitch>
+  )
 );

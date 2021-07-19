@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
+import ReactDatePicker, {
+  ReactDatePickerProps,
+  registerLocale,
+  setDefaultLocale,
+} from 'react-datepicker';
+
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import TemplateInputDatepicker from './template-input-datepicker';
@@ -7,6 +12,13 @@ import TemplateHeaderDatepicker from './template-header-datepicker';
 import ContainerDatepicker from './container-datepicker';
 import { StyledBaseReactDatePicker } from './styled';
 import DatePickerMode from './utils/datepicker-mode';
+import * as locales from 'date-fns/locale';
+
+const getDefaultLocaleObject = (localeCode: string = 'en-US') => {
+  const localesMap = locales as any;
+
+  return localesMap[localeCode.replace('-', '')];
+};
 
 const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
   (props, ref: any) => {
@@ -16,6 +28,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
       showMonthYearPicker = false,
       onChange,
       selected,
+      locale,
     } = props;
 
     const [userSelectedMode, setUserSelectedMode] = useState<
@@ -24,6 +37,25 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
     const [mode, setMode] = useState<DatePickerMode>(DatePickerMode.day);
 
     const datepickerRef = useRef<ReactDatePicker | null>();
+    const [currentLocale, setCurrentLocale] = useState<Locale>(
+      getDefaultLocaleObject()
+    );
+
+    useEffect(() => {
+      let currentLocaleObj: Locale;
+
+      if (!locale || typeof locale === 'string') {
+        currentLocaleObj = getDefaultLocaleObject(locale);
+      } else {
+        currentLocaleObj = locale;
+      }
+
+      if (currentLocaleObj?.code) {
+        setCurrentLocale(currentLocaleObj);
+        registerLocale(currentLocaleObj.code, currentLocaleObj);
+        setDefaultLocale(currentLocaleObj.code);
+      }
+    }, [locale]);
 
     useEffect(() => {
       if (!showYearPicker && !showMonthYearPicker) {
@@ -119,6 +151,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           renderCustomHeader={props => (
             <TemplateHeaderDatepicker
               {...props}
+              locale={currentLocale}
               mode={mode}
               data-testid="test-template-header"
               toNextMode={toNextMode}
@@ -127,7 +160,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           showMonthYearPicker={mode === DatePickerMode.month}
           showYearPicker={mode === DatePickerMode.year}
           clearButtonTitle="Clear"
-          formatWeekDay={nameOfDay => nameOfDay.substr(0, 1)}
+          formatWeekDay={nameOfDay => nameOfDay.substr(0, 1).toUpperCase()}
           calendarContainer={props => (
             <ContainerDatepicker
               {...props}
