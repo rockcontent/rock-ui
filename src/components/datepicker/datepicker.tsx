@@ -104,7 +104,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
       <StyledBaseReactDatePicker>
         <ReactDatePicker
           {...props}
-          ref={(componentRef) => {
+          ref={componentRef => {
             datepickerRef && (datepickerRef.current = componentRef);
             ref && (ref.current = componentRef);
           }}
@@ -116,7 +116,7 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           data-testid="test-datepicker"
           onChange={onChangeHandler}
           shouldCloseOnSelect={closeOnSelect}
-          renderCustomHeader={(props) => (
+          renderCustomHeader={props => (
             <TemplateHeaderDatepicker
               {...props}
               mode={mode}
@@ -127,8 +127,8 @@ const Datepicker = React.forwardRef<ReactDatePicker, ReactDatePickerProps>(
           showMonthYearPicker={mode === DatePickerMode.month}
           showYearPicker={mode === DatePickerMode.year}
           clearButtonTitle="Clear"
-          formatWeekDay={(nameOfDay) => nameOfDay.substr(0, 1)}
-          calendarContainer={(props) => (
+          formatWeekDay={nameOfDay => nameOfDay.substr(0, 1)}
+          calendarContainer={props => (
             <ContainerDatepicker
               {...props}
               goToThisDay={goToThisDay}

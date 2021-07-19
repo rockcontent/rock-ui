@@ -114,7 +114,7 @@ export const CustomRadio = () => {
 
   return (
     <HStack {...group}>
-      {options.map((value) => {
+      {options.map(value => {
         const radio = getRadioProps({ value });
         return (
           <RadioCard key={value} {...radio}>

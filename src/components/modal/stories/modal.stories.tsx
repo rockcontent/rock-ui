@@ -204,7 +204,7 @@ export const SizeExample = () => {
 
   return (
     <>
-      {sizes.map((size) => (
+      {sizes.map(size => (
         <Button
           onClick={() => handleSizeClick(size)}
           key={size}

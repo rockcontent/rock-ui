@@ -41,7 +41,7 @@ describe('Modal', () => {
     ReactDOM.unmountComponentAtNode(container);
     container.remove();
   });
-  it('call the callback functions', (done) => {
+  it('call the callback functions', done => {
     // setup a DOM element as a render target
     const container = document.createElement('div');
     // container *must* be attached to document so events work correctly.

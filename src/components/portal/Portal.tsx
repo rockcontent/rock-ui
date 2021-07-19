@@ -6,6 +6,6 @@ import {
 
 export { BasePortalProps as PortalProps };
 
-export const Portal: FC<BasePortalProps> = (props) => (
+export const Portal: FC<BasePortalProps> = props => (
   <BasePortal {...props}>{props.children}</BasePortal>
 );
